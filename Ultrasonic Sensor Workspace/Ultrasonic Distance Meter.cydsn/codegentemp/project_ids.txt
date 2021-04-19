@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2d72f357-b064-4d53-af07-d44daba63e5f
+C:\Users\Kurty\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|bfcb5edd-254b-47e3-8cc6-3fd9723d6143
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2ffe1678-5fe3-4ca4-8111-a3af6d387e97
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3a36c391-eb04-41eb-bd60-09f56e5de85f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|876e5912-c82b-4978-af9d-97409a3c59fb
+C:\Users\Kurty\Documents\Ultrasonic GitHub (TRC3500)\Ultrasonic-PSoC\Ultrasonic Sensor Workspace\Ultrasonic Distance Meter.cydsn\Ultrasonic Distance Meter.cyprj|32ba1a8b-711b-4123-8cf6-ebcc11b0950a
