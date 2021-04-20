@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 1
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 1
 
 
    1              		.syntax unified
@@ -19,15 +19,20 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.Flight_Timer_ISR,"ax",%progbits
-  20              		.align	2
-  21              		.global	Flight_Timer_ISR
-  22              		.thumb
-  23              		.thumb_func
-  24              		.type	Flight_Timer_ISR, %function
-  25              	Flight_Timer_ISR:
-  26              	.LFB63:
-  27              		.file 1 "main.c"
+  19              		.global	__aeabi_i2d
+  20              		.global	__aeabi_dmul
+  21              		.global	__aeabi_d2f
+  22              		.global	__aeabi_fdiv
+  23              		.global	__aeabi_d2iz
+  24              		.section	.text.main,"ax",%progbits
+  25              		.align	2
+  26              		.global	main
+  27              		.thumb
+  28              		.thumb_func
+  29              		.type	main, %function
+  30              	main:
+  31              	.LFB64:
+  32              		.file 1 "main.c"
    1:main.c        **** /* ========================================
    2:main.c        ****  *
    3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
@@ -42,869 +47,2384 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 1
   12:main.c        **** #include "project.h"
   13:main.c        **** #include "tgmath.h"
   14:main.c        **** 
-  15:main.c        **** int FT_Period_Int;
-  16:main.c        **** int FT_Period_uS;
-  17:main.c        **** int FT_Resolution;
-  18:main.c        **** float FT_Time_Per_Tick_uS;
-  19:main.c        **** float FT_Time_Per_Tick;
-  20:main.c        **** int SoundSpeed;
-  21:main.c        **** 
-  22:main.c        **** CY_ISR(Flight_Timer_ISR) {
-  28              		.loc 1 22 0
-  29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32 0000 08B5     		push	{r3, lr}
-  33              		.cfi_def_cfa_offset 8
-  34              		.cfi_offset 3, -8
-  35              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 2
+  15:main.c        **** // Ultrasonic variables
+  16:main.c        **** int FT_Period_Int;
+  17:main.c        **** int FT_Period_uS;
+  18:main.c        **** int FT_Resolution;
+  19:main.c        **** float FT_Time_Per_Tick_uS;
+  20:main.c        **** float FT_Time_Per_Tick;
+  21:main.c        **** int SoundSpeed;
+  22:main.c        **** 
+  23:main.c        **** // 7 Segment setups
+  24:main.c        **** int Seg1000Count;
+  25:main.c        **** int Seg100Count;
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 2
 
 
-  23:main.c        ****     // Triggers once ultrasonic receives a pulse back
-  24:main.c        ****     // Once triggered gets timer value, measures distance
-  25:main.c        ****     int FT_Count = Flight_Timer_ReadCounter(); // forces capture, returns capture value
-  36              		.loc 1 25 0
-  37 0002 FFF7FEFF 		bl	Flight_Timer_ReadCounter
-  38              	.LVL0:
-  39 0006 08BD     		pop	{r3, pc}
-  40              		.cfi_endproc
-  41              	.LFE63:
-  42              		.size	Flight_Timer_ISR, .-Flight_Timer_ISR
-  43              		.global	__aeabi_i2d
-  44              		.global	__aeabi_dmul
-  45              		.global	__aeabi_d2f
-  46              		.global	__aeabi_fdiv
-  47              		.section	.text.main,"ax",%progbits
-  48              		.align	2
-  49              		.global	main
-  50              		.thumb
-  51              		.thumb_func
-  52              		.type	main, %function
-  53              	main:
-  54              	.LFB64:
-  26:main.c        ****     int FlightTime = FT_Count * FT_Time_Per_Tick;
-  27:main.c        ****     int Distance = (FlightTime * SoundSpeed) / 2; // 2 as wave travels to object, bounces off it an
-  28:main.c        **** }
+  26:main.c        **** int Seg10Count;
+  27:main.c        **** int Seg1Count;
+  28:main.c        **** int decimalPlaces;
   29:main.c        **** 
-  30:main.c        **** int main(void) {
-  55              		.loc 1 30 0
-  56              		.cfi_startproc
-  57              		@ Volatile: function does not return.
-  58              		@ args = 0, pretend = 0, frame = 0
-  59              		@ frame_needed = 0, uses_anonymous_args = 0
-  60 0000 08B5     		push	{r3, lr}
-  61              		.cfi_def_cfa_offset 8
-  62              		.cfi_offset 3, -8
-  63              		.cfi_offset 14, -4
-  31:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  64              		.loc 1 31 0
-  65              		.syntax unified
-  66              	@ 31 "main.c" 1
-  67 0002 62B6     		CPSIE   i
-  68              	@ 0 "" 2
-  32:main.c        **** 
-  33:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  34:main.c        ****     // Initialising hardware modules
-  35:main.c        ****     
-  36:main.c        ****     PGA_1_Start();
-  69              		.loc 1 36 0
-  70              		.thumb
-  71              		.syntax unified
-  72 0004 FFF7FEFF 		bl	PGA_1_Start
-  73              	.LVL1:
-  37:main.c        ****     VDAC8_1_Start();
-  74              		.loc 1 37 0
-  75 0008 FFF7FEFF 		bl	VDAC8_1_Start
-  76              	.LVL2:
-  38:main.c        ****     Comp_1_Start();
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 3
+  30:main.c        **** // hex values to be sent to 7 seg display for active low
+  31:main.c        **** // these could be preprocessor commands instead (#define)
+  32:main.c        **** int zero = 0xC0;
+  33:main.c        **** int one = 0xF9;
+  34:main.c        **** int two = 0xA4;
+  35:main.c        **** int three = 0xB0;
+  36:main.c        **** int four = 0x99;
+  37:main.c        **** int five = 0x92;
+  38:main.c        **** int six = 0x82;
+  39:main.c        **** int seven = 0xF8;
+  40:main.c        **** int eight = 0x80;
+  41:main.c        **** int nine = 0x98;
+  42:main.c        **** 
+  43:main.c        **** int digitThree = 1;
+  44:main.c        **** int digitTwo = 2;
+  45:main.c        **** int digitOne = 4;
+  46:main.c        **** int digitZero = 8;
+  47:main.c        **** 
+  48:main.c        **** long unsigned int displayData[4]; // 0 = ones digit, MSB = decimal
+  49:main.c        **** 
+  50:main.c        **** int digit[4]; // should be a local var
+  51:main.c        **** 
+  52:main.c        **** void getDigits(float FlightTime);
+  53:main.c        **** void saveDigitsToRAM();
+  54:main.c        **** 
+  55:main.c        **** CY_ISR(Flight_Timer_ISR) {
+  56:main.c        ****     // Triggers once ultrasonic receives a pulse back
+  57:main.c        ****     // Once triggered gets timer value, measures distance
+  58:main.c        ****     int FT_Count = Flight_Timer_ReadCapture(); // forces capture, returns capture value
+  59:main.c        ****     float FlightTime = FT_Count * FT_Time_Per_Tick;
+  60:main.c        ****     getDigits(FlightTime);
+  61:main.c        ****     saveDigitsToRAM();
+  62:main.c        ****     
+  63:main.c        ****     isr_1_ClearPending();
+  64:main.c        ****     Flight_Timer_Reset_Reg_Write(1);
+  65:main.c        ****     Flight_Timer_Reset_Reg_Write(0);
+  66:main.c        ****     
+  67:main.c        ****     // Timer_1_ReadStatusRegister()
+  68:main.c        **** }
+  69:main.c        **** 
+  70:main.c        **** //int writeStatus = EEPROM_WriteByte(1,0);
+  71:main.c        **** 
+  72:main.c        **** 
+  73:main.c        **** 
+  74:main.c        **** 
+  75:main.c        **** int main(void) {
+  33              		.loc 1 75 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+  37 0000 10B5     		push	{r4, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 4, -8
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 3
 
 
-  77              		.loc 1 38 0
-  78 000c FFF7FEFF 		bl	Comp_1_Start
-  79              	.LVL3:
-  39:main.c        ****     PGA_1_Start();
-  80              		.loc 1 39 0
-  81 0010 FFF7FEFF 		bl	PGA_1_Start
-  82              	.LVL4:
-  40:main.c        ****     Vssa_Buffer_Start();
-  83              		.loc 1 40 0
-  84 0014 FFF7FEFF 		bl	Vssa_Buffer_Start
-  85              	.LVL5:
-  41:main.c        ****     Ultrasonic_Drive_Start();
-  86              		.loc 1 41 0
-  87 0018 FFF7FEFF 		bl	Ultrasonic_Drive_Start
-  88              	.LVL6:
-  42:main.c        ****     //Flight_Timer_Enable();
-  43:main.c        ****     
-  44:main.c        ****     // Timer value setup
-  45:main.c        ****     FT_Period_Int = Flight_Timer_ReadPeriod(); // timer period, 1 = 10uS, therefore periodint * 10 
-  89              		.loc 1 45 0
-  90 001c FFF7FEFF 		bl	Flight_Timer_ReadPeriod
-  91              	.LVL7:
-  92 0020 0F4B     		ldr	r3, .L6
-  93 0022 1860     		str	r0, [r3]
-  46:main.c        ****     FT_Period_uS = FT_Period_Int * 10; // period in uS
-  94              		.loc 1 46 0
-  95 0024 00EB8000 		add	r0, r0, r0, lsl #2
-  96 0028 4300     		lsls	r3, r0, #1
-  97 002a 0E4A     		ldr	r2, .L6+4
-  98 002c 1360     		str	r3, [r2]
-  47:main.c        ****     FT_Resolution = 16; // 16-bit timer
-  99              		.loc 1 47 0
- 100 002e 1021     		movs	r1, #16
- 101 0030 0D4A     		ldr	r2, .L6+8
- 102 0032 1160     		str	r1, [r2]
-  48:main.c        ****     FT_Time_Per_Tick_uS = FT_Period_uS / powl(2,FT_Resolution); // might need to use pow (no L) ins
- 103              		.loc 1 48 0
- 104 0034 1846     		mov	r0, r3
- 105 0036 FFF7FEFF 		bl	__aeabi_i2d
- 106              	.LVL8:
- 107 003a 0022     		movs	r2, #0
- 108 003c 0B4B     		ldr	r3, .L6+12
- 109 003e FFF7FEFF 		bl	__aeabi_dmul
- 110              	.LVL9:
- 111 0042 FFF7FEFF 		bl	__aeabi_d2f
- 112              	.LVL10:
- 113 0046 0A4B     		ldr	r3, .L6+16
- 114 0048 1860     		str	r0, [r3]	@ float
-  49:main.c        ****     FT_Time_Per_Tick = FT_Time_Per_Tick_uS / powl(10,5);
- 115              		.loc 1 49 0
- 116 004a 0A49     		ldr	r1, .L6+20
- 117 004c FFF7FEFF 		bl	__aeabi_fdiv
- 118              	.LVL11:
- 119 0050 094B     		ldr	r3, .L6+24
- 120 0052 1860     		str	r0, [r3]	@ float
-  50:main.c        ****     SoundSpeed = 343; // metres per sec
- 121              		.loc 1 50 0
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 4
+  40              		.cfi_offset 14, -4
+  76:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  41              		.loc 1 76 0
+  42              		.syntax unified
+  43              	@ 76 "main.c" 1
+  44 0002 62B6     		CPSIE   i
+  45              	@ 0 "" 2
+  77:main.c        ****     isr_1_ClearPending();		 // Cancel any pending isr_1 interrupts 
+  46              		.loc 1 77 0
+  47              		.thumb
+  48              		.syntax unified
+  49 0004 FFF7FEFF 		bl	isr_1_ClearPending
+  50              	.LVL0:
+  78:main.c        ****     isr_1_StartEx(Flight_Timer_ISR);     //Enable the interrupt service routine
+  51              		.loc 1 78 0
+  52 0008 2C48     		ldr	r0, .L6
+  53 000a FFF7FEFF 		bl	isr_1_StartEx
+  54              	.LVL1:
+  79:main.c        **** 
+  80:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  81:main.c        ****     // Initialising hardware modules
+  82:main.c        ****     
+  83:main.c        ****     PGA_1_Start();
+  55              		.loc 1 83 0
+  56 000e FFF7FEFF 		bl	PGA_1_Start
+  57              	.LVL2:
+  84:main.c        ****     VDAC8_1_Start();
+  58              		.loc 1 84 0
+  59 0012 FFF7FEFF 		bl	VDAC8_1_Start
+  60              	.LVL3:
+  85:main.c        ****     Comp_1_Start();
+  61              		.loc 1 85 0
+  62 0016 FFF7FEFF 		bl	Comp_1_Start
+  63              	.LVL4:
+  86:main.c        ****     //PGA_1_Start();
+  87:main.c        ****     Vssa_Buffer_Start();
+  64              		.loc 1 87 0
+  65 001a FFF7FEFF 		bl	Vssa_Buffer_Start
+  66              	.LVL5:
+  88:main.c        ****     Ultrasonic_Drive_Start();
+  67              		.loc 1 88 0
+  68 001e FFF7FEFF 		bl	Ultrasonic_Drive_Start
+  69              	.LVL6:
+  89:main.c        ****     Flight_Timer_Enable();
+  70              		.loc 1 89 0
+  71 0022 FFF7FEFF 		bl	Flight_Timer_Enable
+  72              	.LVL7:
+  90:main.c        ****     Flight_Timer_Start();
+  73              		.loc 1 90 0
+  74 0026 FFF7FEFF 		bl	Flight_Timer_Start
+  75              	.LVL8:
+  91:main.c        ****     Ultrasonic_Drive_Enable();
+  76              		.loc 1 91 0
+  77 002a FFF7FEFF 		bl	Ultrasonic_Drive_Start
+  78              	.LVL9:
+  92:main.c        ****     Ultrasonic_Drive_Start();
+  79              		.loc 1 92 0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 4
 
 
- 122 0054 40F25712 		movw	r2, #343
- 123 0058 084B     		ldr	r3, .L6+28
- 124 005a 1A60     		str	r2, [r3]
- 125              	.L4:
- 126 005c FEE7     		b	.L4
- 127              	.L7:
- 128 005e 00BF     		.align	2
- 129              	.L6:
- 130 0060 00000000 		.word	FT_Period_Int
- 131 0064 00000000 		.word	FT_Period_uS
- 132 0068 00000000 		.word	FT_Resolution
- 133 006c 0000F03E 		.word	1055916032
- 134 0070 00000000 		.word	FT_Time_Per_Tick_uS
- 135 0074 0050C347 		.word	1203982336
- 136 0078 00000000 		.word	FT_Time_Per_Tick
- 137 007c 00000000 		.word	SoundSpeed
- 138              		.cfi_endproc
- 139              	.LFE64:
- 140              		.size	main, .-main
- 141              		.comm	SoundSpeed,4,4
- 142              		.comm	FT_Time_Per_Tick,4,4
- 143              		.comm	FT_Time_Per_Tick_uS,4,4
- 144              		.comm	FT_Resolution,4,4
- 145              		.comm	FT_Period_uS,4,4
- 146              		.comm	FT_Period_Int,4,4
- 147              		.text
- 148              	.Letext0:
- 149              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 150              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 151              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
- 152              		.file 5 "Generated_Source\\PSoC5/Flight_Timer.h"
- 153              		.file 6 "Generated_Source\\PSoC5/PGA_1.h"
- 154              		.file 7 "Generated_Source\\PSoC5/VDAC8_1.h"
- 155              		.file 8 "Generated_Source\\PSoC5/Comp_1.h"
- 156              		.file 9 "Generated_Source\\PSoC5/Vssa_Buffer.h"
- 157              		.file 10 "Generated_Source\\PSoC5/Ultrasonic_Drive.h"
- 158              		.section	.debug_info,"",%progbits
- 159              	.Ldebug_info0:
- 160 0000 FE010000 		.4byte	0x1fe
- 161 0004 0400     		.2byte	0x4
- 162 0006 00000000 		.4byte	.Ldebug_abbrev0
- 163 000a 04       		.byte	0x4
- 164 000b 01       		.uleb128 0x1
- 165 000c A9010000 		.4byte	.LASF33
- 166 0010 0C       		.byte	0xc
- 167 0011 67020000 		.4byte	.LASF34
- 168 0015 59000000 		.4byte	.LASF35
- 169 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 170 001d 00000000 		.4byte	0
- 171 0021 00000000 		.4byte	.Ldebug_line0
- 172 0025 02       		.uleb128 0x2
- 173 0026 01       		.byte	0x1
- 174 0027 06       		.byte	0x6
- 175 0028 D4020000 		.4byte	.LASF0
- 176 002c 02       		.uleb128 0x2
- 177 002d 01       		.byte	0x1
- 178 002e 08       		.byte	0x8
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 5
+  80 002e FFF7FEFF 		bl	Ultrasonic_Drive_Start
+  81              	.LVL10:
+  93:main.c        ****     Ultrasonic_Pulse_Counter_Enable();
+  82              		.loc 1 93 0
+  83 0032 FFF7FEFF 		bl	Ultrasonic_Pulse_Counter_Enable
+  84              	.LVL11:
+  94:main.c        ****     Ultrasonic_Pulse_Counter_Start();
+  85              		.loc 1 94 0
+  86 0036 FFF7FEFF 		bl	Ultrasonic_Pulse_Counter_Start
+  87              	.LVL12:
+  95:main.c        ****     Flight_Timer_Clock_Enable();
+  88              		.loc 1 95 0
+  89 003a FFF7FEFF 		bl	Flight_Timer_Clock_Start
+  90              	.LVL13:
+  96:main.c        ****     Flight_Timer_Clock_Start();
+  91              		.loc 1 96 0
+  92 003e FFF7FEFF 		bl	Flight_Timer_Clock_Start
+  93              	.LVL14:
+  97:main.c        ****     
+  98:main.c        ****     
+  99:main.c        **** 
+ 100:main.c        ****     
+ 101:main.c        ****     // Timer value setup
+ 102:main.c        ****     FT_Period_Int = Flight_Timer_ReadPeriod(); // timer period, 1 = 10uS, therefore periodint * 10 
+  94              		.loc 1 102 0
+  95 0042 FFF7FEFF 		bl	Flight_Timer_ReadPeriod
+  96              	.LVL15:
+  97 0046 1E4B     		ldr	r3, .L6+4
+  98 0048 1860     		str	r0, [r3]
+ 103:main.c        ****     FT_Period_uS = FT_Period_Int * 10; // period in uS
+  99              		.loc 1 103 0
+ 100 004a 00EB8000 		add	r0, r0, r0, lsl #2
+ 101 004e 4300     		lsls	r3, r0, #1
+ 102 0050 1C4A     		ldr	r2, .L6+8
+ 103 0052 1360     		str	r3, [r2]
+ 104:main.c        ****     FT_Resolution = 16; // 16-bit timer
+ 104              		.loc 1 104 0
+ 105 0054 1021     		movs	r1, #16
+ 106 0056 1C4A     		ldr	r2, .L6+12
+ 107 0058 1160     		str	r1, [r2]
+ 105:main.c        ****     FT_Time_Per_Tick_uS = FT_Period_uS / powl(2,FT_Resolution); // might need to use pow (no L) ins
+ 108              		.loc 1 105 0
+ 109 005a 1846     		mov	r0, r3
+ 110 005c FFF7FEFF 		bl	__aeabi_i2d
+ 111              	.LVL16:
+ 112 0060 0022     		movs	r2, #0
+ 113 0062 1A4B     		ldr	r3, .L6+16
+ 114 0064 FFF7FEFF 		bl	__aeabi_dmul
+ 115              	.LVL17:
+ 116 0068 FFF7FEFF 		bl	__aeabi_d2f
+ 117              	.LVL18:
+ 118 006c 184B     		ldr	r3, .L6+20
+ 119 006e 1860     		str	r0, [r3]	@ float
+ 106:main.c        ****     FT_Time_Per_Tick = FT_Time_Per_Tick_uS / powl(10,5);
+ 120              		.loc 1 106 0
+ 121 0070 1849     		ldr	r1, .L6+24
+ 122 0072 FFF7FEFF 		bl	__aeabi_fdiv
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 5
 
 
- 179 002f EB000000 		.4byte	.LASF1
- 180 0033 02       		.uleb128 0x2
- 181 0034 02       		.byte	0x2
- 182 0035 05       		.byte	0x5
- 183 0036 68010000 		.4byte	.LASF2
- 184 003a 02       		.uleb128 0x2
- 185 003b 02       		.byte	0x2
- 186 003c 07       		.byte	0x7
- 187 003d 14010000 		.4byte	.LASF3
- 188 0041 03       		.uleb128 0x3
- 189 0042 35000000 		.4byte	.LASF9
- 190 0046 02       		.byte	0x2
- 191 0047 3F       		.byte	0x3f
- 192 0048 4C000000 		.4byte	0x4c
- 193 004c 02       		.uleb128 0x2
- 194 004d 04       		.byte	0x4
- 195 004e 05       		.byte	0x5
- 196 004f 99020000 		.4byte	.LASF4
- 197 0053 02       		.uleb128 0x2
- 198 0054 04       		.byte	0x4
- 199 0055 07       		.byte	0x7
- 200 0056 02010000 		.4byte	.LASF5
- 201 005a 02       		.uleb128 0x2
- 202 005b 08       		.byte	0x8
- 203 005c 05       		.byte	0x5
- 204 005d 59020000 		.4byte	.LASF6
- 205 0061 02       		.uleb128 0x2
- 206 0062 08       		.byte	0x8
- 207 0063 07       		.byte	0x7
- 208 0064 92010000 		.4byte	.LASF7
- 209 0068 04       		.uleb128 0x4
- 210 0069 04       		.byte	0x4
- 211 006a 05       		.byte	0x5
- 212 006b 696E7400 		.ascii	"int\000"
- 213 006f 02       		.uleb128 0x2
- 214 0070 04       		.byte	0x4
- 215 0071 07       		.byte	0x7
- 216 0072 77010000 		.4byte	.LASF8
- 217 0076 03       		.uleb128 0x3
- 218 0077 37020000 		.4byte	.LASF10
- 219 007b 03       		.byte	0x3
- 220 007c 2C       		.byte	0x2c
- 221 007d 41000000 		.4byte	0x41
- 222 0081 02       		.uleb128 0x2
- 223 0082 04       		.byte	0x4
- 224 0083 04       		.byte	0x4
- 225 0084 E5000000 		.4byte	.LASF11
- 226 0088 02       		.uleb128 0x2
- 227 0089 08       		.byte	0x8
- 228 008a 04       		.byte	0x4
- 229 008b 56010000 		.4byte	.LASF12
- 230 008f 02       		.uleb128 0x2
- 231 0090 01       		.byte	0x1
- 232 0091 08       		.byte	0x8
- 233 0092 6E020000 		.4byte	.LASF13
- 234 0096 02       		.uleb128 0x2
- 235 0097 08       		.byte	0x8
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 6
+ 123              	.LVL19:
+ 124 0076 184B     		ldr	r3, .L6+28
+ 125 0078 1860     		str	r0, [r3]	@ float
+ 107:main.c        ****     SoundSpeed = 343; // metres per sec
+ 126              		.loc 1 107 0
+ 127 007a 40F25712 		movw	r2, #343
+ 128 007e 174B     		ldr	r3, .L6+32
+ 129 0080 1A60     		str	r2, [r3]
+ 130              	.L4:
+ 131              	.LVL20:
+ 132              	.LBB2:
+ 108:main.c        ****     // probably don't need to calculate period each ISR, just once when the program starts
+ 109:main.c        ****     
+ 110:main.c        ****     // todo turn on timer interrupt
+ 111:main.c        ****     // todo reset timer ISR once triggered
+ 112:main.c        ****     for(;;) {
+ 113:main.c        ****         /* Place your application code here. */
+ 114:main.c        ****         // Using Flight_Timer to find distance to the object
+ 115:main.c        ****             // Pulse goes off
+ 116:main.c        ****             // Wait until timer hits capture (through ISR)
+ 117:main.c        ****             // Measure
+ 118:main.c        ****         // todo loop printing digits to the screen until off
+ 119:main.c        ****         
+ 120:main.c        ****         //Digit_Reg_Write(2);
+ 121:main.c        ****         //Seven_Segment_Reg_Write(0x99);
+ 122:main.c        ****         //Decimal_Place_Reg_Write(0);
+ 123:main.c        ****         
+ 124:main.c        ****         
+ 125:main.c        ****         //saveDigitsToRAM();
+ 126:main.c        ****         //Digit_Reg_Write(digitZero);
+ 127:main.c        ****         //Seven_Segment_Reg_Write(zero);
+ 128:main.c        ****         // test number write function
+ 129:main.c        ****         
+ 130:main.c        ****         for(;;) {
+ 131:main.c        ****             for(int index = 0; index < 4; index++) { // loop through digits 0 to 3
+ 133              		.loc 1 131 0
+ 134 0082 0024     		movs	r4, #0
+ 135 0084 17E0     		b	.L2
+ 136              	.LVL21:
+ 137              	.L3:
+ 138              	.LBB3:
+ 132:main.c        ****                 int currentDigit = powl(2,index);
+ 139              		.loc 1 132 0 discriminator 3
+ 140 0086 2046     		mov	r0, r4
+ 141 0088 FFF7FEFF 		bl	__aeabi_i2d
+ 142              	.LVL22:
+ 143 008c 0246     		mov	r2, r0
+ 144 008e 0B46     		mov	r3, r1
+ 145 0090 0020     		movs	r0, #0
+ 146 0092 4FF08041 		mov	r1, #1073741824
+ 147 0096 FFF7FEFF 		bl	powl
+ 148              	.LVL23:
+ 149 009a FFF7FEFF 		bl	__aeabi_d2iz
+ 150              	.LVL24:
+ 133:main.c        ****                 Digit_Reg_Write(currentDigit);
+ 151              		.loc 1 133 0 discriminator 3
+ 152 009e C0B2     		uxtb	r0, r0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 6
 
 
- 236 0098 04       		.byte	0x4
- 237 0099 C8020000 		.4byte	.LASF14
- 238 009d 02       		.uleb128 0x2
- 239 009e 04       		.byte	0x4
- 240 009f 07       		.byte	0x7
- 241 00a0 3F020000 		.4byte	.LASF15
- 242 00a4 05       		.uleb128 0x5
- 243 00a5 48000000 		.4byte	.LASF36
- 244 00a9 01       		.byte	0x1
- 245 00aa 16       		.byte	0x16
- 246 00ab 00000000 		.4byte	.LFB63
- 247 00af 08000000 		.4byte	.LFE63-.LFB63
- 248 00b3 01       		.uleb128 0x1
- 249 00b4 9C       		.byte	0x9c
- 250 00b5 E4000000 		.4byte	0xe4
- 251 00b9 06       		.uleb128 0x6
- 252 00ba 3F000000 		.4byte	.LASF16
- 253 00be 01       		.byte	0x1
- 254 00bf 19       		.byte	0x19
- 255 00c0 68000000 		.4byte	0x68
- 256 00c4 06       		.uleb128 0x6
- 257 00c5 5D010000 		.4byte	.LASF17
- 258 00c9 01       		.byte	0x1
- 259 00ca 1A       		.byte	0x1a
- 260 00cb 68000000 		.4byte	0x68
- 261 00cf 06       		.uleb128 0x6
- 262 00d0 F9000000 		.4byte	.LASF18
- 263 00d4 01       		.byte	0x1
- 264 00d5 1B       		.byte	0x1b
- 265 00d6 68000000 		.4byte	0x68
- 266 00da 07       		.uleb128 0x7
- 267 00db 06000000 		.4byte	.LVL0
- 268 00df B4010000 		.4byte	0x1b4
- 269 00e3 00       		.byte	0
- 270 00e4 08       		.uleb128 0x8
- 271 00e5 72010000 		.4byte	.LASF37
- 272 00e9 01       		.byte	0x1
- 273 00ea 1E       		.byte	0x1e
- 274 00eb 68000000 		.4byte	0x68
- 275 00ef 00000000 		.4byte	.LFB64
- 276 00f3 80000000 		.4byte	.LFE64-.LFB64
- 277 00f7 01       		.uleb128 0x1
- 278 00f8 9C       		.byte	0x9c
- 279 00f9 3D010000 		.4byte	0x13d
- 280 00fd 07       		.uleb128 0x7
- 281 00fe 08000000 		.4byte	.LVL1
- 282 0102 BF010000 		.4byte	0x1bf
- 283 0106 07       		.uleb128 0x7
- 284 0107 0C000000 		.4byte	.LVL2
- 285 010b CA010000 		.4byte	0x1ca
- 286 010f 07       		.uleb128 0x7
- 287 0110 10000000 		.4byte	.LVL3
- 288 0114 D5010000 		.4byte	0x1d5
- 289 0118 07       		.uleb128 0x7
- 290 0119 14000000 		.4byte	.LVL4
- 291 011d BF010000 		.4byte	0x1bf
- 292 0121 07       		.uleb128 0x7
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 7
+ 153              	.LVL25:
+ 154 00a0 FFF7FEFF 		bl	Digit_Reg_Write
+ 155              	.LVL26:
+ 134:main.c        ****                 //Digit_Reg_Write(15);
+ 135:main.c        ****                 Seven_Segment_Reg_Write(displayData[index]);
+ 156              		.loc 1 135 0 discriminator 3
+ 157 00a4 0E4B     		ldr	r3, .L6+36
+ 158 00a6 13F82400 		ldrb	r0, [r3, r4, lsl #2]	@ zero_extendqisi2
+ 159 00aa FFF7FEFF 		bl	Seven_Segment_Reg_Write
+ 160              	.LVL27:
+ 136:main.c        ****                 CyDelay(1);
+ 161              		.loc 1 136 0 discriminator 3
+ 162 00ae 0120     		movs	r0, #1
+ 163 00b0 FFF7FEFF 		bl	CyDelay
+ 164              	.LVL28:
+ 165              	.LBE3:
+ 131:main.c        ****                 int currentDigit = powl(2,index);
+ 166              		.loc 1 131 0 discriminator 3
+ 167 00b4 0134     		adds	r4, r4, #1
+ 168              	.LVL29:
+ 169              	.L2:
+ 131:main.c        ****                 int currentDigit = powl(2,index);
+ 170              		.loc 1 131 0 is_stmt 0 discriminator 1
+ 171 00b6 032C     		cmp	r4, #3
+ 172 00b8 E5DD     		ble	.L3
+ 173 00ba E2E7     		b	.L4
+ 174              	.L7:
+ 175              		.align	2
+ 176              	.L6:
+ 177 00bc 00000000 		.word	Flight_Timer_ISR
+ 178 00c0 00000000 		.word	FT_Period_Int
+ 179 00c4 00000000 		.word	FT_Period_uS
+ 180 00c8 00000000 		.word	FT_Resolution
+ 181 00cc 0000F03E 		.word	1055916032
+ 182 00d0 00000000 		.word	FT_Time_Per_Tick_uS
+ 183 00d4 0050C347 		.word	1203982336
+ 184 00d8 00000000 		.word	FT_Time_Per_Tick
+ 185 00dc 00000000 		.word	SoundSpeed
+ 186 00e0 00000000 		.word	displayData
+ 187              	.LBE2:
+ 188              		.cfi_endproc
+ 189              	.LFE64:
+ 190              		.size	main, .-main
+ 191              		.global	__aeabi_i2f
+ 192              		.global	__aeabi_fmul
+ 193              		.global	__aeabi_f2iz
+ 194              		.section	.text.getDigits,"ax",%progbits
+ 195              		.align	2
+ 196              		.global	getDigits
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.type	getDigits, %function
+ 200              	getDigits:
+ 201              	.LFB65:
+ 137:main.c        ****             }
+ 138:main.c        ****         }
+ 139:main.c        ****     }
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 7
 
 
- 293 0122 18000000 		.4byte	.LVL5
- 294 0126 E0010000 		.4byte	0x1e0
- 295 012a 07       		.uleb128 0x7
- 296 012b 1C000000 		.4byte	.LVL6
- 297 012f EB010000 		.4byte	0x1eb
- 298 0133 07       		.uleb128 0x7
- 299 0134 20000000 		.4byte	.LVL7
- 300 0138 F6010000 		.4byte	0x1f6
- 301 013c 00       		.byte	0
- 302 013d 09       		.uleb128 0x9
- 303 013e 3B010000 		.4byte	.LASF19
- 304 0142 04       		.byte	0x4
- 305 0143 1207     		.2byte	0x712
- 306 0145 49010000 		.4byte	0x149
- 307 0149 0A       		.uleb128 0xa
- 308 014a 76000000 		.4byte	0x76
- 309 014e 0B       		.uleb128 0xb
- 310 014f 84010000 		.4byte	.LASF20
- 311 0153 01       		.byte	0x1
- 312 0154 0F       		.byte	0xf
- 313 0155 68000000 		.4byte	0x68
- 314 0159 05       		.uleb128 0x5
- 315 015a 03       		.byte	0x3
- 316 015b 00000000 		.4byte	FT_Period_Int
- 317 015f 0B       		.uleb128 0xb
- 318 0160 BB020000 		.4byte	.LASF21
- 319 0164 01       		.byte	0x1
- 320 0165 10       		.byte	0x10
- 321 0166 68000000 		.4byte	0x68
- 322 016a 05       		.uleb128 0x5
- 323 016b 03       		.byte	0x3
- 324 016c 00000000 		.4byte	FT_Period_uS
- 325 0170 0B       		.uleb128 0xb
- 326 0171 8B020000 		.4byte	.LASF22
- 327 0175 01       		.byte	0x1
- 328 0176 11       		.byte	0x11
- 329 0177 68000000 		.4byte	0x68
- 330 017b 05       		.uleb128 0x5
- 331 017c 03       		.byte	0x3
- 332 017d 00000000 		.4byte	FT_Resolution
- 333 0181 0B       		.uleb128 0xb
- 334 0182 27010000 		.4byte	.LASF23
- 335 0186 01       		.byte	0x1
- 336 0187 12       		.byte	0x12
- 337 0188 81000000 		.4byte	0x81
- 338 018c 05       		.uleb128 0x5
- 339 018d 03       		.byte	0x3
- 340 018e 00000000 		.4byte	FT_Time_Per_Tick_uS
- 341 0192 0B       		.uleb128 0xb
- 342 0193 48020000 		.4byte	.LASF24
- 343 0197 01       		.byte	0x1
- 344 0198 13       		.byte	0x13
- 345 0199 81000000 		.4byte	0x81
- 346 019d 05       		.uleb128 0x5
- 347 019e 03       		.byte	0x3
- 348 019f 00000000 		.4byte	FT_Time_Per_Tick
- 349 01a3 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 8
+ 140:main.c        **** }
+ 141:main.c        **** 
+ 142:main.c        **** /* [] END OF FILE */
+ 143:main.c        **** 
+ 144:main.c        **** 
+ 145:main.c        **** void getDigits(float FlightTime) {
+ 202              		.loc 1 145 0 is_stmt 1
+ 203              		.cfi_startproc
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206              	.LVL30:
+ 207 0000 10B5     		push	{r4, lr}
+ 208              		.cfi_def_cfa_offset 8
+ 209              		.cfi_offset 4, -8
+ 210              		.cfi_offset 14, -4
+ 211 0002 0446     		mov	r4, r0
+ 146:main.c        ****     // read EEPROM for which kind of distance it is
+ 147:main.c        ****     // calc distance
+ 148:main.c        ****     // readEEPROM
+ 149:main.c        ****     // 1 = mm
+ 150:main.c        ****     // 2 = cm
+ 151:main.c        ****     // 3 = inches
+ 152:main.c        ****     
+ 153:main.c        ****     // EEPROM GO HERE *********************************************************
+ 154:main.c        ****     
+ 155:main.c        ****     //int distanceMode = 1;
+ 156:main.c        ****     int distanceMM;
+ 157:main.c        ****     //float distanceCM;
+ 158:main.c        ****     //float distanceInch;
+ 159:main.c        ****     
+ 160:main.c        ****     distanceMM = ((FlightTime * SoundSpeed) / 2) * 1000; // dist in mm, an integer
+ 212              		.loc 1 160 0
+ 213 0004 154B     		ldr	r3, .L12
+ 214 0006 1868     		ldr	r0, [r3]
+ 215              	.LVL31:
+ 216 0008 FFF7FEFF 		bl	__aeabi_i2f
+ 217              	.LVL32:
+ 218 000c 2146     		mov	r1, r4
+ 219 000e FFF7FEFF 		bl	__aeabi_fmul
+ 220              	.LVL33:
+ 221 0012 4FF07C51 		mov	r1, #1056964608
+ 222 0016 FFF7FEFF 		bl	__aeabi_fmul
+ 223              	.LVL34:
+ 224 001a 1149     		ldr	r1, .L12+4
+ 225 001c FFF7FEFF 		bl	__aeabi_fmul
+ 226              	.LVL35:
+ 227 0020 FFF7FEFF 		bl	__aeabi_f2iz
+ 228              	.LVL36:
+ 161:main.c        ****     //distanceCM = ((FlightTime * SoundSpeed) / 2) * 100; // dist in cm
+ 162:main.c        ****     //distanceInch = ((FlightTime * SoundSpeed) / 2) / 39.3701; // dist in inches
+ 163:main.c        ****     
+ 164:main.c        ****     int index = 0;
+ 229              		.loc 1 164 0
+ 230 0024 0024     		movs	r4, #0
+ 231              	.LVL37:
+ 165:main.c        ****     // 0 = ones
+ 166:main.c        ****     // 1 = tens
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 8
 
 
- 350 01a4 DA000000 		.4byte	.LASF25
- 351 01a8 01       		.byte	0x1
- 352 01a9 14       		.byte	0x14
- 353 01aa 68000000 		.4byte	0x68
- 354 01ae 05       		.uleb128 0x5
- 355 01af 03       		.byte	0x3
- 356 01b0 00000000 		.4byte	SoundSpeed
- 357 01b4 0C       		.uleb128 0xc
- 358 01b5 A2020000 		.4byte	.LASF26
- 359 01b9 A2020000 		.4byte	.LASF26
- 360 01bd 05       		.byte	0x5
- 361 01be 69       		.byte	0x69
- 362 01bf 0C       		.uleb128 0xc
- 363 01c0 17000000 		.4byte	.LASF27
- 364 01c4 17000000 		.4byte	.LASF27
- 365 01c8 06       		.byte	0x6
- 366 01c9 3E       		.byte	0x3e
- 367 01ca 0C       		.uleb128 0xc
- 368 01cb 48010000 		.4byte	.LASF28
- 369 01cf 48010000 		.4byte	.LASF28
- 370 01d3 07       		.byte	0x7
- 371 01d4 33       		.byte	0x33
- 372 01d5 0C       		.uleb128 0xc
- 373 01d6 E0020000 		.4byte	.LASF29
- 374 01da E0020000 		.4byte	.LASF29
- 375 01de 08       		.byte	0x8
- 376 01df 3F       		.byte	0x3f
- 377 01e0 0C       		.uleb128 0xc
- 378 01e1 23000000 		.4byte	.LASF30
- 379 01e5 23000000 		.4byte	.LASF30
- 380 01e9 09       		.byte	0x9
- 381 01ea 33       		.byte	0x33
- 382 01eb 0C       		.uleb128 0xc
- 383 01ec 00000000 		.4byte	.LASF31
- 384 01f0 00000000 		.4byte	.LASF31
- 385 01f4 0A       		.byte	0xa
- 386 01f5 27       		.byte	0x27
- 387 01f6 0C       		.uleb128 0xc
- 388 01f7 73020000 		.4byte	.LASF32
- 389 01fb 73020000 		.4byte	.LASF32
- 390 01ff 05       		.byte	0x5
- 391 0200 67       		.byte	0x67
- 392 0201 00       		.byte	0
- 393              		.section	.debug_abbrev,"",%progbits
- 394              	.Ldebug_abbrev0:
- 395 0000 01       		.uleb128 0x1
- 396 0001 11       		.uleb128 0x11
- 397 0002 01       		.byte	0x1
- 398 0003 25       		.uleb128 0x25
- 399 0004 0E       		.uleb128 0xe
- 400 0005 13       		.uleb128 0x13
- 401 0006 0B       		.uleb128 0xb
- 402 0007 03       		.uleb128 0x3
- 403 0008 0E       		.uleb128 0xe
- 404 0009 1B       		.uleb128 0x1b
- 405 000a 0E       		.uleb128 0xe
- 406 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 9
+ 167:main.c        ****     // 2 = hundreds
+ 168:main.c        ****     // 3 = thousands
+ 169:main.c        ****     int currentDigit = distanceMM;
+ 170:main.c        ****     while(currentDigit >= 10) {
+ 232              		.loc 1 170 0
+ 233 0026 15E0     		b	.L9
+ 234              	.LVL38:
+ 235              	.L10:
+ 171:main.c        ****         digit[index] = currentDigit % 10;
+ 236              		.loc 1 171 0
+ 237 0028 0E4B     		ldr	r3, .L12+8
+ 238 002a 83FB0032 		smull	r3, r2, r3, r0
+ 239 002e C317     		asrs	r3, r0, #31
+ 240 0030 C3EBA203 		rsb	r3, r3, r2, asr #2
+ 241 0034 1946     		mov	r1, r3
+ 242 0036 03EB8303 		add	r3, r3, r3, lsl #2
+ 243 003a 5A00     		lsls	r2, r3, #1
+ 244 003c 831A     		subs	r3, r0, r2
+ 245 003e 0A4A     		ldr	r2, .L12+12
+ 246 0040 42F82430 		str	r3, [r2, r4, lsl #2]
+ 172:main.c        ****         
+ 173:main.c        ****         index += 1; // increment index
+ 247              		.loc 1 173 0
+ 248 0044 0134     		adds	r4, r4, #1
+ 249              	.LVL39:
+ 174:main.c        ****         currentDigit = floor(currentDigit / 10); // move to next number
+ 250              		.loc 1 174 0
+ 251 0046 0846     		mov	r0, r1
+ 252              	.LVL40:
+ 253 0048 FFF7FEFF 		bl	__aeabi_i2d
+ 254              	.LVL41:
+ 255 004c FFF7FEFF 		bl	floor
+ 256              	.LVL42:
+ 257 0050 FFF7FEFF 		bl	__aeabi_d2iz
+ 258              	.LVL43:
+ 259              	.L9:
+ 170:main.c        ****         digit[index] = currentDigit % 10;
+ 260              		.loc 1 170 0
+ 261 0054 0928     		cmp	r0, #9
+ 262 0056 E7DC     		bgt	.L10
+ 175:main.c        ****     }
+ 176:main.c        ****     
+ 177:main.c        ****     /*
+ 178:main.c        ****     switch(distanceMode) {
+ 179:main.c        ****         case 1: //mm
+ 180:main.c        ****             decimalPlaces = 0; // no decimal place
+ 181:main.c        ****             break;
+ 182:main.c        ****         case 2: //cm
+ 183:main.c        ****             decimalPlaces = 1; // 1 decimal place
+ 184:main.c        ****             break;
+ 185:main.c        ****         case 3: //inches
+ 186:main.c        ****             decimalPlaces = 2; // 2 decimal place
+ 187:main.c        ****             break;
+ 188:main.c        ****     }
+ 189:main.c        ****     */
+ 190:main.c        **** }
+ 263              		.loc 1 190 0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 9
 
 
- 407 000c 17       		.uleb128 0x17
- 408 000d 11       		.uleb128 0x11
- 409 000e 01       		.uleb128 0x1
- 410 000f 10       		.uleb128 0x10
- 411 0010 17       		.uleb128 0x17
- 412 0011 00       		.byte	0
- 413 0012 00       		.byte	0
- 414 0013 02       		.uleb128 0x2
- 415 0014 24       		.uleb128 0x24
- 416 0015 00       		.byte	0
- 417 0016 0B       		.uleb128 0xb
- 418 0017 0B       		.uleb128 0xb
- 419 0018 3E       		.uleb128 0x3e
- 420 0019 0B       		.uleb128 0xb
- 421 001a 03       		.uleb128 0x3
- 422 001b 0E       		.uleb128 0xe
- 423 001c 00       		.byte	0
- 424 001d 00       		.byte	0
- 425 001e 03       		.uleb128 0x3
- 426 001f 16       		.uleb128 0x16
- 427 0020 00       		.byte	0
- 428 0021 03       		.uleb128 0x3
- 429 0022 0E       		.uleb128 0xe
- 430 0023 3A       		.uleb128 0x3a
- 431 0024 0B       		.uleb128 0xb
- 432 0025 3B       		.uleb128 0x3b
- 433 0026 0B       		.uleb128 0xb
- 434 0027 49       		.uleb128 0x49
- 435 0028 13       		.uleb128 0x13
- 436 0029 00       		.byte	0
- 437 002a 00       		.byte	0
- 438 002b 04       		.uleb128 0x4
- 439 002c 24       		.uleb128 0x24
- 440 002d 00       		.byte	0
- 441 002e 0B       		.uleb128 0xb
- 442 002f 0B       		.uleb128 0xb
- 443 0030 3E       		.uleb128 0x3e
- 444 0031 0B       		.uleb128 0xb
- 445 0032 03       		.uleb128 0x3
- 446 0033 08       		.uleb128 0x8
- 447 0034 00       		.byte	0
- 448 0035 00       		.byte	0
- 449 0036 05       		.uleb128 0x5
- 450 0037 2E       		.uleb128 0x2e
- 451 0038 01       		.byte	0x1
- 452 0039 3F       		.uleb128 0x3f
- 453 003a 19       		.uleb128 0x19
- 454 003b 03       		.uleb128 0x3
- 455 003c 0E       		.uleb128 0xe
- 456 003d 3A       		.uleb128 0x3a
- 457 003e 0B       		.uleb128 0xb
- 458 003f 3B       		.uleb128 0x3b
- 459 0040 0B       		.uleb128 0xb
- 460 0041 27       		.uleb128 0x27
- 461 0042 19       		.uleb128 0x19
- 462 0043 11       		.uleb128 0x11
- 463 0044 01       		.uleb128 0x1
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 10
+ 264 0058 10BD     		pop	{r4, pc}
+ 265              	.LVL44:
+ 266              	.L13:
+ 267 005a 00BF     		.align	2
+ 268              	.L12:
+ 269 005c 00000000 		.word	SoundSpeed
+ 270 0060 00007A44 		.word	1148846080
+ 271 0064 67666666 		.word	1717986919
+ 272 0068 00000000 		.word	digit
+ 273              		.cfi_endproc
+ 274              	.LFE65:
+ 275              		.size	getDigits, .-getDigits
+ 276              		.global	__aeabi_ui2d
+ 277              		.global	__aeabi_dadd
+ 278              		.global	__aeabi_d2uiz
+ 279              		.section	.text.saveDigitsToRAM,"ax",%progbits
+ 280              		.align	2
+ 281              		.global	saveDigitsToRAM
+ 282              		.thumb
+ 283              		.thumb_func
+ 284              		.type	saveDigitsToRAM, %function
+ 285              	saveDigitsToRAM:
+ 286              	.LFB66:
+ 191:main.c        **** 
+ 192:main.c        **** void saveDigitsToRAM() {
+ 287              		.loc 1 192 0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 0
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291 0000 38B5     		push	{r3, r4, r5, lr}
+ 292              		.cfi_def_cfa_offset 16
+ 293              		.cfi_offset 3, -16
+ 294              		.cfi_offset 4, -12
+ 295              		.cfi_offset 5, -8
+ 296              		.cfi_offset 14, -4
+ 297              	.LVL45:
+ 298              	.LBB4:
+ 193:main.c        ****     for(int index = 0; index < 4; index++) { // loop through digits 0 to 3
+ 299              		.loc 1 193 0
+ 300 0002 0024     		movs	r4, #0
+ 301 0004 56E0     		b	.L15
+ 302              	.LVL46:
+ 303              	.L29:
+ 194:main.c        ****         //int currentDigit = powl(2,index);
+ 195:main.c        ****         //Digit_Reg_Write(currentDigit);
+ 196:main.c        ****         
+ 197:main.c        ****         switch(digit[index]) {
+ 304              		.loc 1 197 0
+ 305 0006 2D4B     		ldr	r3, .L31
+ 306 0008 53F82430 		ldr	r3, [r3, r4, lsl #2]
+ 307 000c 092B     		cmp	r3, #9
+ 308 000e 41D8     		bhi	.L16
+ 309 0010 DFE803F0 		tbb	[pc, r3]
+ 310              	.L18:
+ 311 0014 05       		.byte	(.L17-.L18)/2
+ 312 0015 0B       		.byte	(.L19-.L18)/2
+ 313 0016 11       		.byte	(.L20-.L18)/2
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 10
 
 
- 464 0045 12       		.uleb128 0x12
- 465 0046 06       		.uleb128 0x6
- 466 0047 40       		.uleb128 0x40
- 467 0048 18       		.uleb128 0x18
- 468 0049 9742     		.uleb128 0x2117
- 469 004b 19       		.uleb128 0x19
- 470 004c 01       		.uleb128 0x1
- 471 004d 13       		.uleb128 0x13
- 472 004e 00       		.byte	0
- 473 004f 00       		.byte	0
- 474 0050 06       		.uleb128 0x6
- 475 0051 34       		.uleb128 0x34
- 476 0052 00       		.byte	0
- 477 0053 03       		.uleb128 0x3
- 478 0054 0E       		.uleb128 0xe
- 479 0055 3A       		.uleb128 0x3a
- 480 0056 0B       		.uleb128 0xb
- 481 0057 3B       		.uleb128 0x3b
- 482 0058 0B       		.uleb128 0xb
- 483 0059 49       		.uleb128 0x49
- 484 005a 13       		.uleb128 0x13
- 485 005b 00       		.byte	0
- 486 005c 00       		.byte	0
- 487 005d 07       		.uleb128 0x7
- 488 005e 898201   		.uleb128 0x4109
- 489 0061 00       		.byte	0
- 490 0062 11       		.uleb128 0x11
- 491 0063 01       		.uleb128 0x1
- 492 0064 31       		.uleb128 0x31
- 493 0065 13       		.uleb128 0x13
- 494 0066 00       		.byte	0
- 495 0067 00       		.byte	0
- 496 0068 08       		.uleb128 0x8
- 497 0069 2E       		.uleb128 0x2e
- 498 006a 01       		.byte	0x1
- 499 006b 3F       		.uleb128 0x3f
- 500 006c 19       		.uleb128 0x19
- 501 006d 03       		.uleb128 0x3
- 502 006e 0E       		.uleb128 0xe
- 503 006f 3A       		.uleb128 0x3a
- 504 0070 0B       		.uleb128 0xb
- 505 0071 3B       		.uleb128 0x3b
- 506 0072 0B       		.uleb128 0xb
- 507 0073 27       		.uleb128 0x27
- 508 0074 19       		.uleb128 0x19
- 509 0075 49       		.uleb128 0x49
- 510 0076 13       		.uleb128 0x13
- 511 0077 8701     		.uleb128 0x87
- 512 0079 19       		.uleb128 0x19
- 513 007a 11       		.uleb128 0x11
- 514 007b 01       		.uleb128 0x1
- 515 007c 12       		.uleb128 0x12
- 516 007d 06       		.uleb128 0x6
- 517 007e 40       		.uleb128 0x40
- 518 007f 18       		.uleb128 0x18
- 519 0080 9642     		.uleb128 0x2116
- 520 0082 19       		.uleb128 0x19
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 11
+ 314 0017 17       		.byte	(.L21-.L18)/2
+ 315 0018 1D       		.byte	(.L22-.L18)/2
+ 316 0019 23       		.byte	(.L23-.L18)/2
+ 317 001a 29       		.byte	(.L24-.L18)/2
+ 318 001b 2F       		.byte	(.L25-.L18)/2
+ 319 001c 35       		.byte	(.L26-.L18)/2
+ 320 001d 3B       		.byte	(.L27-.L18)/2
+ 321              		.p2align 1
+ 322              	.L17:
+ 198:main.c        ****         case 0:
+ 199:main.c        ****             //Seven_Segment_Reg_Write(zero);
+ 200:main.c        ****             displayData[index] = zero;
+ 323              		.loc 1 200 0
+ 324 001e 284B     		ldr	r3, .L31+4
+ 325 0020 1A68     		ldr	r2, [r3]
+ 326 0022 284B     		ldr	r3, .L31+8
+ 327 0024 43F82420 		str	r2, [r3, r4, lsl #2]
+ 201:main.c        ****             break;
+ 328              		.loc 1 201 0
+ 329 0028 34E0     		b	.L16
+ 330              	.L19:
+ 202:main.c        ****         case 1:
+ 203:main.c        ****             //Seven_Segment_Reg_Write(one);
+ 204:main.c        ****             displayData[index] = one;
+ 331              		.loc 1 204 0
+ 332 002a 254B     		ldr	r3, .L31+4
+ 333 002c 5A68     		ldr	r2, [r3, #4]
+ 334 002e 254B     		ldr	r3, .L31+8
+ 335 0030 43F82420 		str	r2, [r3, r4, lsl #2]
+ 205:main.c        ****             break;
+ 336              		.loc 1 205 0
+ 337 0034 2EE0     		b	.L16
+ 338              	.L20:
+ 206:main.c        ****         case 2:
+ 207:main.c        ****             //Seven_Segment_Reg_Write(two);
+ 208:main.c        ****             displayData[index] = two;
+ 339              		.loc 1 208 0
+ 340 0036 224B     		ldr	r3, .L31+4
+ 341 0038 9A68     		ldr	r2, [r3, #8]
+ 342 003a 224B     		ldr	r3, .L31+8
+ 343 003c 43F82420 		str	r2, [r3, r4, lsl #2]
+ 209:main.c        ****             break;
+ 344              		.loc 1 209 0
+ 345 0040 28E0     		b	.L16
+ 346              	.L21:
+ 210:main.c        ****         case 3:
+ 211:main.c        ****             //Seven_Segment_Reg_Write(three);
+ 212:main.c        ****             displayData[index] = three;
+ 347              		.loc 1 212 0
+ 348 0042 1F4B     		ldr	r3, .L31+4
+ 349 0044 DA68     		ldr	r2, [r3, #12]
+ 350 0046 1F4B     		ldr	r3, .L31+8
+ 351 0048 43F82420 		str	r2, [r3, r4, lsl #2]
+ 213:main.c        ****             break;
+ 352              		.loc 1 213 0
+ 353 004c 22E0     		b	.L16
+ 354              	.L22:
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 11
 
 
- 521 0083 01       		.uleb128 0x1
- 522 0084 13       		.uleb128 0x13
- 523 0085 00       		.byte	0
- 524 0086 00       		.byte	0
- 525 0087 09       		.uleb128 0x9
- 526 0088 34       		.uleb128 0x34
- 527 0089 00       		.byte	0
- 528 008a 03       		.uleb128 0x3
- 529 008b 0E       		.uleb128 0xe
- 530 008c 3A       		.uleb128 0x3a
- 531 008d 0B       		.uleb128 0xb
- 532 008e 3B       		.uleb128 0x3b
- 533 008f 05       		.uleb128 0x5
- 534 0090 49       		.uleb128 0x49
- 535 0091 13       		.uleb128 0x13
- 536 0092 3F       		.uleb128 0x3f
- 537 0093 19       		.uleb128 0x19
- 538 0094 3C       		.uleb128 0x3c
- 539 0095 19       		.uleb128 0x19
- 540 0096 00       		.byte	0
- 541 0097 00       		.byte	0
- 542 0098 0A       		.uleb128 0xa
- 543 0099 35       		.uleb128 0x35
- 544 009a 00       		.byte	0
- 545 009b 49       		.uleb128 0x49
- 546 009c 13       		.uleb128 0x13
- 547 009d 00       		.byte	0
- 548 009e 00       		.byte	0
- 549 009f 0B       		.uleb128 0xb
- 550 00a0 34       		.uleb128 0x34
- 551 00a1 00       		.byte	0
- 552 00a2 03       		.uleb128 0x3
- 553 00a3 0E       		.uleb128 0xe
- 554 00a4 3A       		.uleb128 0x3a
- 555 00a5 0B       		.uleb128 0xb
- 556 00a6 3B       		.uleb128 0x3b
- 557 00a7 0B       		.uleb128 0xb
- 558 00a8 49       		.uleb128 0x49
- 559 00a9 13       		.uleb128 0x13
- 560 00aa 3F       		.uleb128 0x3f
- 561 00ab 19       		.uleb128 0x19
- 562 00ac 02       		.uleb128 0x2
- 563 00ad 18       		.uleb128 0x18
- 564 00ae 00       		.byte	0
- 565 00af 00       		.byte	0
- 566 00b0 0C       		.uleb128 0xc
- 567 00b1 2E       		.uleb128 0x2e
- 568 00b2 00       		.byte	0
- 569 00b3 3F       		.uleb128 0x3f
- 570 00b4 19       		.uleb128 0x19
- 571 00b5 3C       		.uleb128 0x3c
- 572 00b6 19       		.uleb128 0x19
- 573 00b7 6E       		.uleb128 0x6e
- 574 00b8 0E       		.uleb128 0xe
- 575 00b9 03       		.uleb128 0x3
- 576 00ba 0E       		.uleb128 0xe
- 577 00bb 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 12
+ 214:main.c        ****         case 4:
+ 215:main.c        ****             //Seven_Segment_Reg_Write(four);
+ 216:main.c        ****             displayData[index] = four;
+ 355              		.loc 1 216 0
+ 356 004e 1C4B     		ldr	r3, .L31+4
+ 357 0050 1A69     		ldr	r2, [r3, #16]
+ 358 0052 1C4B     		ldr	r3, .L31+8
+ 359 0054 43F82420 		str	r2, [r3, r4, lsl #2]
+ 217:main.c        ****             break;
+ 360              		.loc 1 217 0
+ 361 0058 1CE0     		b	.L16
+ 362              	.L23:
+ 218:main.c        ****         case 5:
+ 219:main.c        ****             //Seven_Segment_Reg_Write(five);
+ 220:main.c        ****             displayData[index] = five;
+ 363              		.loc 1 220 0
+ 364 005a 194B     		ldr	r3, .L31+4
+ 365 005c 5A69     		ldr	r2, [r3, #20]
+ 366 005e 194B     		ldr	r3, .L31+8
+ 367 0060 43F82420 		str	r2, [r3, r4, lsl #2]
+ 221:main.c        ****             break;
+ 368              		.loc 1 221 0
+ 369 0064 16E0     		b	.L16
+ 370              	.L24:
+ 222:main.c        ****         case 6:
+ 223:main.c        ****             //Seven_Segment_Reg_Write(six);
+ 224:main.c        ****             displayData[index] = six;
+ 371              		.loc 1 224 0
+ 372 0066 164B     		ldr	r3, .L31+4
+ 373 0068 9A69     		ldr	r2, [r3, #24]
+ 374 006a 164B     		ldr	r3, .L31+8
+ 375 006c 43F82420 		str	r2, [r3, r4, lsl #2]
+ 225:main.c        ****             break;
+ 376              		.loc 1 225 0
+ 377 0070 10E0     		b	.L16
+ 378              	.L25:
+ 226:main.c        ****         case 7:
+ 227:main.c        ****             //Seven_Segment_Reg_Write(seven);
+ 228:main.c        ****             displayData[index] = seven;
+ 379              		.loc 1 228 0
+ 380 0072 134B     		ldr	r3, .L31+4
+ 381 0074 DA69     		ldr	r2, [r3, #28]
+ 382 0076 134B     		ldr	r3, .L31+8
+ 383 0078 43F82420 		str	r2, [r3, r4, lsl #2]
+ 229:main.c        ****             break;
+ 384              		.loc 1 229 0
+ 385 007c 0AE0     		b	.L16
+ 386              	.L26:
+ 230:main.c        ****         case 8:
+ 231:main.c        ****             //Seven_Segment_Reg_Write(eight);
+ 232:main.c        ****             displayData[index] = eight;
+ 387              		.loc 1 232 0
+ 388 007e 104B     		ldr	r3, .L31+4
+ 389 0080 1A6A     		ldr	r2, [r3, #32]
+ 390 0082 104B     		ldr	r3, .L31+8
+ 391 0084 43F82420 		str	r2, [r3, r4, lsl #2]
+ 233:main.c        ****             break;
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 12
 
 
- 578 00bc 0B       		.uleb128 0xb
- 579 00bd 3B       		.uleb128 0x3b
- 580 00be 0B       		.uleb128 0xb
- 581 00bf 00       		.byte	0
- 582 00c0 00       		.byte	0
- 583 00c1 00       		.byte	0
- 584              		.section	.debug_aranges,"",%progbits
- 585 0000 24000000 		.4byte	0x24
- 586 0004 0200     		.2byte	0x2
- 587 0006 00000000 		.4byte	.Ldebug_info0
- 588 000a 04       		.byte	0x4
- 589 000b 00       		.byte	0
- 590 000c 0000     		.2byte	0
- 591 000e 0000     		.2byte	0
- 592 0010 00000000 		.4byte	.LFB63
- 593 0014 08000000 		.4byte	.LFE63-.LFB63
- 594 0018 00000000 		.4byte	.LFB64
- 595 001c 80000000 		.4byte	.LFE64-.LFB64
- 596 0020 00000000 		.4byte	0
- 597 0024 00000000 		.4byte	0
- 598              		.section	.debug_ranges,"",%progbits
- 599              	.Ldebug_ranges0:
- 600 0000 00000000 		.4byte	.LFB63
- 601 0004 08000000 		.4byte	.LFE63
- 602 0008 00000000 		.4byte	.LFB64
- 603 000c 80000000 		.4byte	.LFE64
- 604 0010 00000000 		.4byte	0
- 605 0014 00000000 		.4byte	0
- 606              		.section	.debug_line,"",%progbits
- 607              	.Ldebug_line0:
- 608 0000 CE010000 		.section	.debug_str,"MS",%progbits,1
- 608      02009C01 
- 608      00000201 
- 608      FB0E0D00 
- 608      01010101 
- 609              	.LASF31:
- 610 0000 556C7472 		.ascii	"Ultrasonic_Drive_Start\000"
- 610      61736F6E 
- 610      69635F44 
- 610      72697665 
- 610      5F537461 
- 611              	.LASF27:
- 612 0017 5047415F 		.ascii	"PGA_1_Start\000"
- 612      315F5374 
- 612      61727400 
- 613              	.LASF30:
- 614 0023 56737361 		.ascii	"Vssa_Buffer_Start\000"
- 614      5F427566 
- 614      6665725F 
- 614      53746172 
- 614      7400
- 615              	.LASF9:
- 616 0035 5F5F696E 		.ascii	"__int32_t\000"
- 616      7433325F 
- 616      7400
- 617              	.LASF16:
- 618 003f 46545F43 		.ascii	"FT_Count\000"
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 13
+ 392              		.loc 1 233 0
+ 393 0088 04E0     		b	.L16
+ 394              	.L27:
+ 234:main.c        ****         case 9:
+ 235:main.c        ****             //Seven_Segment_Reg_Write(nine);
+ 236:main.c        ****             displayData[index] = nine;
+ 395              		.loc 1 236 0
+ 396 008a 0D4B     		ldr	r3, .L31+4
+ 397 008c 5A6A     		ldr	r2, [r3, #36]
+ 398 008e 0D4B     		ldr	r3, .L31+8
+ 399 0090 43F82420 		str	r2, [r3, r4, lsl #2]
+ 400              	.L16:
+ 237:main.c        ****             break;
+ 238:main.c        ****         }
+ 239:main.c        ****         
+ 240:main.c        ****         if(index == 1) { // 2nd most significant digit
+ 401              		.loc 1 240 0
+ 402 0094 012C     		cmp	r4, #1
+ 403 0096 0CD1     		bne	.L28
+ 241:main.c        ****             displayData[index] = displayData[index] + powl(2,7); //unsure if works
+ 404              		.loc 1 241 0
+ 405 0098 0A4D     		ldr	r5, .L31+8
+ 406 009a 55F82400 		ldr	r0, [r5, r4, lsl #2]
+ 407 009e FFF7FEFF 		bl	__aeabi_ui2d
+ 408              	.LVL47:
+ 409 00a2 0022     		movs	r2, #0
+ 410 00a4 084B     		ldr	r3, .L31+12
+ 411 00a6 FFF7FEFF 		bl	__aeabi_dadd
+ 412              	.LVL48:
+ 413 00aa FFF7FEFF 		bl	__aeabi_d2uiz
+ 414              	.LVL49:
+ 415 00ae 45F82400 		str	r0, [r5, r4, lsl #2]
+ 416              	.L28:
+ 193:main.c        ****         //int currentDigit = powl(2,index);
+ 417              		.loc 1 193 0 discriminator 2
+ 418 00b2 0134     		adds	r4, r4, #1
+ 419              	.LVL50:
+ 420              	.L15:
+ 193:main.c        ****         //int currentDigit = powl(2,index);
+ 421              		.loc 1 193 0 is_stmt 0 discriminator 1
+ 422 00b4 032C     		cmp	r4, #3
+ 423 00b6 A6DD     		ble	.L29
+ 424              	.LBE4:
+ 242:main.c        ****         }
+ 243:main.c        ****     }
+ 244:main.c        ****     
+ 245:main.c        ****     // digit pin high = digit SELECTED
+ 246:main.c        ****     // segment pin low = segment ILLUMINATED
+ 247:main.c        **** }
+ 425              		.loc 1 247 0 is_stmt 1
+ 426 00b8 38BD     		pop	{r3, r4, r5, pc}
+ 427              	.LVL51:
+ 428              	.L32:
+ 429 00ba 00BF     		.align	2
+ 430              	.L31:
+ 431 00bc 00000000 		.word	digit
+ 432 00c0 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 13
 
 
- 618      6F756E74 
- 618      00
- 619              	.LASF36:
- 620 0048 466C6967 		.ascii	"Flight_Timer_ISR\000"
- 620      68745F54 
- 620      696D6572 
- 620      5F495352 
- 620      00
- 621              	.LASF35:
- 622 0059 433A5C55 		.ascii	"C:\\Users\\Kurty\\Documents\\Ultrasonic GitHub (TRC"
- 622      73657273 
- 622      5C4B7572 
- 622      74795C44 
- 622      6F63756D 
- 623 0088 33353030 		.ascii	"3500)\\Ultrasonic-PSoC\\Ultrasonic Sensor Workspace"
- 623      295C556C 
- 623      74726173 
- 623      6F6E6963 
- 623      2D50536F 
- 624 00b9 5C556C74 		.ascii	"\\Ultrasonic Distance Meter.cydsn\000"
- 624      7261736F 
- 624      6E696320 
- 624      44697374 
- 624      616E6365 
- 625              	.LASF25:
- 626 00da 536F756E 		.ascii	"SoundSpeed\000"
- 626      64537065 
- 626      656400
- 627              	.LASF11:
- 628 00e5 666C6F61 		.ascii	"float\000"
- 628      7400
- 629              	.LASF1:
- 630 00eb 756E7369 		.ascii	"unsigned char\000"
- 630      676E6564 
- 630      20636861 
- 630      7200
- 631              	.LASF18:
- 632 00f9 44697374 		.ascii	"Distance\000"
- 632      616E6365 
- 632      00
- 633              	.LASF5:
- 634 0102 6C6F6E67 		.ascii	"long unsigned int\000"
- 634      20756E73 
- 634      69676E65 
- 634      6420696E 
- 634      7400
- 635              	.LASF3:
- 636 0114 73686F72 		.ascii	"short unsigned int\000"
- 636      7420756E 
- 636      7369676E 
- 636      65642069 
- 636      6E7400
- 637              	.LASF23:
- 638 0127 46545F54 		.ascii	"FT_Time_Per_Tick_uS\000"
- 638      696D655F 
- 638      5065725F 
- 638      5469636B 
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 14
+ 433 00c4 00000000 		.word	displayData
+ 434 00c8 00006040 		.word	1080033280
+ 435              		.cfi_endproc
+ 436              	.LFE66:
+ 437              		.size	saveDigitsToRAM, .-saveDigitsToRAM
+ 438              		.section	.text.Flight_Timer_ISR,"ax",%progbits
+ 439              		.align	2
+ 440              		.global	Flight_Timer_ISR
+ 441              		.thumb
+ 442              		.thumb_func
+ 443              		.type	Flight_Timer_ISR, %function
+ 444              	Flight_Timer_ISR:
+ 445              	.LFB63:
+  55:main.c        ****     // Triggers once ultrasonic receives a pulse back
+ 446              		.loc 1 55 0
+ 447              		.cfi_startproc
+ 448              		@ args = 0, pretend = 0, frame = 0
+ 449              		@ frame_needed = 0, uses_anonymous_args = 0
+ 450 0000 08B5     		push	{r3, lr}
+ 451              		.cfi_def_cfa_offset 8
+ 452              		.cfi_offset 3, -8
+ 453              		.cfi_offset 14, -4
+  58:main.c        ****     float FlightTime = FT_Count * FT_Time_Per_Tick;
+ 454              		.loc 1 58 0
+ 455 0002 FFF7FEFF 		bl	Flight_Timer_ReadCapture
+ 456              	.LVL52:
+  59:main.c        ****     getDigits(FlightTime);
+ 457              		.loc 1 59 0
+ 458 0006 FFF7FEFF 		bl	__aeabi_i2f
+ 459              	.LVL53:
+ 460 000a 084B     		ldr	r3, .L35
+ 461 000c 1968     		ldr	r1, [r3]	@ float
+ 462 000e FFF7FEFF 		bl	__aeabi_fmul
+ 463              	.LVL54:
+  60:main.c        ****     saveDigitsToRAM();
+ 464              		.loc 1 60 0
+ 465 0012 FFF7FEFF 		bl	getDigits
+ 466              	.LVL55:
+  61:main.c        ****     
+ 467              		.loc 1 61 0
+ 468 0016 FFF7FEFF 		bl	saveDigitsToRAM
+ 469              	.LVL56:
+  63:main.c        ****     Flight_Timer_Reset_Reg_Write(1);
+ 470              		.loc 1 63 0
+ 471 001a FFF7FEFF 		bl	isr_1_ClearPending
+ 472              	.LVL57:
+  64:main.c        ****     Flight_Timer_Reset_Reg_Write(0);
+ 473              		.loc 1 64 0
+ 474 001e 0120     		movs	r0, #1
+ 475 0020 FFF7FEFF 		bl	Flight_Timer_Reset_Reg_Write
+ 476              	.LVL58:
+  65:main.c        ****     
+ 477              		.loc 1 65 0
+ 478 0024 0020     		movs	r0, #0
+ 479 0026 FFF7FEFF 		bl	Flight_Timer_Reset_Reg_Write
+ 480              	.LVL59:
+ 481 002a 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 14
 
 
- 638      5F755300 
- 639              	.LASF19:
- 640 013b 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 640      52784275 
- 640      66666572 
- 640      00
- 641              	.LASF28:
- 642 0148 56444143 		.ascii	"VDAC8_1_Start\000"
- 642      385F315F 
- 642      53746172 
- 642      7400
- 643              	.LASF12:
- 644 0156 646F7562 		.ascii	"double\000"
- 644      6C6500
- 645              	.LASF17:
- 646 015d 466C6967 		.ascii	"FlightTime\000"
- 646      68745469 
- 646      6D6500
- 647              	.LASF2:
- 648 0168 73686F72 		.ascii	"short int\000"
- 648      7420696E 
- 648      7400
- 649              	.LASF37:
- 650 0172 6D61696E 		.ascii	"main\000"
- 650      00
- 651              	.LASF8:
- 652 0177 756E7369 		.ascii	"unsigned int\000"
- 652      676E6564 
- 652      20696E74 
- 652      00
- 653              	.LASF20:
- 654 0184 46545F50 		.ascii	"FT_Period_Int\000"
- 654      6572696F 
- 654      645F496E 
- 654      7400
- 655              	.LASF7:
- 656 0192 6C6F6E67 		.ascii	"long long unsigned int\000"
- 656      206C6F6E 
- 656      6720756E 
- 656      7369676E 
- 656      65642069 
- 657              	.LASF33:
- 658 01a9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 658      43313120 
- 658      352E342E 
- 658      31203230 
- 658      31363036 
- 659 01dc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 659      20726576 
- 659      6973696F 
- 659      6E203233 
- 659      37373135 
- 660 020f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 660      66756E63 
- 660      74696F6E 
- 660      2D736563 
- 660      74696F6E 
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 15
+ 482              	.L36:
+ 483              		.align	2
+ 484              	.L35:
+ 485 002c 00000000 		.word	FT_Time_Per_Tick
+ 486              		.cfi_endproc
+ 487              	.LFE63:
+ 488              		.size	Flight_Timer_ISR, .-Flight_Timer_ISR
+ 489              		.comm	digit,16,4
+ 490              		.comm	displayData,16,4
+ 491              		.global	digitZero
+ 492              		.global	digitOne
+ 493              		.global	digitTwo
+ 494              		.global	digitThree
+ 495              		.global	nine
+ 496              		.global	eight
+ 497              		.global	seven
+ 498              		.global	six
+ 499              		.global	five
+ 500              		.global	four
+ 501              		.global	three
+ 502              		.global	two
+ 503              		.global	one
+ 504              		.global	zero
+ 505              		.comm	decimalPlaces,4,4
+ 506              		.comm	Seg1Count,4,4
+ 507              		.comm	Seg10Count,4,4
+ 508              		.comm	Seg100Count,4,4
+ 509              		.comm	Seg1000Count,4,4
+ 510              		.comm	SoundSpeed,4,4
+ 511              		.comm	FT_Time_Per_Tick,4,4
+ 512              		.comm	FT_Time_Per_Tick_uS,4,4
+ 513              		.comm	FT_Resolution,4,4
+ 514              		.comm	FT_Period_uS,4,4
+ 515              		.comm	FT_Period_Int,4,4
+ 516              		.data
+ 517              		.align	2
+ 518              		.set	.LANCHOR0,. + 0
+ 519              		.type	zero, %object
+ 520              		.size	zero, 4
+ 521              	zero:
+ 522 0000 C0000000 		.word	192
+ 523              		.type	one, %object
+ 524              		.size	one, 4
+ 525              	one:
+ 526 0004 F9000000 		.word	249
+ 527              		.type	two, %object
+ 528              		.size	two, 4
+ 529              	two:
+ 530 0008 A4000000 		.word	164
+ 531              		.type	three, %object
+ 532              		.size	three, 4
+ 533              	three:
+ 534 000c B0000000 		.word	176
+ 535              		.type	four, %object
+ 536              		.size	four, 4
+ 537              	four:
+ 538 0010 99000000 		.word	153
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 15
 
 
- 661              	.LASF10:
- 662 0237 696E7433 		.ascii	"int32_t\000"
- 662      325F7400 
- 663              	.LASF15:
- 664 023f 73697A65 		.ascii	"sizetype\000"
- 664      74797065 
- 664      00
- 665              	.LASF24:
- 666 0248 46545F54 		.ascii	"FT_Time_Per_Tick\000"
- 666      696D655F 
- 666      5065725F 
- 666      5469636B 
- 666      00
- 667              	.LASF6:
- 668 0259 6C6F6E67 		.ascii	"long long int\000"
- 668      206C6F6E 
- 668      6720696E 
- 668      7400
- 669              	.LASF34:
- 670 0267 6D61696E 		.ascii	"main.c\000"
- 670      2E6300
- 671              	.LASF13:
- 672 026e 63686172 		.ascii	"char\000"
- 672      00
- 673              	.LASF32:
- 674 0273 466C6967 		.ascii	"Flight_Timer_ReadPeriod\000"
- 674      68745F54 
- 674      696D6572 
- 674      5F526561 
- 674      64506572 
- 675              	.LASF22:
- 676 028b 46545F52 		.ascii	"FT_Resolution\000"
- 676      65736F6C 
- 676      7574696F 
- 676      6E00
- 677              	.LASF4:
- 678 0299 6C6F6E67 		.ascii	"long int\000"
- 678      20696E74 
- 678      00
- 679              	.LASF26:
- 680 02a2 466C6967 		.ascii	"Flight_Timer_ReadCounter\000"
- 680      68745F54 
- 680      696D6572 
- 680      5F526561 
- 680      64436F75 
- 681              	.LASF21:
- 682 02bb 46545F50 		.ascii	"FT_Period_uS\000"
- 682      6572696F 
- 682      645F7553 
- 682      00
- 683              	.LASF14:
- 684 02c8 6C6F6E67 		.ascii	"long double\000"
- 684      20646F75 
- 684      626C6500 
- 685              	.LASF0:
- 686 02d4 7369676E 		.ascii	"signed char\000"
- 686      65642063 
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cc4q6fqW.s 			page 16
+ 539              		.type	five, %object
+ 540              		.size	five, 4
+ 541              	five:
+ 542 0014 92000000 		.word	146
+ 543              		.type	six, %object
+ 544              		.size	six, 4
+ 545              	six:
+ 546 0018 82000000 		.word	130
+ 547              		.type	seven, %object
+ 548              		.size	seven, 4
+ 549              	seven:
+ 550 001c F8000000 		.word	248
+ 551              		.type	eight, %object
+ 552              		.size	eight, 4
+ 553              	eight:
+ 554 0020 80000000 		.word	128
+ 555              		.type	nine, %object
+ 556              		.size	nine, 4
+ 557              	nine:
+ 558 0024 98000000 		.word	152
+ 559              		.type	digitZero, %object
+ 560              		.size	digitZero, 4
+ 561              	digitZero:
+ 562 0028 08000000 		.word	8
+ 563              		.type	digitOne, %object
+ 564              		.size	digitOne, 4
+ 565              	digitOne:
+ 566 002c 04000000 		.word	4
+ 567              		.type	digitTwo, %object
+ 568              		.size	digitTwo, 4
+ 569              	digitTwo:
+ 570 0030 02000000 		.word	2
+ 571              		.type	digitThree, %object
+ 572              		.size	digitThree, 4
+ 573              	digitThree:
+ 574 0034 01000000 		.word	1
+ 575              		.text
+ 576              	.Letext0:
+ 577              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 578              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 579              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 580              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 581              		.file 6 "Generated_Source\\PSoC5/Digit_Reg.h"
+ 582              		.file 7 "Generated_Source\\PSoC5/Seven_Segment_Reg.h"
+ 583              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 584              		.file 9 "Generated_Source\\PSoC5/isr_1.h"
+ 585              		.file 10 "Generated_Source\\PSoC5/PGA_1.h"
+ 586              		.file 11 "Generated_Source\\PSoC5/VDAC8_1.h"
+ 587              		.file 12 "Generated_Source\\PSoC5/Comp_1.h"
+ 588              		.file 13 "Generated_Source\\PSoC5/Vssa_Buffer.h"
+ 589              		.file 14 "Generated_Source\\PSoC5/Ultrasonic_Drive.h"
+ 590              		.file 15 "Generated_Source\\PSoC5/Flight_Timer.h"
+ 591              		.file 16 "Generated_Source\\PSoC5/Ultrasonic_Pulse_Counter.h"
+ 592              		.file 17 "Generated_Source\\PSoC5/Flight_Timer_Clock.h"
+ 593              		.file 18 "Generated_Source\\PSoC5/Flight_Timer_Reset_Reg.h"
+ 594              		.section	.debug_info,"",%progbits
+ 595              	.Ldebug_info0:
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 16
 
 
- 686      68617200 
- 687              	.LASF29:
- 688 02e0 436F6D70 		.ascii	"Comp_1_Start\000"
- 688      5F315F53 
- 688      74617274 
- 688      00
- 689              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 596 0000 96050000 		.4byte	0x596
+ 597 0004 0400     		.2byte	0x4
+ 598 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 599 000a 04       		.byte	0x4
+ 600 000b 01       		.uleb128 0x1
+ 601 000c E1030000 		.4byte	.LASF68
+ 602 0010 0C       		.byte	0xc
+ 603 0011 3B030000 		.4byte	.LASF69
+ 604 0015 FA000000 		.4byte	.LASF70
+ 605 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 606 001d 00000000 		.4byte	0
+ 607 0021 00000000 		.4byte	.Ldebug_line0
+ 608 0025 02       		.uleb128 0x2
+ 609 0026 04       		.byte	0x4
+ 610 0027 04       		.byte	0x4
+ 611 0028 D9000000 		.4byte	.LASF0
+ 612 002c 02       		.uleb128 0x2
+ 613 002d 01       		.byte	0x1
+ 614 002e 06       		.byte	0x6
+ 615 002f 18020000 		.4byte	.LASF1
+ 616 0033 02       		.uleb128 0x2
+ 617 0034 01       		.byte	0x1
+ 618 0035 08       		.byte	0x8
+ 619 0036 ED010000 		.4byte	.LASF2
+ 620 003a 02       		.uleb128 0x2
+ 621 003b 02       		.byte	0x2
+ 622 003c 05       		.byte	0x5
+ 623 003d 34000000 		.4byte	.LASF3
+ 624 0041 02       		.uleb128 0x2
+ 625 0042 02       		.byte	0x2
+ 626 0043 07       		.byte	0x7
+ 627 0044 8A020000 		.4byte	.LASF4
+ 628 0048 03       		.uleb128 0x3
+ 629 0049 7D030000 		.4byte	.LASF10
+ 630 004d 02       		.byte	0x2
+ 631 004e 3F       		.byte	0x3f
+ 632 004f 53000000 		.4byte	0x53
+ 633 0053 02       		.uleb128 0x2
+ 634 0054 04       		.byte	0x4
+ 635 0055 05       		.byte	0x5
+ 636 0056 81010000 		.4byte	.LASF5
+ 637 005a 02       		.uleb128 0x2
+ 638 005b 04       		.byte	0x4
+ 639 005c 07       		.byte	0x7
+ 640 005d 42030000 		.4byte	.LASF6
+ 641 0061 02       		.uleb128 0x2
+ 642 0062 08       		.byte	0x8
+ 643 0063 05       		.byte	0x5
+ 644 0064 4C000000 		.4byte	.LASF7
+ 645 0068 02       		.uleb128 0x2
+ 646 0069 08       		.byte	0x8
+ 647 006a 07       		.byte	0x7
+ 648 006b 2C020000 		.4byte	.LASF8
+ 649 006f 04       		.uleb128 0x4
+ 650 0070 04       		.byte	0x4
+ 651 0071 05       		.byte	0x5
+ 652 0072 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 17
+
+
+ 653 0076 02       		.uleb128 0x2
+ 654 0077 04       		.byte	0x4
+ 655 0078 07       		.byte	0x7
+ 656 0079 56020000 		.4byte	.LASF9
+ 657 007d 03       		.uleb128 0x3
+ 658 007e 24020000 		.4byte	.LASF11
+ 659 0082 03       		.byte	0x3
+ 660 0083 2C       		.byte	0x2c
+ 661 0084 48000000 		.4byte	0x48
+ 662 0088 02       		.uleb128 0x2
+ 663 0089 08       		.byte	0x8
+ 664 008a 04       		.byte	0x4
+ 665 008b 54030000 		.4byte	.LASF12
+ 666 008f 02       		.uleb128 0x2
+ 667 0090 01       		.byte	0x1
+ 668 0091 08       		.byte	0x8
+ 669 0092 B1020000 		.4byte	.LASF13
+ 670 0096 02       		.uleb128 0x2
+ 671 0097 08       		.byte	0x8
+ 672 0098 04       		.byte	0x4
+ 673 0099 E1010000 		.4byte	.LASF14
+ 674 009d 02       		.uleb128 0x2
+ 675 009e 04       		.byte	0x4
+ 676 009f 07       		.byte	0x7
+ 677 00a0 8A010000 		.4byte	.LASF15
+ 678 00a4 05       		.uleb128 0x5
+ 679 00a5 C0020000 		.4byte	.LASF71
+ 680 00a9 01       		.byte	0x1
+ 681 00aa 4B       		.byte	0x4b
+ 682 00ab 6F000000 		.4byte	0x6f
+ 683 00af 00000000 		.4byte	.LFB64
+ 684 00b3 E4000000 		.4byte	.LFE64-.LFB64
+ 685 00b7 01       		.uleb128 0x1
+ 686 00b8 9C       		.byte	0x9c
+ 687 00b9 BC010000 		.4byte	0x1bc
+ 688 00bd 06       		.uleb128 0x6
+ 689 00be 82000000 		.4byte	.LBB2
+ 690 00c2 62000000 		.4byte	.LBE2-.LBB2
+ 691 00c6 1D010000 		.4byte	0x11d
+ 692 00ca 07       		.uleb128 0x7
+ 693 00cb A5000000 		.4byte	.LASF16
+ 694 00cf 01       		.byte	0x1
+ 695 00d0 83       		.byte	0x83
+ 696 00d1 6F000000 		.4byte	0x6f
+ 697 00d5 00000000 		.4byte	.LLST0
+ 698 00d9 08       		.uleb128 0x8
+ 699 00da 86000000 		.4byte	.LBB3
+ 700 00de 2E000000 		.4byte	.LBE3-.LBB3
+ 701 00e2 07       		.uleb128 0x7
+ 702 00e3 82040000 		.4byte	.LASF17
+ 703 00e7 01       		.byte	0x1
+ 704 00e8 84       		.byte	0x84
+ 705 00e9 6F000000 		.4byte	0x6f
+ 706 00ed 1F000000 		.4byte	.LLST1
+ 707 00f1 09       		.uleb128 0x9
+ 708 00f2 9A000000 		.4byte	.LVL23
+ 709 00f6 BC040000 		.4byte	0x4bc
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 18
+
+
+ 710 00fa 09       		.uleb128 0x9
+ 711 00fb A4000000 		.4byte	.LVL26
+ 712 00ff C8040000 		.4byte	0x4c8
+ 713 0103 09       		.uleb128 0x9
+ 714 0104 AE000000 		.4byte	.LVL27
+ 715 0108 D3040000 		.4byte	0x4d3
+ 716 010c 0A       		.uleb128 0xa
+ 717 010d B4000000 		.4byte	.LVL28
+ 718 0111 DE040000 		.4byte	0x4de
+ 719 0115 0B       		.uleb128 0xb
+ 720 0116 01       		.uleb128 0x1
+ 721 0117 50       		.byte	0x50
+ 722 0118 01       		.uleb128 0x1
+ 723 0119 31       		.byte	0x31
+ 724 011a 00       		.byte	0
+ 725 011b 00       		.byte	0
+ 726 011c 00       		.byte	0
+ 727 011d 09       		.uleb128 0x9
+ 728 011e 08000000 		.4byte	.LVL0
+ 729 0122 E9040000 		.4byte	0x4e9
+ 730 0126 0C       		.uleb128 0xc
+ 731 0127 0E000000 		.4byte	.LVL1
+ 732 012b F4040000 		.4byte	0x4f4
+ 733 012f 3D010000 		.4byte	0x13d
+ 734 0133 0B       		.uleb128 0xb
+ 735 0134 01       		.uleb128 0x1
+ 736 0135 50       		.byte	0x50
+ 737 0136 05       		.uleb128 0x5
+ 738 0137 03       		.byte	0x3
+ 739 0138 00000000 		.4byte	Flight_Timer_ISR
+ 740 013c 00       		.byte	0
+ 741 013d 09       		.uleb128 0x9
+ 742 013e 12000000 		.4byte	.LVL2
+ 743 0142 FF040000 		.4byte	0x4ff
+ 744 0146 09       		.uleb128 0x9
+ 745 0147 16000000 		.4byte	.LVL3
+ 746 014b 0A050000 		.4byte	0x50a
+ 747 014f 09       		.uleb128 0x9
+ 748 0150 1A000000 		.4byte	.LVL4
+ 749 0154 15050000 		.4byte	0x515
+ 750 0158 09       		.uleb128 0x9
+ 751 0159 1E000000 		.4byte	.LVL5
+ 752 015d 20050000 		.4byte	0x520
+ 753 0161 09       		.uleb128 0x9
+ 754 0162 22000000 		.4byte	.LVL6
+ 755 0166 2B050000 		.4byte	0x52b
+ 756 016a 09       		.uleb128 0x9
+ 757 016b 26000000 		.4byte	.LVL7
+ 758 016f 36050000 		.4byte	0x536
+ 759 0173 09       		.uleb128 0x9
+ 760 0174 2A000000 		.4byte	.LVL8
+ 761 0178 41050000 		.4byte	0x541
+ 762 017c 09       		.uleb128 0x9
+ 763 017d 2E000000 		.4byte	.LVL9
+ 764 0181 2B050000 		.4byte	0x52b
+ 765 0185 09       		.uleb128 0x9
+ 766 0186 32000000 		.4byte	.LVL10
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 19
+
+
+ 767 018a 2B050000 		.4byte	0x52b
+ 768 018e 09       		.uleb128 0x9
+ 769 018f 36000000 		.4byte	.LVL11
+ 770 0193 4C050000 		.4byte	0x54c
+ 771 0197 09       		.uleb128 0x9
+ 772 0198 3A000000 		.4byte	.LVL12
+ 773 019c 57050000 		.4byte	0x557
+ 774 01a0 09       		.uleb128 0x9
+ 775 01a1 3E000000 		.4byte	.LVL13
+ 776 01a5 62050000 		.4byte	0x562
+ 777 01a9 09       		.uleb128 0x9
+ 778 01aa 42000000 		.4byte	.LVL14
+ 779 01ae 62050000 		.4byte	0x562
+ 780 01b2 09       		.uleb128 0x9
+ 781 01b3 46000000 		.4byte	.LVL15
+ 782 01b7 6D050000 		.4byte	0x56d
+ 783 01bb 00       		.byte	0
+ 784 01bc 0D       		.uleb128 0xd
+ 785 01bd C6000000 		.4byte	.LASF19
+ 786 01c1 01       		.byte	0x1
+ 787 01c2 91       		.byte	0x91
+ 788 01c3 00000000 		.4byte	.LFB65
+ 789 01c7 6C000000 		.4byte	.LFE65-.LFB65
+ 790 01cb 01       		.uleb128 0x1
+ 791 01cc 9C       		.byte	0x9c
+ 792 01cd 17020000 		.4byte	0x217
+ 793 01d1 0E       		.uleb128 0xe
+ 794 01d2 5B030000 		.4byte	.LASF22
+ 795 01d6 01       		.byte	0x1
+ 796 01d7 91       		.byte	0x91
+ 797 01d8 25000000 		.4byte	0x25
+ 798 01dc 32000000 		.4byte	.LLST2
+ 799 01e0 07       		.uleb128 0x7
+ 800 01e1 B6030000 		.4byte	.LASF18
+ 801 01e5 01       		.byte	0x1
+ 802 01e6 9C       		.byte	0x9c
+ 803 01e7 6F000000 		.4byte	0x6f
+ 804 01eb 60000000 		.4byte	.LLST3
+ 805 01ef 07       		.uleb128 0x7
+ 806 01f0 A5000000 		.4byte	.LASF16
+ 807 01f4 01       		.byte	0x1
+ 808 01f5 A4       		.byte	0xa4
+ 809 01f6 6F000000 		.4byte	0x6f
+ 810 01fa 73000000 		.4byte	.LLST4
+ 811 01fe 07       		.uleb128 0x7
+ 812 01ff 82040000 		.4byte	.LASF17
+ 813 0203 01       		.byte	0x1
+ 814 0204 A9       		.byte	0xa9
+ 815 0205 6F000000 		.4byte	0x6f
+ 816 0209 92000000 		.4byte	.LLST5
+ 817 020d 09       		.uleb128 0x9
+ 818 020e 50000000 		.4byte	.LVL42
+ 819 0212 78050000 		.4byte	0x578
+ 820 0216 00       		.byte	0
+ 821 0217 0F       		.uleb128 0xf
+ 822 0218 EA000000 		.4byte	.LASF72
+ 823 021c 01       		.byte	0x1
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 20
+
+
+ 824 021d C0       		.byte	0xc0
+ 825 021e 00000000 		.4byte	.LFB66
+ 826 0222 CC000000 		.4byte	.LFE66-.LFB66
+ 827 0226 01       		.uleb128 0x1
+ 828 0227 9C       		.byte	0x9c
+ 829 0228 46020000 		.4byte	0x246
+ 830 022c 08       		.uleb128 0x8
+ 831 022d 02000000 		.4byte	.LBB4
+ 832 0231 B6000000 		.4byte	.LBE4-.LBB4
+ 833 0235 07       		.uleb128 0x7
+ 834 0236 A5000000 		.4byte	.LASF16
+ 835 023a 01       		.byte	0x1
+ 836 023b C1       		.byte	0xc1
+ 837 023c 6F000000 		.4byte	0x6f
+ 838 0240 B0000000 		.4byte	.LLST6
+ 839 0244 00       		.byte	0
+ 840 0245 00       		.byte	0
+ 841 0246 0D       		.uleb128 0xd
+ 842 0247 6C030000 		.4byte	.LASF20
+ 843 024b 01       		.byte	0x1
+ 844 024c 37       		.byte	0x37
+ 845 024d 00000000 		.4byte	.LFB63
+ 846 0251 30000000 		.4byte	.LFE63-.LFB63
+ 847 0255 01       		.uleb128 0x1
+ 848 0256 9C       		.byte	0x9c
+ 849 0257 C0020000 		.4byte	0x2c0
+ 850 025b 07       		.uleb128 0x7
+ 851 025c 7B000000 		.4byte	.LASF21
+ 852 0260 01       		.byte	0x1
+ 853 0261 3A       		.byte	0x3a
+ 854 0262 6F000000 		.4byte	0x6f
+ 855 0266 CF000000 		.4byte	.LLST7
+ 856 026a 07       		.uleb128 0x7
+ 857 026b 5B030000 		.4byte	.LASF22
+ 858 026f 01       		.byte	0x1
+ 859 0270 3B       		.byte	0x3b
+ 860 0271 25000000 		.4byte	0x25
+ 861 0275 E2000000 		.4byte	.LLST8
+ 862 0279 09       		.uleb128 0x9
+ 863 027a 06000000 		.4byte	.LVL52
+ 864 027e 83050000 		.4byte	0x583
+ 865 0282 09       		.uleb128 0x9
+ 866 0283 16000000 		.4byte	.LVL55
+ 867 0287 BC010000 		.4byte	0x1bc
+ 868 028b 09       		.uleb128 0x9
+ 869 028c 1A000000 		.4byte	.LVL56
+ 870 0290 17020000 		.4byte	0x217
+ 871 0294 09       		.uleb128 0x9
+ 872 0295 1E000000 		.4byte	.LVL57
+ 873 0299 E9040000 		.4byte	0x4e9
+ 874 029d 0C       		.uleb128 0xc
+ 875 029e 24000000 		.4byte	.LVL58
+ 876 02a2 8E050000 		.4byte	0x58e
+ 877 02a6 B0020000 		.4byte	0x2b0
+ 878 02aa 0B       		.uleb128 0xb
+ 879 02ab 01       		.uleb128 0x1
+ 880 02ac 50       		.byte	0x50
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 21
+
+
+ 881 02ad 01       		.uleb128 0x1
+ 882 02ae 31       		.byte	0x31
+ 883 02af 00       		.byte	0
+ 884 02b0 0A       		.uleb128 0xa
+ 885 02b1 2A000000 		.4byte	.LVL59
+ 886 02b5 8E050000 		.4byte	0x58e
+ 887 02b9 0B       		.uleb128 0xb
+ 888 02ba 01       		.uleb128 0x1
+ 889 02bb 50       		.byte	0x50
+ 890 02bc 01       		.uleb128 0x1
+ 891 02bd 30       		.byte	0x30
+ 892 02be 00       		.byte	0
+ 893 02bf 00       		.byte	0
+ 894 02c0 10       		.uleb128 0x10
+ 895 02c1 D4030000 		.4byte	.LASF23
+ 896 02c5 04       		.byte	0x4
+ 897 02c6 1207     		.2byte	0x712
+ 898 02c8 CC020000 		.4byte	0x2cc
+ 899 02cc 11       		.uleb128 0x11
+ 900 02cd 7D000000 		.4byte	0x7d
+ 901 02d1 12       		.uleb128 0x12
+ 902 02d2 AB000000 		.4byte	.LASF24
+ 903 02d6 01       		.byte	0x1
+ 904 02d7 10       		.byte	0x10
+ 905 02d8 6F000000 		.4byte	0x6f
+ 906 02dc 05       		.uleb128 0x5
+ 907 02dd 03       		.byte	0x3
+ 908 02de 00000000 		.4byte	FT_Period_Int
+ 909 02e2 12       		.uleb128 0x12
+ 910 02e3 A9030000 		.4byte	.LASF25
+ 911 02e7 01       		.byte	0x1
+ 912 02e8 11       		.byte	0x11
+ 913 02e9 6F000000 		.4byte	0x6f
+ 914 02ed 05       		.uleb128 0x5
+ 915 02ee 03       		.byte	0x3
+ 916 02ef 00000000 		.4byte	FT_Period_uS
+ 917 02f3 12       		.uleb128 0x12
+ 918 02f4 3E000000 		.4byte	.LASF26
+ 919 02f8 01       		.byte	0x1
+ 920 02f9 12       		.byte	0x12
+ 921 02fa 6F000000 		.4byte	0x6f
+ 922 02fe 05       		.uleb128 0x5
+ 923 02ff 03       		.byte	0x3
+ 924 0300 00000000 		.4byte	FT_Resolution
+ 925 0304 12       		.uleb128 0x12
+ 926 0305 9D020000 		.4byte	.LASF27
+ 927 0309 01       		.byte	0x1
+ 928 030a 13       		.byte	0x13
+ 929 030b 25000000 		.4byte	0x25
+ 930 030f 05       		.uleb128 0x5
+ 931 0310 03       		.byte	0x3
+ 932 0311 00000000 		.4byte	FT_Time_Per_Tick_uS
+ 933 0315 12       		.uleb128 0x12
+ 934 0316 2A030000 		.4byte	.LASF28
+ 935 031a 01       		.byte	0x1
+ 936 031b 14       		.byte	0x14
+ 937 031c 25000000 		.4byte	0x25
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 22
+
+
+ 938 0320 05       		.uleb128 0x5
+ 939 0321 03       		.byte	0x3
+ 940 0322 00000000 		.4byte	FT_Time_Per_Tick
+ 941 0326 12       		.uleb128 0x12
+ 942 0327 63020000 		.4byte	.LASF29
+ 943 032b 01       		.byte	0x1
+ 944 032c 15       		.byte	0x15
+ 945 032d 6F000000 		.4byte	0x6f
+ 946 0331 05       		.uleb128 0x5
+ 947 0332 03       		.byte	0x3
+ 948 0333 00000000 		.4byte	SoundSpeed
+ 949 0337 12       		.uleb128 0x12
+ 950 0338 B9000000 		.4byte	.LASF30
+ 951 033c 01       		.byte	0x1
+ 952 033d 18       		.byte	0x18
+ 953 033e 6F000000 		.4byte	0x6f
+ 954 0342 05       		.uleb128 0x5
+ 955 0343 03       		.byte	0x3
+ 956 0344 00000000 		.4byte	Seg1000Count
+ 957 0348 12       		.uleb128 0x12
+ 958 0349 A3040000 		.4byte	.LASF31
+ 959 034d 01       		.byte	0x1
+ 960 034e 19       		.byte	0x19
+ 961 034f 6F000000 		.4byte	0x6f
+ 962 0353 05       		.uleb128 0x5
+ 963 0354 03       		.byte	0x3
+ 964 0355 00000000 		.4byte	Seg100Count
+ 965 0359 12       		.uleb128 0x12
+ 966 035a D6010000 		.4byte	.LASF32
+ 967 035e 01       		.byte	0x1
+ 968 035f 1A       		.byte	0x1a
+ 969 0360 6F000000 		.4byte	0x6f
+ 970 0364 05       		.uleb128 0x5
+ 971 0365 03       		.byte	0x3
+ 972 0366 00000000 		.4byte	Seg10Count
+ 973 036a 12       		.uleb128 0x12
+ 974 036b 9F010000 		.4byte	.LASF33
+ 975 036f 01       		.byte	0x1
+ 976 0370 1B       		.byte	0x1b
+ 977 0371 6F000000 		.4byte	0x6f
+ 978 0375 05       		.uleb128 0x5
+ 979 0376 03       		.byte	0x3
+ 980 0377 00000000 		.4byte	Seg1Count
+ 981 037b 12       		.uleb128 0x12
+ 982 037c C5020000 		.4byte	.LASF34
+ 983 0380 01       		.byte	0x1
+ 984 0381 1C       		.byte	0x1c
+ 985 0382 6F000000 		.4byte	0x6f
+ 986 0386 05       		.uleb128 0x5
+ 987 0387 03       		.byte	0x3
+ 988 0388 00000000 		.4byte	decimalPlaces
+ 989 038c 12       		.uleb128 0x12
+ 990 038d 87030000 		.4byte	.LASF35
+ 991 0391 01       		.byte	0x1
+ 992 0392 20       		.byte	0x20
+ 993 0393 6F000000 		.4byte	0x6f
+ 994 0397 05       		.uleb128 0x5
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 23
+
+
+ 995 0398 03       		.byte	0x3
+ 996 0399 00000000 		.4byte	zero
+ 997 039d 13       		.uleb128 0x13
+ 998 039e 6F6E6500 		.ascii	"one\000"
+ 999 03a2 01       		.byte	0x1
+ 1000 03a3 21       		.byte	0x21
+ 1001 03a4 6F000000 		.4byte	0x6f
+ 1002 03a8 05       		.uleb128 0x5
+ 1003 03a9 03       		.byte	0x3
+ 1004 03aa 00000000 		.4byte	one
+ 1005 03ae 13       		.uleb128 0x13
+ 1006 03af 74776F00 		.ascii	"two\000"
+ 1007 03b3 01       		.byte	0x1
+ 1008 03b4 22       		.byte	0x22
+ 1009 03b5 6F000000 		.4byte	0x6f
+ 1010 03b9 05       		.uleb128 0x5
+ 1011 03ba 03       		.byte	0x3
+ 1012 03bb 00000000 		.4byte	two
+ 1013 03bf 12       		.uleb128 0x12
+ 1014 03c0 7B010000 		.4byte	.LASF36
+ 1015 03c4 01       		.byte	0x1
+ 1016 03c5 23       		.byte	0x23
+ 1017 03c6 6F000000 		.4byte	0x6f
+ 1018 03ca 05       		.uleb128 0x5
+ 1019 03cb 03       		.byte	0x3
+ 1020 03cc 00000000 		.4byte	three
+ 1021 03d0 12       		.uleb128 0x12
+ 1022 03d1 77040000 		.4byte	.LASF37
+ 1023 03d5 01       		.byte	0x1
+ 1024 03d6 24       		.byte	0x24
+ 1025 03d7 6F000000 		.4byte	0x6f
+ 1026 03db 05       		.uleb128 0x5
+ 1027 03dc 03       		.byte	0x3
+ 1028 03dd 00000000 		.4byte	four
+ 1029 03e1 12       		.uleb128 0x12
+ 1030 03e2 8C030000 		.4byte	.LASF38
+ 1031 03e6 01       		.byte	0x1
+ 1032 03e7 25       		.byte	0x25
+ 1033 03e8 6F000000 		.4byte	0x6f
+ 1034 03ec 05       		.uleb128 0x5
+ 1035 03ed 03       		.byte	0x3
+ 1036 03ee 00000000 		.4byte	five
+ 1037 03f2 13       		.uleb128 0x13
+ 1038 03f3 73697800 		.ascii	"six\000"
+ 1039 03f7 01       		.byte	0x1
+ 1040 03f8 26       		.byte	0x26
+ 1041 03f9 6F000000 		.4byte	0x6f
+ 1042 03fd 05       		.uleb128 0x5
+ 1043 03fe 03       		.byte	0x3
+ 1044 03ff 00000000 		.4byte	six
+ 1045 0403 12       		.uleb128 0x12
+ 1046 0404 66030000 		.4byte	.LASF39
+ 1047 0408 01       		.byte	0x1
+ 1048 0409 27       		.byte	0x27
+ 1049 040a 6F000000 		.4byte	0x6f
+ 1050 040e 05       		.uleb128 0x5
+ 1051 040f 03       		.byte	0x3
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 24
+
+
+ 1052 0410 00000000 		.4byte	seven
+ 1053 0414 12       		.uleb128 0x12
+ 1054 0415 7C040000 		.4byte	.LASF40
+ 1055 0419 01       		.byte	0x1
+ 1056 041a 28       		.byte	0x28
+ 1057 041b 6F000000 		.4byte	0x6f
+ 1058 041f 05       		.uleb128 0x5
+ 1059 0420 03       		.byte	0x3
+ 1060 0421 00000000 		.4byte	eight
+ 1061 0425 12       		.uleb128 0x12
+ 1062 0426 85020000 		.4byte	.LASF41
+ 1063 042a 01       		.byte	0x1
+ 1064 042b 29       		.byte	0x29
+ 1065 042c 6F000000 		.4byte	0x6f
+ 1066 0430 05       		.uleb128 0x5
+ 1067 0431 03       		.byte	0x3
+ 1068 0432 00000000 		.4byte	nine
+ 1069 0436 12       		.uleb128 0x12
+ 1070 0437 DF000000 		.4byte	.LASF42
+ 1071 043b 01       		.byte	0x1
+ 1072 043c 2B       		.byte	0x2b
+ 1073 043d 6F000000 		.4byte	0x6f
+ 1074 0441 05       		.uleb128 0x5
+ 1075 0442 03       		.byte	0x3
+ 1076 0443 00000000 		.4byte	digitThree
+ 1077 0447 12       		.uleb128 0x12
+ 1078 0448 5A000000 		.4byte	.LASF43
+ 1079 044c 01       		.byte	0x1
+ 1080 044d 2C       		.byte	0x2c
+ 1081 044e 6F000000 		.4byte	0x6f
+ 1082 0452 05       		.uleb128 0x5
+ 1083 0453 03       		.byte	0x3
+ 1084 0454 00000000 		.4byte	digitTwo
+ 1085 0458 12       		.uleb128 0x12
+ 1086 0459 D0000000 		.4byte	.LASF44
+ 1087 045d 01       		.byte	0x1
+ 1088 045e 2D       		.byte	0x2d
+ 1089 045f 6F000000 		.4byte	0x6f
+ 1090 0463 05       		.uleb128 0x5
+ 1091 0464 03       		.byte	0x3
+ 1092 0465 00000000 		.4byte	digitOne
+ 1093 0469 12       		.uleb128 0x12
+ 1094 046a B6020000 		.4byte	.LASF45
+ 1095 046e 01       		.byte	0x1
+ 1096 046f 2E       		.byte	0x2e
+ 1097 0470 6F000000 		.4byte	0x6f
+ 1098 0474 05       		.uleb128 0x5
+ 1099 0475 03       		.byte	0x3
+ 1100 0476 00000000 		.4byte	digitZero
+ 1101 047a 14       		.uleb128 0x14
+ 1102 047b 5A000000 		.4byte	0x5a
+ 1103 047f 8A040000 		.4byte	0x48a
+ 1104 0483 15       		.uleb128 0x15
+ 1105 0484 9D000000 		.4byte	0x9d
+ 1106 0488 03       		.byte	0x3
+ 1107 0489 00       		.byte	0
+ 1108 048a 12       		.uleb128 0x12
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 25
+
+
+ 1109 048b 93010000 		.4byte	.LASF46
+ 1110 048f 01       		.byte	0x1
+ 1111 0490 30       		.byte	0x30
+ 1112 0491 7A040000 		.4byte	0x47a
+ 1113 0495 05       		.uleb128 0x5
+ 1114 0496 03       		.byte	0x3
+ 1115 0497 00000000 		.4byte	displayData
+ 1116 049b 14       		.uleb128 0x14
+ 1117 049c 6F000000 		.4byte	0x6f
+ 1118 04a0 AB040000 		.4byte	0x4ab
+ 1119 04a4 15       		.uleb128 0x15
+ 1120 04a5 9D000000 		.4byte	0x9d
+ 1121 04a9 03       		.byte	0x3
+ 1122 04aa 00       		.byte	0
+ 1123 04ab 12       		.uleb128 0x12
+ 1124 04ac C1030000 		.4byte	.LASF47
+ 1125 04b0 01       		.byte	0x1
+ 1126 04b1 32       		.byte	0x32
+ 1127 04b2 9B040000 		.4byte	0x49b
+ 1128 04b6 05       		.uleb128 0x5
+ 1129 04b7 03       		.byte	0x3
+ 1130 04b8 00000000 		.4byte	digit
+ 1131 04bc 16       		.uleb128 0x16
+ 1132 04bd 2F000000 		.4byte	.LASF48
+ 1133 04c1 2F000000 		.4byte	.LASF48
+ 1134 04c5 05       		.byte	0x5
+ 1135 04c6 D601     		.2byte	0x1d6
+ 1136 04c8 17       		.uleb128 0x17
+ 1137 04c9 00000000 		.4byte	.LASF49
+ 1138 04cd 00000000 		.4byte	.LASF49
+ 1139 04d1 06       		.byte	0x6
+ 1140 04d2 2F       		.byte	0x2f
+ 1141 04d3 17       		.uleb128 0x17
+ 1142 04d4 91030000 		.4byte	.LASF50
+ 1143 04d8 91030000 		.4byte	.LASF50
+ 1144 04dc 07       		.byte	0x7
+ 1145 04dd 2F       		.byte	0x2f
+ 1146 04de 17       		.uleb128 0x17
+ 1147 04df 6F040000 		.4byte	.LASF51
+ 1148 04e3 6F040000 		.4byte	.LASF51
+ 1149 04e7 08       		.byte	0x8
+ 1150 04e8 76       		.byte	0x76
+ 1151 04e9 17       		.uleb128 0x17
+ 1152 04ea 84000000 		.4byte	.LASF52
+ 1153 04ee 84000000 		.4byte	.LASF52
+ 1154 04f2 09       		.byte	0x9
+ 1155 04f3 28       		.byte	0x28
+ 1156 04f4 17       		.uleb128 0x17
+ 1157 04f5 A9010000 		.4byte	.LASF53
+ 1158 04f9 A9010000 		.4byte	.LASF53
+ 1159 04fd 09       		.byte	0x9
+ 1160 04fe 18       		.byte	0x18
+ 1161 04ff 17       		.uleb128 0x17
+ 1162 0500 05030000 		.4byte	.LASF54
+ 1163 0504 05030000 		.4byte	.LASF54
+ 1164 0508 0A       		.byte	0xa
+ 1165 0509 3E       		.byte	0x3e
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 26
+
+
+ 1166 050a 17       		.uleb128 0x17
+ 1167 050b 97000000 		.4byte	.LASF55
+ 1168 050f 97000000 		.4byte	.LASF55
+ 1169 0513 0B       		.byte	0xb
+ 1170 0514 33       		.byte	0x33
+ 1171 0515 17       		.uleb128 0x17
+ 1172 0516 C7030000 		.4byte	.LASF56
+ 1173 051a C7030000 		.4byte	.LASF56
+ 1174 051e 0C       		.byte	0xc
+ 1175 051f 3F       		.byte	0x3f
+ 1176 0520 17       		.uleb128 0x17
+ 1177 0521 D3020000 		.4byte	.LASF57
+ 1178 0525 D3020000 		.4byte	.LASF57
+ 1179 0529 0D       		.byte	0xd
+ 1180 052a 33       		.byte	0x33
+ 1181 052b 17       		.uleb128 0x17
+ 1182 052c 6E020000 		.4byte	.LASF58
+ 1183 0530 6E020000 		.4byte	.LASF58
+ 1184 0534 0E       		.byte	0xe
+ 1185 0535 27       		.byte	0x27
+ 1186 0536 17       		.uleb128 0x17
+ 1187 0537 8F040000 		.4byte	.LASF59
+ 1188 053b 8F040000 		.4byte	.LASF59
+ 1189 053f 0F       		.byte	0xf
+ 1190 0540 8B       		.byte	0x8b
+ 1191 0541 17       		.uleb128 0x17
+ 1192 0542 43020000 		.4byte	.LASF60
+ 1193 0546 43020000 		.4byte	.LASF60
+ 1194 054a 0F       		.byte	0xf
+ 1195 054b 5A       		.byte	0x5a
+ 1196 054c 17       		.uleb128 0x17
+ 1197 054d E5020000 		.4byte	.LASF61
+ 1198 0551 E5020000 		.4byte	.LASF61
+ 1199 0555 10       		.byte	0x10
+ 1200 0556 25       		.byte	0x25
+ 1201 0557 17       		.uleb128 0x17
+ 1202 0558 B7010000 		.4byte	.LASF62
+ 1203 055c B7010000 		.4byte	.LASF62
+ 1204 0560 10       		.byte	0x10
+ 1205 0561 26       		.byte	0x26
+ 1206 0562 17       		.uleb128 0x17
+ 1207 0563 10000000 		.4byte	.LASF63
+ 1208 0567 10000000 		.4byte	.LASF63
+ 1209 056b 11       		.byte	0x11
+ 1210 056c 27       		.byte	0x27
+ 1211 056d 17       		.uleb128 0x17
+ 1212 056e 63000000 		.4byte	.LASF64
+ 1213 0572 63000000 		.4byte	.LASF64
+ 1214 0576 0F       		.byte	0xf
+ 1215 0577 67       		.byte	0x67
+ 1216 0578 17       		.uleb128 0x17
+ 1217 0579 29000000 		.4byte	.LASF65
+ 1218 057d 29000000 		.4byte	.LASF65
+ 1219 0581 05       		.byte	0x5
+ 1220 0582 76       		.byte	0x76
+ 1221 0583 17       		.uleb128 0x17
+ 1222 0584 11030000 		.4byte	.LASF66
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 27
+
+
+ 1223 0588 11030000 		.4byte	.LASF66
+ 1224 058c 0F       		.byte	0xf
+ 1225 058d 6B       		.byte	0x6b
+ 1226 058e 17       		.uleb128 0x17
+ 1227 058f FB010000 		.4byte	.LASF67
+ 1228 0593 FB010000 		.4byte	.LASF67
+ 1229 0597 12       		.byte	0x12
+ 1230 0598 2F       		.byte	0x2f
+ 1231 0599 00       		.byte	0
+ 1232              		.section	.debug_abbrev,"",%progbits
+ 1233              	.Ldebug_abbrev0:
+ 1234 0000 01       		.uleb128 0x1
+ 1235 0001 11       		.uleb128 0x11
+ 1236 0002 01       		.byte	0x1
+ 1237 0003 25       		.uleb128 0x25
+ 1238 0004 0E       		.uleb128 0xe
+ 1239 0005 13       		.uleb128 0x13
+ 1240 0006 0B       		.uleb128 0xb
+ 1241 0007 03       		.uleb128 0x3
+ 1242 0008 0E       		.uleb128 0xe
+ 1243 0009 1B       		.uleb128 0x1b
+ 1244 000a 0E       		.uleb128 0xe
+ 1245 000b 55       		.uleb128 0x55
+ 1246 000c 17       		.uleb128 0x17
+ 1247 000d 11       		.uleb128 0x11
+ 1248 000e 01       		.uleb128 0x1
+ 1249 000f 10       		.uleb128 0x10
+ 1250 0010 17       		.uleb128 0x17
+ 1251 0011 00       		.byte	0
+ 1252 0012 00       		.byte	0
+ 1253 0013 02       		.uleb128 0x2
+ 1254 0014 24       		.uleb128 0x24
+ 1255 0015 00       		.byte	0
+ 1256 0016 0B       		.uleb128 0xb
+ 1257 0017 0B       		.uleb128 0xb
+ 1258 0018 3E       		.uleb128 0x3e
+ 1259 0019 0B       		.uleb128 0xb
+ 1260 001a 03       		.uleb128 0x3
+ 1261 001b 0E       		.uleb128 0xe
+ 1262 001c 00       		.byte	0
+ 1263 001d 00       		.byte	0
+ 1264 001e 03       		.uleb128 0x3
+ 1265 001f 16       		.uleb128 0x16
+ 1266 0020 00       		.byte	0
+ 1267 0021 03       		.uleb128 0x3
+ 1268 0022 0E       		.uleb128 0xe
+ 1269 0023 3A       		.uleb128 0x3a
+ 1270 0024 0B       		.uleb128 0xb
+ 1271 0025 3B       		.uleb128 0x3b
+ 1272 0026 0B       		.uleb128 0xb
+ 1273 0027 49       		.uleb128 0x49
+ 1274 0028 13       		.uleb128 0x13
+ 1275 0029 00       		.byte	0
+ 1276 002a 00       		.byte	0
+ 1277 002b 04       		.uleb128 0x4
+ 1278 002c 24       		.uleb128 0x24
+ 1279 002d 00       		.byte	0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 28
+
+
+ 1280 002e 0B       		.uleb128 0xb
+ 1281 002f 0B       		.uleb128 0xb
+ 1282 0030 3E       		.uleb128 0x3e
+ 1283 0031 0B       		.uleb128 0xb
+ 1284 0032 03       		.uleb128 0x3
+ 1285 0033 08       		.uleb128 0x8
+ 1286 0034 00       		.byte	0
+ 1287 0035 00       		.byte	0
+ 1288 0036 05       		.uleb128 0x5
+ 1289 0037 2E       		.uleb128 0x2e
+ 1290 0038 01       		.byte	0x1
+ 1291 0039 3F       		.uleb128 0x3f
+ 1292 003a 19       		.uleb128 0x19
+ 1293 003b 03       		.uleb128 0x3
+ 1294 003c 0E       		.uleb128 0xe
+ 1295 003d 3A       		.uleb128 0x3a
+ 1296 003e 0B       		.uleb128 0xb
+ 1297 003f 3B       		.uleb128 0x3b
+ 1298 0040 0B       		.uleb128 0xb
+ 1299 0041 27       		.uleb128 0x27
+ 1300 0042 19       		.uleb128 0x19
+ 1301 0043 49       		.uleb128 0x49
+ 1302 0044 13       		.uleb128 0x13
+ 1303 0045 8701     		.uleb128 0x87
+ 1304 0047 19       		.uleb128 0x19
+ 1305 0048 11       		.uleb128 0x11
+ 1306 0049 01       		.uleb128 0x1
+ 1307 004a 12       		.uleb128 0x12
+ 1308 004b 06       		.uleb128 0x6
+ 1309 004c 40       		.uleb128 0x40
+ 1310 004d 18       		.uleb128 0x18
+ 1311 004e 9642     		.uleb128 0x2116
+ 1312 0050 19       		.uleb128 0x19
+ 1313 0051 01       		.uleb128 0x1
+ 1314 0052 13       		.uleb128 0x13
+ 1315 0053 00       		.byte	0
+ 1316 0054 00       		.byte	0
+ 1317 0055 06       		.uleb128 0x6
+ 1318 0056 0B       		.uleb128 0xb
+ 1319 0057 01       		.byte	0x1
+ 1320 0058 11       		.uleb128 0x11
+ 1321 0059 01       		.uleb128 0x1
+ 1322 005a 12       		.uleb128 0x12
+ 1323 005b 06       		.uleb128 0x6
+ 1324 005c 01       		.uleb128 0x1
+ 1325 005d 13       		.uleb128 0x13
+ 1326 005e 00       		.byte	0
+ 1327 005f 00       		.byte	0
+ 1328 0060 07       		.uleb128 0x7
+ 1329 0061 34       		.uleb128 0x34
+ 1330 0062 00       		.byte	0
+ 1331 0063 03       		.uleb128 0x3
+ 1332 0064 0E       		.uleb128 0xe
+ 1333 0065 3A       		.uleb128 0x3a
+ 1334 0066 0B       		.uleb128 0xb
+ 1335 0067 3B       		.uleb128 0x3b
+ 1336 0068 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 29
+
+
+ 1337 0069 49       		.uleb128 0x49
+ 1338 006a 13       		.uleb128 0x13
+ 1339 006b 02       		.uleb128 0x2
+ 1340 006c 17       		.uleb128 0x17
+ 1341 006d 00       		.byte	0
+ 1342 006e 00       		.byte	0
+ 1343 006f 08       		.uleb128 0x8
+ 1344 0070 0B       		.uleb128 0xb
+ 1345 0071 01       		.byte	0x1
+ 1346 0072 11       		.uleb128 0x11
+ 1347 0073 01       		.uleb128 0x1
+ 1348 0074 12       		.uleb128 0x12
+ 1349 0075 06       		.uleb128 0x6
+ 1350 0076 00       		.byte	0
+ 1351 0077 00       		.byte	0
+ 1352 0078 09       		.uleb128 0x9
+ 1353 0079 898201   		.uleb128 0x4109
+ 1354 007c 00       		.byte	0
+ 1355 007d 11       		.uleb128 0x11
+ 1356 007e 01       		.uleb128 0x1
+ 1357 007f 31       		.uleb128 0x31
+ 1358 0080 13       		.uleb128 0x13
+ 1359 0081 00       		.byte	0
+ 1360 0082 00       		.byte	0
+ 1361 0083 0A       		.uleb128 0xa
+ 1362 0084 898201   		.uleb128 0x4109
+ 1363 0087 01       		.byte	0x1
+ 1364 0088 11       		.uleb128 0x11
+ 1365 0089 01       		.uleb128 0x1
+ 1366 008a 31       		.uleb128 0x31
+ 1367 008b 13       		.uleb128 0x13
+ 1368 008c 00       		.byte	0
+ 1369 008d 00       		.byte	0
+ 1370 008e 0B       		.uleb128 0xb
+ 1371 008f 8A8201   		.uleb128 0x410a
+ 1372 0092 00       		.byte	0
+ 1373 0093 02       		.uleb128 0x2
+ 1374 0094 18       		.uleb128 0x18
+ 1375 0095 9142     		.uleb128 0x2111
+ 1376 0097 18       		.uleb128 0x18
+ 1377 0098 00       		.byte	0
+ 1378 0099 00       		.byte	0
+ 1379 009a 0C       		.uleb128 0xc
+ 1380 009b 898201   		.uleb128 0x4109
+ 1381 009e 01       		.byte	0x1
+ 1382 009f 11       		.uleb128 0x11
+ 1383 00a0 01       		.uleb128 0x1
+ 1384 00a1 31       		.uleb128 0x31
+ 1385 00a2 13       		.uleb128 0x13
+ 1386 00a3 01       		.uleb128 0x1
+ 1387 00a4 13       		.uleb128 0x13
+ 1388 00a5 00       		.byte	0
+ 1389 00a6 00       		.byte	0
+ 1390 00a7 0D       		.uleb128 0xd
+ 1391 00a8 2E       		.uleb128 0x2e
+ 1392 00a9 01       		.byte	0x1
+ 1393 00aa 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 30
+
+
+ 1394 00ab 19       		.uleb128 0x19
+ 1395 00ac 03       		.uleb128 0x3
+ 1396 00ad 0E       		.uleb128 0xe
+ 1397 00ae 3A       		.uleb128 0x3a
+ 1398 00af 0B       		.uleb128 0xb
+ 1399 00b0 3B       		.uleb128 0x3b
+ 1400 00b1 0B       		.uleb128 0xb
+ 1401 00b2 27       		.uleb128 0x27
+ 1402 00b3 19       		.uleb128 0x19
+ 1403 00b4 11       		.uleb128 0x11
+ 1404 00b5 01       		.uleb128 0x1
+ 1405 00b6 12       		.uleb128 0x12
+ 1406 00b7 06       		.uleb128 0x6
+ 1407 00b8 40       		.uleb128 0x40
+ 1408 00b9 18       		.uleb128 0x18
+ 1409 00ba 9642     		.uleb128 0x2116
+ 1410 00bc 19       		.uleb128 0x19
+ 1411 00bd 01       		.uleb128 0x1
+ 1412 00be 13       		.uleb128 0x13
+ 1413 00bf 00       		.byte	0
+ 1414 00c0 00       		.byte	0
+ 1415 00c1 0E       		.uleb128 0xe
+ 1416 00c2 05       		.uleb128 0x5
+ 1417 00c3 00       		.byte	0
+ 1418 00c4 03       		.uleb128 0x3
+ 1419 00c5 0E       		.uleb128 0xe
+ 1420 00c6 3A       		.uleb128 0x3a
+ 1421 00c7 0B       		.uleb128 0xb
+ 1422 00c8 3B       		.uleb128 0x3b
+ 1423 00c9 0B       		.uleb128 0xb
+ 1424 00ca 49       		.uleb128 0x49
+ 1425 00cb 13       		.uleb128 0x13
+ 1426 00cc 02       		.uleb128 0x2
+ 1427 00cd 17       		.uleb128 0x17
+ 1428 00ce 00       		.byte	0
+ 1429 00cf 00       		.byte	0
+ 1430 00d0 0F       		.uleb128 0xf
+ 1431 00d1 2E       		.uleb128 0x2e
+ 1432 00d2 01       		.byte	0x1
+ 1433 00d3 3F       		.uleb128 0x3f
+ 1434 00d4 19       		.uleb128 0x19
+ 1435 00d5 03       		.uleb128 0x3
+ 1436 00d6 0E       		.uleb128 0xe
+ 1437 00d7 3A       		.uleb128 0x3a
+ 1438 00d8 0B       		.uleb128 0xb
+ 1439 00d9 3B       		.uleb128 0x3b
+ 1440 00da 0B       		.uleb128 0xb
+ 1441 00db 11       		.uleb128 0x11
+ 1442 00dc 01       		.uleb128 0x1
+ 1443 00dd 12       		.uleb128 0x12
+ 1444 00de 06       		.uleb128 0x6
+ 1445 00df 40       		.uleb128 0x40
+ 1446 00e0 18       		.uleb128 0x18
+ 1447 00e1 9642     		.uleb128 0x2116
+ 1448 00e3 19       		.uleb128 0x19
+ 1449 00e4 01       		.uleb128 0x1
+ 1450 00e5 13       		.uleb128 0x13
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 31
+
+
+ 1451 00e6 00       		.byte	0
+ 1452 00e7 00       		.byte	0
+ 1453 00e8 10       		.uleb128 0x10
+ 1454 00e9 34       		.uleb128 0x34
+ 1455 00ea 00       		.byte	0
+ 1456 00eb 03       		.uleb128 0x3
+ 1457 00ec 0E       		.uleb128 0xe
+ 1458 00ed 3A       		.uleb128 0x3a
+ 1459 00ee 0B       		.uleb128 0xb
+ 1460 00ef 3B       		.uleb128 0x3b
+ 1461 00f0 05       		.uleb128 0x5
+ 1462 00f1 49       		.uleb128 0x49
+ 1463 00f2 13       		.uleb128 0x13
+ 1464 00f3 3F       		.uleb128 0x3f
+ 1465 00f4 19       		.uleb128 0x19
+ 1466 00f5 3C       		.uleb128 0x3c
+ 1467 00f6 19       		.uleb128 0x19
+ 1468 00f7 00       		.byte	0
+ 1469 00f8 00       		.byte	0
+ 1470 00f9 11       		.uleb128 0x11
+ 1471 00fa 35       		.uleb128 0x35
+ 1472 00fb 00       		.byte	0
+ 1473 00fc 49       		.uleb128 0x49
+ 1474 00fd 13       		.uleb128 0x13
+ 1475 00fe 00       		.byte	0
+ 1476 00ff 00       		.byte	0
+ 1477 0100 12       		.uleb128 0x12
+ 1478 0101 34       		.uleb128 0x34
+ 1479 0102 00       		.byte	0
+ 1480 0103 03       		.uleb128 0x3
+ 1481 0104 0E       		.uleb128 0xe
+ 1482 0105 3A       		.uleb128 0x3a
+ 1483 0106 0B       		.uleb128 0xb
+ 1484 0107 3B       		.uleb128 0x3b
+ 1485 0108 0B       		.uleb128 0xb
+ 1486 0109 49       		.uleb128 0x49
+ 1487 010a 13       		.uleb128 0x13
+ 1488 010b 3F       		.uleb128 0x3f
+ 1489 010c 19       		.uleb128 0x19
+ 1490 010d 02       		.uleb128 0x2
+ 1491 010e 18       		.uleb128 0x18
+ 1492 010f 00       		.byte	0
+ 1493 0110 00       		.byte	0
+ 1494 0111 13       		.uleb128 0x13
+ 1495 0112 34       		.uleb128 0x34
+ 1496 0113 00       		.byte	0
+ 1497 0114 03       		.uleb128 0x3
+ 1498 0115 08       		.uleb128 0x8
+ 1499 0116 3A       		.uleb128 0x3a
+ 1500 0117 0B       		.uleb128 0xb
+ 1501 0118 3B       		.uleb128 0x3b
+ 1502 0119 0B       		.uleb128 0xb
+ 1503 011a 49       		.uleb128 0x49
+ 1504 011b 13       		.uleb128 0x13
+ 1505 011c 3F       		.uleb128 0x3f
+ 1506 011d 19       		.uleb128 0x19
+ 1507 011e 02       		.uleb128 0x2
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 32
+
+
+ 1508 011f 18       		.uleb128 0x18
+ 1509 0120 00       		.byte	0
+ 1510 0121 00       		.byte	0
+ 1511 0122 14       		.uleb128 0x14
+ 1512 0123 01       		.uleb128 0x1
+ 1513 0124 01       		.byte	0x1
+ 1514 0125 49       		.uleb128 0x49
+ 1515 0126 13       		.uleb128 0x13
+ 1516 0127 01       		.uleb128 0x1
+ 1517 0128 13       		.uleb128 0x13
+ 1518 0129 00       		.byte	0
+ 1519 012a 00       		.byte	0
+ 1520 012b 15       		.uleb128 0x15
+ 1521 012c 21       		.uleb128 0x21
+ 1522 012d 00       		.byte	0
+ 1523 012e 49       		.uleb128 0x49
+ 1524 012f 13       		.uleb128 0x13
+ 1525 0130 2F       		.uleb128 0x2f
+ 1526 0131 0B       		.uleb128 0xb
+ 1527 0132 00       		.byte	0
+ 1528 0133 00       		.byte	0
+ 1529 0134 16       		.uleb128 0x16
+ 1530 0135 2E       		.uleb128 0x2e
+ 1531 0136 00       		.byte	0
+ 1532 0137 3F       		.uleb128 0x3f
+ 1533 0138 19       		.uleb128 0x19
+ 1534 0139 3C       		.uleb128 0x3c
+ 1535 013a 19       		.uleb128 0x19
+ 1536 013b 6E       		.uleb128 0x6e
+ 1537 013c 0E       		.uleb128 0xe
+ 1538 013d 03       		.uleb128 0x3
+ 1539 013e 0E       		.uleb128 0xe
+ 1540 013f 3A       		.uleb128 0x3a
+ 1541 0140 0B       		.uleb128 0xb
+ 1542 0141 3B       		.uleb128 0x3b
+ 1543 0142 05       		.uleb128 0x5
+ 1544 0143 00       		.byte	0
+ 1545 0144 00       		.byte	0
+ 1546 0145 17       		.uleb128 0x17
+ 1547 0146 2E       		.uleb128 0x2e
+ 1548 0147 00       		.byte	0
+ 1549 0148 3F       		.uleb128 0x3f
+ 1550 0149 19       		.uleb128 0x19
+ 1551 014a 3C       		.uleb128 0x3c
+ 1552 014b 19       		.uleb128 0x19
+ 1553 014c 6E       		.uleb128 0x6e
+ 1554 014d 0E       		.uleb128 0xe
+ 1555 014e 03       		.uleb128 0x3
+ 1556 014f 0E       		.uleb128 0xe
+ 1557 0150 3A       		.uleb128 0x3a
+ 1558 0151 0B       		.uleb128 0xb
+ 1559 0152 3B       		.uleb128 0x3b
+ 1560 0153 0B       		.uleb128 0xb
+ 1561 0154 00       		.byte	0
+ 1562 0155 00       		.byte	0
+ 1563 0156 00       		.byte	0
+ 1564              		.section	.debug_loc,"",%progbits
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 33
+
+
+ 1565              	.Ldebug_loc0:
+ 1566              	.LLST0:
+ 1567 0000 82000000 		.4byte	.LVL20
+ 1568 0004 86000000 		.4byte	.LVL21
+ 1569 0008 0200     		.2byte	0x2
+ 1570 000a 30       		.byte	0x30
+ 1571 000b 9F       		.byte	0x9f
+ 1572 000c 86000000 		.4byte	.LVL21
+ 1573 0010 E4000000 		.4byte	.LFE64
+ 1574 0014 0100     		.2byte	0x1
+ 1575 0016 54       		.byte	0x54
+ 1576 0017 00000000 		.4byte	0
+ 1577 001b 00000000 		.4byte	0
+ 1578              	.LLST1:
+ 1579 001f 9E000000 		.4byte	.LVL24
+ 1580 0023 A0000000 		.4byte	.LVL25
+ 1581 0027 0100     		.2byte	0x1
+ 1582 0029 50       		.byte	0x50
+ 1583 002a 00000000 		.4byte	0
+ 1584 002e 00000000 		.4byte	0
+ 1585              	.LLST2:
+ 1586 0032 00000000 		.4byte	.LVL30
+ 1587 0036 08000000 		.4byte	.LVL31
+ 1588 003a 0100     		.2byte	0x1
+ 1589 003c 50       		.byte	0x50
+ 1590 003d 08000000 		.4byte	.LVL31
+ 1591 0041 26000000 		.4byte	.LVL37
+ 1592 0045 0100     		.2byte	0x1
+ 1593 0047 54       		.byte	0x54
+ 1594 0048 26000000 		.4byte	.LVL37
+ 1595 004c 6C000000 		.4byte	.LFE65
+ 1596 0050 0600     		.2byte	0x6
+ 1597 0052 F3       		.byte	0xf3
+ 1598 0053 03       		.uleb128 0x3
+ 1599 0054 F5       		.byte	0xf5
+ 1600 0055 00       		.uleb128 0
+ 1601 0056 25       		.uleb128 0x25
+ 1602 0057 9F       		.byte	0x9f
+ 1603 0058 00000000 		.4byte	0
+ 1604 005c 00000000 		.4byte	0
+ 1605              	.LLST3:
+ 1606 0060 24000000 		.4byte	.LVL36
+ 1607 0064 28000000 		.4byte	.LVL38
+ 1608 0068 0100     		.2byte	0x1
+ 1609 006a 50       		.byte	0x50
+ 1610 006b 00000000 		.4byte	0
+ 1611 006f 00000000 		.4byte	0
+ 1612              	.LLST4:
+ 1613 0073 24000000 		.4byte	.LVL36
+ 1614 0077 28000000 		.4byte	.LVL38
+ 1615 007b 0200     		.2byte	0x2
+ 1616 007d 30       		.byte	0x30
+ 1617 007e 9F       		.byte	0x9f
+ 1618 007f 28000000 		.4byte	.LVL38
+ 1619 0083 5A000000 		.4byte	.LVL44
+ 1620 0087 0100     		.2byte	0x1
+ 1621 0089 54       		.byte	0x54
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 34
+
+
+ 1622 008a 00000000 		.4byte	0
+ 1623 008e 00000000 		.4byte	0
+ 1624              	.LLST5:
+ 1625 0092 24000000 		.4byte	.LVL36
+ 1626 0096 48000000 		.4byte	.LVL40
+ 1627 009a 0100     		.2byte	0x1
+ 1628 009c 50       		.byte	0x50
+ 1629 009d 54000000 		.4byte	.LVL43
+ 1630 00a1 6C000000 		.4byte	.LFE65
+ 1631 00a5 0100     		.2byte	0x1
+ 1632 00a7 50       		.byte	0x50
+ 1633 00a8 00000000 		.4byte	0
+ 1634 00ac 00000000 		.4byte	0
+ 1635              	.LLST6:
+ 1636 00b0 02000000 		.4byte	.LVL45
+ 1637 00b4 06000000 		.4byte	.LVL46
+ 1638 00b8 0200     		.2byte	0x2
+ 1639 00ba 30       		.byte	0x30
+ 1640 00bb 9F       		.byte	0x9f
+ 1641 00bc 06000000 		.4byte	.LVL46
+ 1642 00c0 BA000000 		.4byte	.LVL51
+ 1643 00c4 0100     		.2byte	0x1
+ 1644 00c6 54       		.byte	0x54
+ 1645 00c7 00000000 		.4byte	0
+ 1646 00cb 00000000 		.4byte	0
+ 1647              	.LLST7:
+ 1648 00cf 06000000 		.4byte	.LVL52
+ 1649 00d3 09000000 		.4byte	.LVL53-1
+ 1650 00d7 0100     		.2byte	0x1
+ 1651 00d9 50       		.byte	0x50
+ 1652 00da 00000000 		.4byte	0
+ 1653 00de 00000000 		.4byte	0
+ 1654              	.LLST8:
+ 1655 00e2 12000000 		.4byte	.LVL54
+ 1656 00e6 15000000 		.4byte	.LVL55-1
+ 1657 00ea 0100     		.2byte	0x1
+ 1658 00ec 50       		.byte	0x50
+ 1659 00ed 00000000 		.4byte	0
+ 1660 00f1 00000000 		.4byte	0
+ 1661              		.section	.debug_aranges,"",%progbits
+ 1662 0000 34000000 		.4byte	0x34
+ 1663 0004 0200     		.2byte	0x2
+ 1664 0006 00000000 		.4byte	.Ldebug_info0
+ 1665 000a 04       		.byte	0x4
+ 1666 000b 00       		.byte	0
+ 1667 000c 0000     		.2byte	0
+ 1668 000e 0000     		.2byte	0
+ 1669 0010 00000000 		.4byte	.LFB64
+ 1670 0014 E4000000 		.4byte	.LFE64-.LFB64
+ 1671 0018 00000000 		.4byte	.LFB65
+ 1672 001c 6C000000 		.4byte	.LFE65-.LFB65
+ 1673 0020 00000000 		.4byte	.LFB66
+ 1674 0024 CC000000 		.4byte	.LFE66-.LFB66
+ 1675 0028 00000000 		.4byte	.LFB63
+ 1676 002c 30000000 		.4byte	.LFE63-.LFB63
+ 1677 0030 00000000 		.4byte	0
+ 1678 0034 00000000 		.4byte	0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 35
+
+
+ 1679              		.section	.debug_ranges,"",%progbits
+ 1680              	.Ldebug_ranges0:
+ 1681 0000 00000000 		.4byte	.LFB64
+ 1682 0004 E4000000 		.4byte	.LFE64
+ 1683 0008 00000000 		.4byte	.LFB65
+ 1684 000c 6C000000 		.4byte	.LFE65
+ 1685 0010 00000000 		.4byte	.LFB66
+ 1686 0014 CC000000 		.4byte	.LFE66
+ 1687 0018 00000000 		.4byte	.LFB63
+ 1688 001c 30000000 		.4byte	.LFE63
+ 1689 0020 00000000 		.4byte	0
+ 1690 0024 00000000 		.4byte	0
+ 1691              		.section	.debug_line,"",%progbits
+ 1692              	.Ldebug_line0:
+ 1693 0000 54030000 		.section	.debug_str,"MS",%progbits,1
+ 1693      02009C02 
+ 1693      00000201 
+ 1693      FB0E0D00 
+ 1693      01010101 
+ 1694              	.LASF49:
+ 1695 0000 44696769 		.ascii	"Digit_Reg_Write\000"
+ 1695      745F5265 
+ 1695      675F5772 
+ 1695      69746500 
+ 1696              	.LASF63:
+ 1697 0010 466C6967 		.ascii	"Flight_Timer_Clock_Start\000"
+ 1697      68745F54 
+ 1697      696D6572 
+ 1697      5F436C6F 
+ 1697      636B5F53 
+ 1698              	.LASF65:
+ 1699 0029 666C6F6F 		.ascii	"floor\000"
+ 1699      7200
+ 1700              	.LASF48:
+ 1701 002f 706F776C 		.ascii	"powl\000"
+ 1701      00
+ 1702              	.LASF3:
+ 1703 0034 73686F72 		.ascii	"short int\000"
+ 1703      7420696E 
+ 1703      7400
+ 1704              	.LASF26:
+ 1705 003e 46545F52 		.ascii	"FT_Resolution\000"
+ 1705      65736F6C 
+ 1705      7574696F 
+ 1705      6E00
+ 1706              	.LASF7:
+ 1707 004c 6C6F6E67 		.ascii	"long long int\000"
+ 1707      206C6F6E 
+ 1707      6720696E 
+ 1707      7400
+ 1708              	.LASF43:
+ 1709 005a 64696769 		.ascii	"digitTwo\000"
+ 1709      7454776F 
+ 1709      00
+ 1710              	.LASF64:
+ 1711 0063 466C6967 		.ascii	"Flight_Timer_ReadPeriod\000"
+ 1711      68745F54 
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 36
+
+
+ 1711      696D6572 
+ 1711      5F526561 
+ 1711      64506572 
+ 1712              	.LASF21:
+ 1713 007b 46545F43 		.ascii	"FT_Count\000"
+ 1713      6F756E74 
+ 1713      00
+ 1714              	.LASF52:
+ 1715 0084 6973725F 		.ascii	"isr_1_ClearPending\000"
+ 1715      315F436C 
+ 1715      65617250 
+ 1715      656E6469 
+ 1715      6E6700
+ 1716              	.LASF55:
+ 1717 0097 56444143 		.ascii	"VDAC8_1_Start\000"
+ 1717      385F315F 
+ 1717      53746172 
+ 1717      7400
+ 1718              	.LASF16:
+ 1719 00a5 696E6465 		.ascii	"index\000"
+ 1719      7800
+ 1720              	.LASF24:
+ 1721 00ab 46545F50 		.ascii	"FT_Period_Int\000"
+ 1721      6572696F 
+ 1721      645F496E 
+ 1721      7400
+ 1722              	.LASF30:
+ 1723 00b9 53656731 		.ascii	"Seg1000Count\000"
+ 1723      30303043 
+ 1723      6F756E74 
+ 1723      00
+ 1724              	.LASF19:
+ 1725 00c6 67657444 		.ascii	"getDigits\000"
+ 1725      69676974 
+ 1725      7300
+ 1726              	.LASF44:
+ 1727 00d0 64696769 		.ascii	"digitOne\000"
+ 1727      744F6E65 
+ 1727      00
+ 1728              	.LASF0:
+ 1729 00d9 666C6F61 		.ascii	"float\000"
+ 1729      7400
+ 1730              	.LASF42:
+ 1731 00df 64696769 		.ascii	"digitThree\000"
+ 1731      74546872 
+ 1731      656500
+ 1732              	.LASF72:
+ 1733 00ea 73617665 		.ascii	"saveDigitsToRAM\000"
+ 1733      44696769 
+ 1733      7473546F 
+ 1733      52414D00 
+ 1734              	.LASF70:
+ 1735 00fa 433A5C55 		.ascii	"C:\\Users\\Kurty\\Documents\\Ultrasonic GitHub (TRC"
+ 1735      73657273 
+ 1735      5C4B7572 
+ 1735      74795C44 
+ 1735      6F63756D 
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 37
+
+
+ 1736 0129 33353030 		.ascii	"3500)\\Ultrasonic-PSoC\\Ultrasonic Sensor Workspace"
+ 1736      295C556C 
+ 1736      74726173 
+ 1736      6F6E6963 
+ 1736      2D50536F 
+ 1737 015a 5C556C74 		.ascii	"\\Ultrasonic Distance Meter.cydsn\000"
+ 1737      7261736F 
+ 1737      6E696320 
+ 1737      44697374 
+ 1737      616E6365 
+ 1738              	.LASF36:
+ 1739 017b 74687265 		.ascii	"three\000"
+ 1739      6500
+ 1740              	.LASF5:
+ 1741 0181 6C6F6E67 		.ascii	"long int\000"
+ 1741      20696E74 
+ 1741      00
+ 1742              	.LASF15:
+ 1743 018a 73697A65 		.ascii	"sizetype\000"
+ 1743      74797065 
+ 1743      00
+ 1744              	.LASF46:
+ 1745 0193 64697370 		.ascii	"displayData\000"
+ 1745      6C617944 
+ 1745      61746100 
+ 1746              	.LASF33:
+ 1747 019f 53656731 		.ascii	"Seg1Count\000"
+ 1747      436F756E 
+ 1747      7400
+ 1748              	.LASF53:
+ 1749 01a9 6973725F 		.ascii	"isr_1_StartEx\000"
+ 1749      315F5374 
+ 1749      61727445 
+ 1749      7800
+ 1750              	.LASF62:
+ 1751 01b7 556C7472 		.ascii	"Ultrasonic_Pulse_Counter_Start\000"
+ 1751      61736F6E 
+ 1751      69635F50 
+ 1751      756C7365 
+ 1751      5F436F75 
+ 1752              	.LASF32:
+ 1753 01d6 53656731 		.ascii	"Seg10Count\000"
+ 1753      30436F75 
+ 1753      6E7400
+ 1754              	.LASF14:
+ 1755 01e1 6C6F6E67 		.ascii	"long double\000"
+ 1755      20646F75 
+ 1755      626C6500 
+ 1756              	.LASF2:
+ 1757 01ed 756E7369 		.ascii	"unsigned char\000"
+ 1757      676E6564 
+ 1757      20636861 
+ 1757      7200
+ 1758              	.LASF67:
+ 1759 01fb 466C6967 		.ascii	"Flight_Timer_Reset_Reg_Write\000"
+ 1759      68745F54 
+ 1759      696D6572 
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 38
+
+
+ 1759      5F526573 
+ 1759      65745F52 
+ 1760              	.LASF1:
+ 1761 0218 7369676E 		.ascii	"signed char\000"
+ 1761      65642063 
+ 1761      68617200 
+ 1762              	.LASF11:
+ 1763 0224 696E7433 		.ascii	"int32_t\000"
+ 1763      325F7400 
+ 1764              	.LASF8:
+ 1765 022c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1765      206C6F6E 
+ 1765      6720756E 
+ 1765      7369676E 
+ 1765      65642069 
+ 1766              	.LASF60:
+ 1767 0243 466C6967 		.ascii	"Flight_Timer_Start\000"
+ 1767      68745F54 
+ 1767      696D6572 
+ 1767      5F537461 
+ 1767      727400
+ 1768              	.LASF9:
+ 1769 0256 756E7369 		.ascii	"unsigned int\000"
+ 1769      676E6564 
+ 1769      20696E74 
+ 1769      00
+ 1770              	.LASF29:
+ 1771 0263 536F756E 		.ascii	"SoundSpeed\000"
+ 1771      64537065 
+ 1771      656400
+ 1772              	.LASF58:
+ 1773 026e 556C7472 		.ascii	"Ultrasonic_Drive_Start\000"
+ 1773      61736F6E 
+ 1773      69635F44 
+ 1773      72697665 
+ 1773      5F537461 
+ 1774              	.LASF41:
+ 1775 0285 6E696E65 		.ascii	"nine\000"
+ 1775      00
+ 1776              	.LASF4:
+ 1777 028a 73686F72 		.ascii	"short unsigned int\000"
+ 1777      7420756E 
+ 1777      7369676E 
+ 1777      65642069 
+ 1777      6E7400
+ 1778              	.LASF27:
+ 1779 029d 46545F54 		.ascii	"FT_Time_Per_Tick_uS\000"
+ 1779      696D655F 
+ 1779      5065725F 
+ 1779      5469636B 
+ 1779      5F755300 
+ 1780              	.LASF13:
+ 1781 02b1 63686172 		.ascii	"char\000"
+ 1781      00
+ 1782              	.LASF45:
+ 1783 02b6 64696769 		.ascii	"digitZero\000"
+ 1783      745A6572 
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 39
+
+
+ 1783      6F00
+ 1784              	.LASF71:
+ 1785 02c0 6D61696E 		.ascii	"main\000"
+ 1785      00
+ 1786              	.LASF34:
+ 1787 02c5 64656369 		.ascii	"decimalPlaces\000"
+ 1787      6D616C50 
+ 1787      6C616365 
+ 1787      7300
+ 1788              	.LASF57:
+ 1789 02d3 56737361 		.ascii	"Vssa_Buffer_Start\000"
+ 1789      5F427566 
+ 1789      6665725F 
+ 1789      53746172 
+ 1789      7400
+ 1790              	.LASF61:
+ 1791 02e5 556C7472 		.ascii	"Ultrasonic_Pulse_Counter_Enable\000"
+ 1791      61736F6E 
+ 1791      69635F50 
+ 1791      756C7365 
+ 1791      5F436F75 
+ 1792              	.LASF54:
+ 1793 0305 5047415F 		.ascii	"PGA_1_Start\000"
+ 1793      315F5374 
+ 1793      61727400 
+ 1794              	.LASF66:
+ 1795 0311 466C6967 		.ascii	"Flight_Timer_ReadCapture\000"
+ 1795      68745F54 
+ 1795      696D6572 
+ 1795      5F526561 
+ 1795      64436170 
+ 1796              	.LASF28:
+ 1797 032a 46545F54 		.ascii	"FT_Time_Per_Tick\000"
+ 1797      696D655F 
+ 1797      5065725F 
+ 1797      5469636B 
+ 1797      00
+ 1798              	.LASF69:
+ 1799 033b 6D61696E 		.ascii	"main.c\000"
+ 1799      2E6300
+ 1800              	.LASF6:
+ 1801 0342 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1801      20756E73 
+ 1801      69676E65 
+ 1801      6420696E 
+ 1801      7400
+ 1802              	.LASF12:
+ 1803 0354 646F7562 		.ascii	"double\000"
+ 1803      6C6500
+ 1804              	.LASF22:
+ 1805 035b 466C6967 		.ascii	"FlightTime\000"
+ 1805      68745469 
+ 1805      6D6500
+ 1806              	.LASF39:
+ 1807 0366 73657665 		.ascii	"seven\000"
+ 1807      6E00
+ 1808              	.LASF20:
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 40
+
+
+ 1809 036c 466C6967 		.ascii	"Flight_Timer_ISR\000"
+ 1809      68745F54 
+ 1809      696D6572 
+ 1809      5F495352 
+ 1809      00
+ 1810              	.LASF10:
+ 1811 037d 5F5F696E 		.ascii	"__int32_t\000"
+ 1811      7433325F 
+ 1811      7400
+ 1812              	.LASF35:
+ 1813 0387 7A65726F 		.ascii	"zero\000"
+ 1813      00
+ 1814              	.LASF38:
+ 1815 038c 66697665 		.ascii	"five\000"
+ 1815      00
+ 1816              	.LASF50:
+ 1817 0391 53657665 		.ascii	"Seven_Segment_Reg_Write\000"
+ 1817      6E5F5365 
+ 1817      676D656E 
+ 1817      745F5265 
+ 1817      675F5772 
+ 1818              	.LASF25:
+ 1819 03a9 46545F50 		.ascii	"FT_Period_uS\000"
+ 1819      6572696F 
+ 1819      645F7553 
+ 1819      00
+ 1820              	.LASF18:
+ 1821 03b6 64697374 		.ascii	"distanceMM\000"
+ 1821      616E6365 
+ 1821      4D4D00
+ 1822              	.LASF47:
+ 1823 03c1 64696769 		.ascii	"digit\000"
+ 1823      7400
+ 1824              	.LASF56:
+ 1825 03c7 436F6D70 		.ascii	"Comp_1_Start\000"
+ 1825      5F315F53 
+ 1825      74617274 
+ 1825      00
+ 1826              	.LASF23:
+ 1827 03d4 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1827      52784275 
+ 1827      66666572 
+ 1827      00
+ 1828              	.LASF68:
+ 1829 03e1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1829      43313120 
+ 1829      352E342E 
+ 1829      31203230 
+ 1829      31363036 
+ 1830 0414 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1830      20726576 
+ 1830      6973696F 
+ 1830      6E203233 
+ 1830      37373135 
+ 1831 0447 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1831      66756E63 
+ 1831      74696F6E 
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccWQQyLj.s 			page 41
+
+
+ 1831      2D736563 
+ 1831      74696F6E 
+ 1832              	.LASF51:
+ 1833 046f 43794465 		.ascii	"CyDelay\000"
+ 1833      6C617900 
+ 1834              	.LASF37:
+ 1835 0477 666F7572 		.ascii	"four\000"
+ 1835      00
+ 1836              	.LASF40:
+ 1837 047c 65696768 		.ascii	"eight\000"
+ 1837      7400
+ 1838              	.LASF17:
+ 1839 0482 63757272 		.ascii	"currentDigit\000"
+ 1839      656E7444 
+ 1839      69676974 
+ 1839      00
+ 1840              	.LASF59:
+ 1841 048f 466C6967 		.ascii	"Flight_Timer_Enable\000"
+ 1841      68745F54 
+ 1841      696D6572 
+ 1841      5F456E61 
+ 1841      626C6500 
+ 1842              	.LASF31:
+ 1843 04a3 53656731 		.ascii	"Seg100Count\000"
+ 1843      3030436F 
+ 1843      756E7400 
+ 1844              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

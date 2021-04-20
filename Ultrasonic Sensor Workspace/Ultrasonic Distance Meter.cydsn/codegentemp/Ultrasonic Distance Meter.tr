@@ -11,8 +11,9 @@
 		4.1::Critical Path Report for CyBUS_CLK
 		4.2::Critical Path Report for Ultrasonic_Drive
 	5::Path Details for Clock Relationship Summary
-		5.1::Critical Path Report for (CyBUS_CLK:R vs. Ultrasonic_Drive:R)
-		5.2::Critical Path Report for (Ultrasonic_Drive:R vs. Ultrasonic_Drive:R)
+		5.1::Critical Path Report for (Ultrasonic_Drive(routed):R vs. Ultrasonic_Drive:R)
+		5.2::Critical Path Report for (Ultrasonic_Drive(routed):F vs. Ultrasonic_Drive:R)
+		5.3::Critical Path Report for (CyBUS_CLK:R vs. Ultrasonic_Drive:R)
 ===================================================================== 
                     End of Table of Contents
 ##################################################################### 
@@ -21,15 +22,15 @@
                     1::Clock Frequency Summary
 ===================================================================== 
 Number of clocks: 9
-Clock: CyBUS_CLK                    | Frequency: 233.20 MHz  | Target: 24.00 MHz  | 
-Clock: CyILO                        | N/A                    | Target: 0.00 MHz   | 
-Clock: CyIMO                        | N/A                    | Target: 3.00 MHz   | 
-Clock: CyMASTER_CLK                 | N/A                    | Target: 24.00 MHz  | 
-Clock: CyPLL_OUT                    | N/A                    | Target: 24.00 MHz  | 
-Clock: Ultrasonic_Drive             | Frequency: 71.65 MHz   | Target: 0.04 MHz   | 
-Clock: Ultrasonic_Drive(routed)     | N/A                    | Target: 0.04 MHz   | 
-Clock: timer_clock                  | N/A                    | Target: 0.10 MHz   | 
-Clock: timer_clock(fixed-function)  | N/A                    | Target: 0.10 MHz   | 
+Clock: CyBUS_CLK                           | Frequency: 233.20 MHz  | Target: 24.00 MHz  | 
+Clock: CyILO                               | N/A                    | Target: 0.00 MHz   | 
+Clock: CyIMO                               | N/A                    | Target: 3.00 MHz   | 
+Clock: CyMASTER_CLK                        | N/A                    | Target: 24.00 MHz  | 
+Clock: CyPLL_OUT                           | N/A                    | Target: 24.00 MHz  | 
+Clock: Flight_Timer_Clock                  | N/A                    | Target: 0.10 MHz   | 
+Clock: Flight_Timer_Clock(fixed-function)  | N/A                    | Target: 0.10 MHz   | 
+Clock: Ultrasonic_Drive                    | Frequency: 233.20 MHz  | Target: 0.04 MHz   | 
+Clock: Ultrasonic_Drive(routed)            | N/A                    | Target: 0.04 MHz   | 
 
  =====================================================================
                     End of Clock Frequency Summary
@@ -40,10 +41,10 @@ Clock: timer_clock(fixed-function)  | N/A                    | Target: 0.10 MHz 
                     2::Clock Relationship Summary
  =====================================================================
 
-Launch Clock      Capture Clock     Constraint(R-R)  Slack(R-R)  Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
-----------------  ----------------  ---------------  ----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
-CyBUS_CLK         Ultrasonic_Drive  41666.7          37379       N/A              N/A         N/A              N/A         N/A              N/A         
-Ultrasonic_Drive  Ultrasonic_Drive  2.5e+007         24986044    N/A              N/A         N/A              N/A         N/A              N/A         
+Launch Clock              Capture Clock     Constraint(R-R)  Slack(R-R)  Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
+------------------------  ----------------  ---------------  ----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
+CyBUS_CLK                 Ultrasonic_Drive  41666.7          37379       N/A              N/A         N/A              N/A         N/A              N/A         
+Ultrasonic_Drive(routed)  Ultrasonic_Drive  2.5e+007         24989946    N/A              N/A         N/A              N/A         1.25e+007        12489946    
 
  =====================================================================
                     End of Clock Relationship Summary
@@ -66,14 +67,24 @@ Port Name  Setup to Clk  Clock Name:Phase
 -----------------------3.2::Clock to Out
 ----------------------------------------
 
-Port Name    Clock to Out  Clock Name:Phase            
------------  ------------  --------------------------  
-TX_1(0)_PAD  32072         Ultrasonic_Drive(routed):R  
-TX_1(0)_PAD  32072         Ultrasonic_Drive(routed):F  
-TX_1(0)_PAD  31155         Ultrasonic_Drive:R          
-TX_2(0)_PAD  32596         Ultrasonic_Drive(routed):R  
-TX_2(0)_PAD  32596         Ultrasonic_Drive(routed):F  
-TX_2(0)_PAD  31678         Ultrasonic_Drive:R          
+Port Name             Clock to Out  Clock Name:Phase            
+--------------------  ------------  --------------------------  
+Decimal_place(0)_PAD  25777         CyBUS_CLK:R                 
+Digit_0(0)_PAD        24660         CyBUS_CLK:R                 
+Digit_1(0)_PAD        23787         CyBUS_CLK:R                 
+Digit_2(0)_PAD        24148         CyBUS_CLK:R                 
+Digit_3(0)_PAD        24463         CyBUS_CLK:R                 
+Seven_Segment(0)_PAD  26348         CyBUS_CLK:R                 
+Seven_Segment(1)_PAD  27341         CyBUS_CLK:R                 
+Seven_Segment(2)_PAD  26691         CyBUS_CLK:R                 
+Seven_Segment(3)_PAD  25713         CyBUS_CLK:R                 
+Seven_Segment(4)_PAD  26016         CyBUS_CLK:R                 
+Seven_Segment(5)_PAD  26311         CyBUS_CLK:R                 
+Seven_Segment(6)_PAD  26546         CyBUS_CLK:R                 
+TX_1(0)_PAD           21957         Ultrasonic_Drive(routed):R  
+TX_1(0)_PAD           21957         Ultrasonic_Drive(routed):F  
+TX_2(0)_PAD           33245         Ultrasonic_Drive(routed):R  
+TX_2(0)_PAD           33245         Ultrasonic_Drive(routed):F  
 
 
                          3.3::Pad to Pad
@@ -136,61 +147,7 @@ ClockBlock/dclk_glb_1                                      clockblockcell      0
 4.2::Critical Path Report for Ultrasonic_Drive
 **********************************************
 Clock: Ultrasonic_Drive
-Frequency: 71.65 MHz | Target: 0.04 MHz
-
-++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-
-Path Begin     : \Ultrasonic_Pulse_Counter:Counter7\/tc
-Path End       : \Ultrasonic_Pulse_Counter:Counter7\/enable
-Capture Clock  : \Ultrasonic_Pulse_Counter:Counter7\/clock
-Path slack     : 24986044p
-
-Capture Clock Arrival Time                                              0
-+ Clock path delay                                                      0
-+ Cycle adjust (Ultrasonic_Drive:R#1 vs. Ultrasonic_Drive:R#2)   25000000
-- Setup time                                                        -4060
---------------------------------------------------------------   -------- 
-End-of-path required time (ps)                                   24995940
-
-Launch Clock Arrival Time                      0
-+ Clock path delay                         0
-+ Data path delay                       9896
--------------------------------------   ---- 
-End-of-path arrival time (ps)           9896
- 
-Launch Clock Path
-pin name                                                   model name      delay     AT  edge  Fanout
----------------------------------------------------------  --------------  -----  -----  ----  ------
-ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
-\Ultrasonic_Pulse_Counter:Counter7\/clock                  count7cell          0      0  RISE       1
-
-Data path
-pin name                                    model name   delay     AT     slack  edge  Fanout
-------------------------------------------  -----------  -----  -----  --------  ----  ------
-\Ultrasonic_Pulse_Counter:Counter7\/tc      count7cell    2050   2050  24986044  RISE       1
-Net_28/main_0                               macrocell3    2250   4300  24986044  RISE       1
-Net_28/q                                    macrocell3    3350   7650  24986044  RISE       1
-\Ultrasonic_Pulse_Counter:Counter7\/enable  count7cell    2246   9896  24986044  RISE       1
-
-Capture Clock Path
-pin name                                                   model name      delay     AT  edge  Fanout
----------------------------------------------------------  --------------  -----  -----  ----  ------
-ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
-\Ultrasonic_Pulse_Counter:Counter7\/clock                  count7cell          0      0  RISE       1
-
-
-
-===================================================================== 
-                    End of Path Details for Clock Frequency Summary
-##################################################################### 
-
-
-##################################################################### 
-                    5::Path Details for Clock Relationship Summary
-===================================================================== 
-
-5.1::Critical Path Report for (CyBUS_CLK:R vs. Ultrasonic_Drive:R)
-******************************************************************
+Frequency: 233.20 MHz | Target: 0.04 MHz
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
@@ -231,42 +188,122 @@ ClockBlock/dclk_glb_1                                      clockblockcell      0
 \Ultrasonic_Pulse_Counter:Counter7\/clock                  count7cell          0      0  RISE       1
 
 
-5.2::Critical Path Report for (Ultrasonic_Drive:R vs. Ultrasonic_Drive:R)
-*************************************************************************
 
-++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+===================================================================== 
+                    End of Path Details for Clock Frequency Summary
+##################################################################### 
 
-Path Begin     : \Ultrasonic_Pulse_Counter:Counter7\/tc
+
+##################################################################### 
+                    5::Path Details for Clock Relationship Summary
+===================================================================== 
+
+5.1::Critical Path Report for (Ultrasonic_Drive(routed):R vs. Ultrasonic_Drive:R)
+*********************************************************************************
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : ClockBlock/dclk_1
 Path End       : \Ultrasonic_Pulse_Counter:Counter7\/enable
 Capture Clock  : \Ultrasonic_Pulse_Counter:Counter7\/clock
-Path slack     : 24986044p
+Path slack     : 24989946p
 
-Capture Clock Arrival Time                                              0
-+ Clock path delay                                                      0
-+ Cycle adjust (Ultrasonic_Drive:R#1 vs. Ultrasonic_Drive:R#2)   25000000
-- Setup time                                                        -4060
---------------------------------------------------------------   -------- 
-End-of-path required time (ps)                                   24995940
+Capture Clock Arrival Time                                                      0
++ Clock path delay                                                              0
++ Cycle adjust (Ultrasonic_Drive(routed):R#1 vs. Ultrasonic_Drive:R#2)   25000000
+- Setup time                                                                -4060
+----------------------------------------------------------------------   -------- 
+End-of-path required time (ps)                                           24995940
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       9896
++ Data path delay                       5994
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           9896
+End-of-path arrival time (ps)           5994
  
-Launch Clock Path
+Data path
+pin name                                    model name      delay     AT     slack  edge  Fanout
+------------------------------------------  --------------  -----  -----  --------  ----  ------
+ClockBlock/dclk_1                           clockblockcell      0      0      COMP  RISE       1
+\Ultrasonic_Pulse_Counter:Counter7\/enable  count7cell       5994   5994  24989946  RISE       1
+
+Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
 ---------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
 \Ultrasonic_Pulse_Counter:Counter7\/clock                  count7cell          0      0  RISE       1
 
+
+5.2::Critical Path Report for (Ultrasonic_Drive(routed):F vs. Ultrasonic_Drive:R)
+*********************************************************************************
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : ClockBlock/dclk_1
+Path End       : \Ultrasonic_Pulse_Counter:Counter7\/enable
+Capture Clock  : \Ultrasonic_Pulse_Counter:Counter7\/clock
+Path slack     : 12489946p
+
+Capture Clock Arrival Time                                                      0
++ Clock path delay                                                              0
++ Cycle adjust (Ultrasonic_Drive(routed):F#1 vs. Ultrasonic_Drive:R#2)   25000000
+- Setup time                                                                -4060
+----------------------------------------------------------------------   -------- 
+End-of-path required time (ps)                                           24995940
+
+Launch Clock Arrival Time                   12500000
++ Clock path delay                             0
++ Data path delay                           5994
+-------------------------------------   -------- 
+End-of-path arrival time (ps)           12505994
+ 
 Data path
-pin name                                    model name   delay     AT     slack  edge  Fanout
-------------------------------------------  -----------  -----  -----  --------  ----  ------
-\Ultrasonic_Pulse_Counter:Counter7\/tc      count7cell    2050   2050  24986044  RISE       1
-Net_28/main_0                               macrocell3    2250   4300  24986044  RISE       1
-Net_28/q                                    macrocell3    3350   7650  24986044  RISE       1
-\Ultrasonic_Pulse_Counter:Counter7\/enable  count7cell    2246   9896  24986044  RISE       1
+pin name                                    model name      delay        AT     slack  edge  Fanout
+------------------------------------------  --------------  -----  --------  --------  ----  ------
+ClockBlock/dclk_1                           clockblockcell      0  12500000      COMP  FALL       1
+\Ultrasonic_Pulse_Counter:Counter7\/enable  count7cell       5994  12505994  12489946  FALL       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Ultrasonic_Pulse_Counter:Counter7\/clock                  count7cell          0      0  RISE       1
+
+
+5.3::Critical Path Report for (CyBUS_CLK:R vs. Ultrasonic_Drive:R)
+******************************************************************
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Ultrasonic_Set_Reg:Sync:ctrl_reg\/control_0
+Path End       : \Ultrasonic_Pulse_Counter:Counter7\/reset
+Capture Clock  : \Ultrasonic_Pulse_Counter:Counter7\/clock
+Path slack     : 37379p
+
+Capture Clock Arrival Time                                      0
++ Clock path delay                                              0
++ Cycle adjust (CyBUS_CLK:R#600 vs. Ultrasonic_Drive:R#2)   41667
+- Recovery time                                                 0
+---------------------------------------------------------   ----- 
+End-of-path required time (ps)                              41667
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4288
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4288
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+\Ultrasonic_Set_Reg:Sync:ctrl_reg\/busclk                   controlcell1        0      0  RISE       1
+
+Data path
+pin name                                      model name    delay     AT  slack  edge  Fanout
+--------------------------------------------  ------------  -----  -----  -----  ----  ------
+\Ultrasonic_Set_Reg:Sync:ctrl_reg\/control_0  controlcell1   2050   2050  37379  RISE       1
+\Ultrasonic_Pulse_Counter:Counter7\/reset     count7cell     2238   4288  37379  RISE       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout
@@ -326,37 +363,29 @@ ClockBlock/dclk_glb_1                                      clockblockcell      0
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \Ultrasonic_Pulse_Counter:Counter7\/tc
+Path Begin     : ClockBlock/dclk_1
 Path End       : \Ultrasonic_Pulse_Counter:Counter7\/enable
 Capture Clock  : \Ultrasonic_Pulse_Counter:Counter7\/clock
-Path slack     : 24986044p
+Path slack     : 12489946p
 
-Capture Clock Arrival Time                                              0
-+ Clock path delay                                                      0
-+ Cycle adjust (Ultrasonic_Drive:R#1 vs. Ultrasonic_Drive:R#2)   25000000
-- Setup time                                                        -4060
---------------------------------------------------------------   -------- 
-End-of-path required time (ps)                                   24995940
+Capture Clock Arrival Time                                                      0
++ Clock path delay                                                              0
++ Cycle adjust (Ultrasonic_Drive(routed):F#1 vs. Ultrasonic_Drive:R#2)   25000000
+- Setup time                                                                -4060
+----------------------------------------------------------------------   -------- 
+End-of-path required time (ps)                                           24995940
 
-Launch Clock Arrival Time                      0
-+ Clock path delay                         0
-+ Data path delay                       9896
--------------------------------------   ---- 
-End-of-path arrival time (ps)           9896
+Launch Clock Arrival Time                   12500000
++ Clock path delay                             0
++ Data path delay                           5994
+-------------------------------------   -------- 
+End-of-path arrival time (ps)           12505994
  
-Launch Clock Path
-pin name                                                   model name      delay     AT  edge  Fanout
----------------------------------------------------------  --------------  -----  -----  ----  ------
-ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
-\Ultrasonic_Pulse_Counter:Counter7\/clock                  count7cell          0      0  RISE       1
-
 Data path
-pin name                                    model name   delay     AT     slack  edge  Fanout
-------------------------------------------  -----------  -----  -----  --------  ----  ------
-\Ultrasonic_Pulse_Counter:Counter7\/tc      count7cell    2050   2050  24986044  RISE       1
-Net_28/main_0                               macrocell3    2250   4300  24986044  RISE       1
-Net_28/q                                    macrocell3    3350   7650  24986044  RISE       1
-\Ultrasonic_Pulse_Counter:Counter7\/enable  count7cell    2246   9896  24986044  RISE       1
+pin name                                    model name      delay        AT     slack  edge  Fanout
+------------------------------------------  --------------  -----  --------  --------  ----  ------
+ClockBlock/dclk_1                           clockblockcell      0  12500000      COMP  FALL       1
+\Ultrasonic_Pulse_Counter:Counter7\/enable  count7cell       5994  12505994  12489946  FALL       1
 
 Capture Clock Path
 pin name                                                   model name      delay     AT  edge  Fanout

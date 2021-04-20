@@ -2,6 +2,8 @@ Archive member included to satisfy reference by file (symbol)
 
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
                               .\CortexM3\ARM_GCC_541\Debug\main.o (Ultrasonic_Drive_Start)
+.\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Ultrasonic_Pulse_Counter_Enable)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
                               .\CortexM3\ARM_GCC_541\Debug\main.o (PGA_1_Start)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
@@ -15,21 +17,69 @@ Archive member included to satisfy reference by file (symbol)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
                               .\CortexM3\ARM_GCC_541\Debug\main.o (Comp_1_Start)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
-                              .\CortexM3\ARM_GCC_541\Debug\main.o (Flight_Timer_ReadPeriod)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Flight_Timer_Enable)
+.\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (isr_1_StartEx)
+.\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Digit_Reg_Write)
+.\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Seven_Segment_Reg_Write)
+.\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Flight_Timer_Clock_Start)
+.\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (Flight_Timer_Reset_Reg_Write)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
                               .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o (CyDelayCycles)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
                               .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o) (CyFlash_SetWaitCycles)
 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
                               .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o) (CySpcStart)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (powl)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (floor)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o) (pow)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (__ieee754_pow)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o) (__ieee754_sqrt)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o) (fabs)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (finite)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_lib_ver.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (__fdlib_version)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (matherr)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o) (nan)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (rint)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o) (scalbn)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o) (copysign)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_i2d)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o) (__aeabi_dsub)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
                               .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_dmul)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (__aeabi_dcmpeq)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_unorddf2.o)
+                              c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o) (__aeabi_dcmpun)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_d2iz)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_d2uiz)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
                               .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_d2f)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_i2f)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_fdiv)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_fmul)
+c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+                              .\CortexM3\ARM_GCC_541\Debug\main.o (__aeabi_f2iz)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
                               .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o (__errno)
 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
@@ -46,9 +96,16 @@ c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.
 Allocating common symbols
 Common symbol       size              file
 
+digit               0x10              .\CortexM3\ARM_GCC_541\Debug\main.o
 FT_Period_uS        0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
+decimalPlaces       0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
+Seg10Count          0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
+Seg1Count           0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
 FT_Resolution       0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
 FT_Period_Int       0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
+displayData         0x10              .\CortexM3\ARM_GCC_541\Debug\main.o
+Seg1000Count        0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
+Seg100Count         0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
 SoundSpeed          0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
 FT_Time_Per_Tick    0x4               .\CortexM3\ARM_GCC_541\Debug\main.o
 dieTemperature      0x2               .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
@@ -67,10 +124,7 @@ Discarded input sections
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\main.o
- .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\main.o
  .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\main.o
- .text.Flight_Timer_ISR
-                0x00000000        0x8 .\CortexM3\ARM_GCC_541\Debug\main.o
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -107,12 +161,23 @@ Discarded input sections
                 0x00000000       0xdc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
  .text.Ultrasonic_Drive_SetSourceRegister
                 0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .text.Ultrasonic_Pulse_Counter_Stop
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .text.Ultrasonic_Pulse_Counter_WriteCounter
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .text.Ultrasonic_Pulse_Counter_ReadCounter
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .text.Ultrasonic_Pulse_Counter_WritePeriod
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .text.Ultrasonic_Pulse_Counter_ReadPeriod
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
  .text.PGA_1_Stop
                 0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .data          0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .bss           0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .text.CyUSB_PowerOnCheck
                 0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
@@ -191,7 +256,6 @@ Discarded input sections
                 0x00000000       0x58 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .text.CySoftwareReset
                 0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .text.CyDelay  0x00000000       0x2c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .text.CyDelayUs
                 0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .text.CyXTAL_32KHZ_SetPowerMode
@@ -336,13 +400,8 @@ Discarded input sections
                 0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .bss           0x00000000        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_Enable
-                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .text.Flight_Timer_Stop
                 0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_SetInterruptMode
-                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .text.Flight_Timer_SoftwareCapture
                 0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .text.Flight_Timer_ReadStatusRegister
@@ -351,18 +410,63 @@ Discarded input sections
                 0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .text.Flight_Timer_WriteControlRegister
                 0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_WritePeriod
-                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_ReadCapture
-                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_WriteCounter
-                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_Init
-                0x00000000       0x68 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .text.Flight_Timer_Start
-                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .text.Flight_Timer_ReadCounter
                 0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_Interrupt
+                0x00000000        0x4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_GetVector
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_GetPriority
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_GetState
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_Start
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_Stop
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text.isr_1_SetPending
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .text.Digit_Reg_Read
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .text.Seven_Segment_Reg_Read
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_Stop
+                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_StopBlock
+                0x00000000       0x6c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_StandbyPower
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_GetDividerRegister
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_SetModeRegister
+                0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_ClearModeRegister
+                0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_GetModeRegister
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_GetSourceRegister
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_SetDividerRegister
+                0x00000000       0xd8 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text.Flight_Timer_Clock_SetSourceRegister
+                0x00000000       0x5c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .text.Flight_Timer_Reset_Reg_Read
+                0x00000000        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
@@ -426,14 +530,65 @@ Discarded input sections
                 0x00000000       0x38 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
  .text.CySpcGetAlgorithm
                 0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_lib_ver.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_lib_ver.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_lib_ver.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_unorddf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_unorddf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
@@ -525,7 +680,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 [!provide]                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x130a
+.text           0x00000000     0x2dca
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -542,228 +697,375 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .text.main     0x00000084       0x80 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .text.main     0x00000084       0xe4 .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x00000084                main
+ .text.getDigits
+                0x00000168       0x6c .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000168                getDigits
+ .text.saveDigitsToRAM
+                0x000001d4       0xcc .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000001d4                saveDigitsToRAM
+ .text.Flight_Timer_ISR
+                0x000002a0       0x30 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000002a0                Flight_Timer_ISR
  .text.CyClockStartupError
-                0x00000104        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000002d0        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cfg_write_bytes32
-                0x00000108       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000002d4       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.AnalogSetDefault
-                0x0000013c       0x8c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000308       0x78 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x000001c8        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000380        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.ClockSetup
-                0x000001d4       0xc8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000038c       0xc8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYCONFIGCPY
-                0x0000029c        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000454        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cyfitter_cfg
-                0x000002a4       0xfc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                0x000002a4                cyfitter_cfg
+                0x0000045c      0x10c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000045c                cyfitter_cfg
  .text.IntDefaultHandler
-                0x000003a0       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x000003a0                IntDefaultHandler
- .text.Start_c  0x000003b0       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x000003b0                Start_c
+                0x00000568       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000568                IntDefaultHandler
+ .text.Start_c  0x00000578       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000578                Start_c
  .text.initialize_psoc
-                0x000003fc       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x000003fc                initialize_psoc
+                0x000005c4       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000005c4                initialize_psoc
  .text.Ultrasonic_Drive_Start
-                0x00000464       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
-                0x00000464                Ultrasonic_Drive_Start
+                0x0000062c       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+                0x0000062c                Ultrasonic_Drive_Start
+ .text.Ultrasonic_Pulse_Counter_Init
+                0x00000648        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+                0x00000648                Ultrasonic_Pulse_Counter_Init
+ .text.Ultrasonic_Pulse_Counter_Enable
+                0x00000654       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+                0x00000654                Ultrasonic_Pulse_Counter_Enable
+ .text.Ultrasonic_Pulse_Counter_Start
+                0x00000670       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+                0x00000670                Ultrasonic_Pulse_Counter_Start
  .text.PGA_1_Enable
-                0x00000480       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
-                0x00000480                PGA_1_Enable
+                0x0000068c       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x0000068c                PGA_1_Enable
  .text.PGA_1_SetPower
-                0x000004a8       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
-                0x000004a8                PGA_1_SetPower
+                0x000006b4       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x000006b4                PGA_1_SetPower
  .text.PGA_1_SetGain
-                0x000004c0       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
-                0x000004c0                PGA_1_SetGain
+                0x000006cc       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x000006cc                PGA_1_SetGain
  .text.PGA_1_Init
-                0x00000538       0x34 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
-                0x00000538                PGA_1_Init
+                0x00000744       0x34 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x00000744                PGA_1_Init
  .text.PGA_1_Start
-                0x0000056c       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
-                0x0000056c                PGA_1_Start
+                0x00000778       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x00000778                PGA_1_Start
+ .text.CyDelay  0x00000794       0x2c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+                0x00000794                CyDelay
  .text.Vssa_Buffer_Enable
-                0x00000588       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
-                0x00000588                Vssa_Buffer_Enable
+                0x000007c0       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x000007c0                Vssa_Buffer_Enable
  .text.Vssa_Buffer_SetPower
-                0x000005b0       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
-                0x000005b0                Vssa_Buffer_SetPower
+                0x000007e8       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x000007e8                Vssa_Buffer_SetPower
  .text.Vssa_Buffer_Init
-                0x000005cc        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
-                0x000005cc                Vssa_Buffer_Init
+                0x00000804        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x00000804                Vssa_Buffer_Init
  .text.Vssa_Buffer_Start
-                0x000005d8       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
-                0x000005d8                Vssa_Buffer_Start
+                0x00000810       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x00000810                Vssa_Buffer_Start
  .text.VDAC8_1_Enable
-                0x000005f4       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x000005f4                VDAC8_1_Enable
+                0x0000082c       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x0000082c                VDAC8_1_Enable
  .text.VDAC8_1_SetSpeed
-                0x00000610       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x00000610                VDAC8_1_SetSpeed
+                0x00000848       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x00000848                VDAC8_1_SetSpeed
  .text.VDAC8_1_SetValue
-                0x0000062c        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x0000062c                VDAC8_1_SetValue
+                0x00000864        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x00000864                VDAC8_1_SetValue
  .text.VDAC8_1_DacTrim
-                0x00000638       0x24 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x00000638                VDAC8_1_DacTrim
+                0x00000870       0x24 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x00000870                VDAC8_1_DacTrim
  .text.VDAC8_1_SetRange
-                0x0000065c       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x0000065c                VDAC8_1_SetRange
+                0x00000894       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x00000894                VDAC8_1_SetRange
  .text.VDAC8_1_Init
-                0x0000067c       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x0000067c                VDAC8_1_Init
+                0x000008b4       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x000008b4                VDAC8_1_Init
  .text.VDAC8_1_Start
-                0x0000069c       0x24 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x0000069c                VDAC8_1_Start
+                0x000008d4       0x24 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x000008d4                VDAC8_1_Start
  .text.Comp_1_Enable
-                0x000006c0       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
-                0x000006c0                Comp_1_Enable
+                0x000008f8       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x000008f8                Comp_1_Enable
  .text.Comp_1_SetSpeed
-                0x000006dc       0x58 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
-                0x000006dc                Comp_1_SetSpeed
+                0x00000914       0x58 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x00000914                Comp_1_SetSpeed
  .text.Comp_1_Init
-                0x00000734       0x3c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
-                0x00000734                Comp_1_Init
+                0x0000096c       0x3c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x0000096c                Comp_1_Init
  .text.Comp_1_Start
-                0x00000770       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
-                0x00000770                Comp_1_Start
+                0x000009a8       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x000009a8                Comp_1_Start
+ .text.Flight_Timer_Enable
+                0x000009c4       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x000009c4                Flight_Timer_Enable
+ .text.Flight_Timer_SetInterruptMode
+                0x000009ec        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x000009ec                Flight_Timer_SetInterruptMode
  .text.Flight_Timer_ReadPeriod
-                0x0000078c        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
-                0x0000078c                Flight_Timer_ReadPeriod
- .text          0x00000798       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
-                0x00000798                CyDelayCycles
-                0x000007a8                CyEnterCriticalSection
-                0x000007b0                CyExitCriticalSection
- .text          0x000007b8      0x370 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                0x000007b8                __aeabi_drsub
-                0x000007c0                __aeabi_dsub
-                0x000007c0                __subdf3
-                0x000007c4                __aeabi_dadd
-                0x000007c4                __adddf3
-                0x00000a3c                __floatunsidf
-                0x00000a3c                __aeabi_ui2d
-                0x00000a5c                __floatsidf
-                0x00000a5c                __aeabi_i2d
-                0x00000a80                __aeabi_f2d
-                0x00000a80                __extendsfdf2
-                0x00000abc                __floatundidf
-                0x00000abc                __aeabi_ul2d
-                0x00000acc                __floatdidf
-                0x00000acc                __aeabi_l2d
- .text          0x00000b28      0x424 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
-                0x00000b28                __aeabi_dmul
-                0x00000b28                __muldf3
-                0x00000d7c                __divdf3
-                0x00000d7c                __aeabi_ddiv
- .text          0x00000f4c       0xa0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
-                0x00000f4c                __truncdfsf2
-                0x00000f4c                __aeabi_d2f
- .text          0x00000fec      0x2a0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                0x00000fec                __mulsf3
-                0x00000fec                __aeabi_fmul
-                0x00001154                __aeabi_fdiv
-                0x00001154                __divsf3
- .text.__errno  0x0000128c        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x0000128c                __errno
+                0x000009f8        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x000009f8                Flight_Timer_ReadPeriod
+ .text.Flight_Timer_WritePeriod
+                0x00000a04        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x00000a04                Flight_Timer_WritePeriod
+ .text.Flight_Timer_ReadCapture
+                0x00000a10        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x00000a10                Flight_Timer_ReadCapture
+ .text.Flight_Timer_WriteCounter
+                0x00000a1c        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x00000a1c                Flight_Timer_WriteCounter
+ .text.Flight_Timer_Init
+                0x00000a28       0x68 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x00000a28                Flight_Timer_Init
+ .text.Flight_Timer_Start
+                0x00000a90       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x00000a90                Flight_Timer_Start
+ .text.isr_1_SetVector
+                0x00000aac       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                0x00000aac                isr_1_SetVector
+ .text.isr_1_SetPriority
+                0x00000abc       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                0x00000abc                isr_1_SetPriority
+ .text.isr_1_Enable
+                0x00000acc       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                0x00000acc                isr_1_Enable
+ .text.isr_1_Disable
+                0x00000adc       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                0x00000adc                isr_1_Disable
+ .text.isr_1_StartEx
+                0x00000aec       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                0x00000aec                isr_1_StartEx
+ .text.isr_1_ClearPending
+                0x00000b08       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                0x00000b08                isr_1_ClearPending
+ .text.Digit_Reg_Write
+                0x00000b18        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+                0x00000b18                Digit_Reg_Write
+ .text.Seven_Segment_Reg_Write
+                0x00000b24        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+                0x00000b24                Seven_Segment_Reg_Write
+ .text.Flight_Timer_Clock_Start
+                0x00000b30       0x1c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+                0x00000b30                Flight_Timer_Clock_Start
+ .text.Flight_Timer_Reset_Reg_Write
+                0x00000b4c        0xc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+                0x00000b4c                Flight_Timer_Reset_Reg_Write
+ .text          0x00000b58       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+                0x00000b58                CyDelayCycles
+                0x00000b68                CyEnterCriticalSection
+                0x00000b70                CyExitCriticalSection
+ .text.powl     0x00000b78        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
+                0x00000b78                powl
+ *fill*         0x00000b7c        0x4 
+ .text.floor    0x00000b80      0x110 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
+                0x00000b80                floor
+ .text.pow      0x00000c90      0x330 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+                0x00000c90                pow
+ .text.__ieee754_pow
+                0x00000fc0      0xac4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+                0x00000fc0                __ieee754_pow
+ .text.__ieee754_sqrt
+                0x00001a84      0x188 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
+                0x00001a84                __ieee754_sqrt
+ .text.fabs     0x00001c0c        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+                0x00001c0c                fabs
+ .text.finite   0x00001c14        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+                0x00001c14                finite
+ .text.matherr  0x00001c20        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+                0x00001c20                matherr
+ .text.nan      0x00001c24        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+                0x00001c24                nan
+ .text.rint     0x00001c30      0x120 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+                0x00001c30                rint
+ .text.scalbn   0x00001d50       0xe4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+                0x00001d50                scalbn
+ .text.copysign
+                0x00001e34       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
+                0x00001e34                copysign
+ .text          0x00001e44      0x370 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00001e44                __aeabi_drsub
+                0x00001e4c                __aeabi_dsub
+                0x00001e4c                __subdf3
+                0x00001e50                __aeabi_dadd
+                0x00001e50                __adddf3
+                0x000020c8                __floatunsidf
+                0x000020c8                __aeabi_ui2d
+                0x000020e8                __floatsidf
+                0x000020e8                __aeabi_i2d
+                0x0000210c                __aeabi_f2d
+                0x0000210c                __extendsfdf2
+                0x00002148                __floatundidf
+                0x00002148                __aeabi_ul2d
+                0x00002158                __floatdidf
+                0x00002158                __aeabi_l2d
+ .text          0x000021b4      0x424 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x000021b4                __aeabi_dmul
+                0x000021b4                __muldf3
+                0x00002408                __divdf3
+                0x00002408                __aeabi_ddiv
+ .text          0x000025d8      0x110 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                0x000025d8                __gtdf2
+                0x000025d8                __gedf2
+                0x000025e0                __ltdf2
+                0x000025e0                __ledf2
+                0x000025e8                __nedf2
+                0x000025e8                __eqdf2
+                0x000025e8                __cmpdf2
+                0x00002664                __aeabi_cdrcmple
+                0x00002674                __aeabi_cdcmpeq
+                0x00002674                __aeabi_cdcmple
+                0x00002684                __aeabi_dcmpeq
+                0x00002698                __aeabi_dcmplt
+                0x000026ac                __aeabi_dcmple
+                0x000026c0                __aeabi_dcmpge
+                0x000026d4                __aeabi_dcmpgt
+ .text          0x000026e8       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_unorddf2.o)
+                0x000026e8                __unorddf2
+                0x000026e8                __aeabi_dcmpun
+ .text          0x00002714       0x50 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x00002714                __aeabi_d2iz
+                0x00002714                __fixdfsi
+ .text          0x00002764       0x40 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
+                0x00002764                __aeabi_d2uiz
+                0x00002764                __fixunsdfsi
+ .text          0x000027a4       0xa0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+                0x000027a4                __truncdfsf2
+                0x000027a4                __aeabi_d2f
+ .text          0x00002844      0x21c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x00002844                __aeabi_frsub
+                0x0000284c                __subsf3
+                0x0000284c                __aeabi_fsub
+                0x00002850                __aeabi_fadd
+                0x00002850                __addsf3
+                0x000029b0                __aeabi_ui2f
+                0x000029b0                __floatunsisf
+                0x000029b8                __aeabi_i2f
+                0x000029b8                __floatsisf
+                0x000029d4                __aeabi_ul2f
+                0x000029d4                __floatundisf
+                0x000029e4                __aeabi_l2f
+                0x000029e4                __floatdisf
+ .text          0x00002a60      0x2a0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00002a60                __mulsf3
+                0x00002a60                __aeabi_fmul
+                0x00002bc8                __aeabi_fdiv
+                0x00002bc8                __divsf3
+ .text          0x00002d00       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+                0x00002d00                __aeabi_f2iz
+                0x00002d00                __fixsfsi
+ .text.__errno  0x00002d4c        0xc c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00002d4c                __errno
  .text.__libc_init_array
-                0x00001298       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x00001298                __libc_init_array
- .text.memcpy   0x000012e4       0x16 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x000012e4                memcpy
- .text.memset   0x000012fa       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x000012fa                memset
+                0x00002d58       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00002d58                __libc_init_array
+ .text.memcpy   0x00002da4       0x16 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00002da4                memcpy
+ .text.memset   0x00002dba       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00002dba                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x0000130a        0x0 linker stubs
+ .glue_7t       0x00002dca        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x0000130a        0x0 linker stubs
+ .glue_7        0x00002dca        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x0000130a        0x0 linker stubs
+ .vfp11_veneer  0x00002dca        0x0 linker stubs
  *(.bootloader)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x0000130c        0x0
- .v4_bx         0x0000130c        0x0 linker stubs
+.v4_bx          0x00002dcc        0x0
+ .v4_bx         0x00002dcc        0x0 linker stubs
 
-.iplt           0x0000130c        0x0
- .iplt          0x0000130c        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.iplt           0x00002dcc        0x0
+ .iplt          0x00002dcc        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x0000130c        0x4
+.eh_frame       0x00002dcc        0x4
  *(.eh_frame)
- .eh_frame      0x0000130c        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .eh_frame      0x0000130c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .eh_frame      0x00002dcc        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .eh_frame      0x00002dcc        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
                 [!provide]                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00001310                __exidx_end = .
+                0x00002dd0                __exidx_end = .
 
-.rodata         0x00001310       0x88
+.rodata         0x00002dd0       0xa0
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00001310       0x36 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- *fill*         0x00001346        0x2 
- .rodata        0x00001348       0x15 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .rodata        0x00002dd0       0x36 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ *fill*         0x00002e06        0x2 
+ .rodata        0x00002e08       0x15 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ *fill*         0x00002e1d        0x3 
+ .rodata.str1.4
+                0x00002e20        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+ .rodata.str1.4
+                0x00002e24        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+                                  0x1 (size before relaxing)
+ .rodata.TWO52  0x00002e28       0x10 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
  .rodata.str1.1
-                0x0000135d        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x00001360                . = ALIGN (0x4)
- *fill*         0x0000135f        0x1 
+                0x00002e38        0x2 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00002e3c                . = ALIGN (0x4)
+ *fill*         0x00002e3a        0x2 
  *(.init)
- .init          0x00001360        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x00001360                _init
- .init          0x00001364        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x0000136c                . = ALIGN (0x4)
-                0x0000136c                __preinit_array_start = .
+ .init          0x00002e3c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x00002e3c                _init
+ .init          0x00002e40        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00002e48                . = ALIGN (0x4)
+                0x00002e48                __preinit_array_start = .
  *(.preinit_array)
-                0x0000136c                __preinit_array_end = .
-                0x0000136c                . = ALIGN (0x4)
-                0x0000136c                __init_array_start = .
+                0x00002e48                __preinit_array_end = .
+                0x00002e48                . = ALIGN (0x4)
+                0x00002e48                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x0000136c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .init_array    0x00001370        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00001374                __init_array_end = .
-                0x00001374                . = ALIGN (0x4)
+ .init_array    0x00002e48        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x00002e4c        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00002e50                __init_array_end = .
+                0x00002e50                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00001374        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x00001374                _fini
- .fini          0x00001378        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x00001380                . = ALIGN (0x4)
-                0x00001380                __fini_array_start = .
+ .fini          0x00002e50        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x00002e50                _fini
+ .fini          0x00002e54        0x8 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00002e5c                . = ALIGN (0x4)
+                0x00002e5c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00001380        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .fini_array    0x00002e5c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00001384                __fini_array_end = .
-                0x00001384                . = ALIGN (0x4)
+                0x00002e60                __fini_array_end = .
+                0x00002e60                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00001384                . = ALIGN (0x4)
+                0x00002e60                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00001384                . = ALIGN (0x4)
-                0x00001384                __cy_regions = .
-                0x00001384        0x4 LONG 0x1398 __cy_region_init_ram
-                0x00001388        0x4 LONG 0x1fff80c8 __cy_region_start_data
-                0x0000138c        0x4 LONG 0x68 __cy_region_init_size_ram
-                0x00001390        0x4 LONG 0x38 __cy_region_zero_size_ram
-                0x00001394                __cy_regions_end = .
-                0x00001398                . = ALIGN (0x8)
- *fill*         0x00001394        0x4 
-                0x00001398                _etext = .
+                0x00002e60                . = ALIGN (0x4)
+                0x00002e60                __cy_regions = .
+                0x00002e60        0x4 LONG 0x2e70 __cy_region_init_ram
+                0x00002e64        0x4 LONG 0x1fff80c8 __cy_region_start_data
+                0x00002e68        0x4 LONG 0xb8 __cy_region_init_size_ram
+                0x00002e6c        0x4 LONG 0x70 __cy_region_zero_size_ram
+                0x00002e70                __cy_regions_end = .
+                0x00002e70                . = ALIGN (0x8)
+                0x00002e70                _etext = .
 
 .cy_checksum_exclude
-                0x00001398        0x0
+                0x00002e70        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000       0xc0
@@ -777,7 +1079,7 @@ END GROUP
  .noinit        0x1fff80c0        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
                 0x1fff80c0                CyResetStatus
 
-.data           0x1fff80c8       0x68 load address 0x00001398
+.data           0x1fff80c8       0xb8 load address 0x00002e70
                 0x1fff80c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff80c8        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
@@ -786,54 +1088,91 @@ END GROUP
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x1fff80cc       0x38 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff80cc                zero
+                0x1fff80d0                one
+                0x1fff80d4                two
+                0x1fff80d8                three
+                0x1fff80dc                four
+                0x1fff80e0                five
+                0x1fff80e4                six
+                0x1fff80e8                seven
+                0x1fff80ec                eight
+                0x1fff80f0                nine
+                0x1fff80f4                digitZero
+                0x1fff80f8                digitOne
+                0x1fff80fc                digitTwo
+                0x1fff8100                digitThree
+ .data          0x1fff8104       0x10 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+                0x1fff8104                cydelay_32k_ms
+                0x1fff8108                cydelay_freq_khz
+                0x1fff810c                cydelay_freq_mhz
+                0x1fff8110                cydelay_freq_hz
+ .data.__fdlib_version
+                0x1fff8114        0x1 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_lib_ver.o)
+                0x1fff8114                __fdlib_version
+ *fill*         0x1fff8115        0x3 
  .data.impure_data
-                0x1fff80cc       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x1fff8118       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .data._impure_ptr
-                0x1fff812c        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x1fff812c                _impure_ptr
-                0x1fff8130                . = ALIGN (0x8)
+                0x1fff8178        0x4 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x1fff8178                _impure_ptr
+                0x1fff8180                . = ALIGN (0x8)
+ *fill*         0x1fff817c        0x4 
  *(.ram)
-                0x1fff8130                _edata = .
+                0x1fff8180                _edata = .
 
-.igot.plt       0x1fff8130        0x0 load address 0x00001400
- .igot.plt      0x1fff8130        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.igot.plt       0x1fff8180        0x0 load address 0x00002f28
+ .igot.plt      0x1fff8180        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.bss            0x1fff8130       0x38 load address 0x00001400
-                0x1fff8130                PROVIDE (__bss_start__, .)
+.bss            0x1fff8180       0x70 load address 0x00002f28
+                0x1fff8180                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x1fff8130       0x1c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .bss           0x1fff814c        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
-                0x1fff814c                PGA_1_initVar
- .bss           0x1fff814d        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
-                0x1fff814d                Vssa_Buffer_initVar
- .bss           0x1fff814e        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
-                0x1fff814e                VDAC8_1_initVar
- .bss           0x1fff814f        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
-                0x1fff814f                Comp_1_initVar
+ .bss           0x1fff8180       0x1c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .bss           0x1fff819c        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+                0x1fff819c                Ultrasonic_Pulse_Counter_initVar
+ .bss           0x1fff819d        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x1fff819d                PGA_1_initVar
+ .bss           0x1fff819e        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x1fff819e                Vssa_Buffer_initVar
+ .bss           0x1fff819f        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x1fff819f                VDAC8_1_initVar
+ .bss           0x1fff81a0        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x1fff81a0                Comp_1_initVar
+ .bss           0x1fff81a1        0x1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x1fff81a1                Flight_Timer_initVar
  *(COMMON)
- COMMON         0x1fff8150       0x18 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x1fff8150                FT_Period_uS
-                0x1fff8154                FT_Resolution
-                0x1fff8158                FT_Period_Int
-                0x1fff815c                SoundSpeed
-                0x1fff8160                FT_Time_Per_Tick
-                0x1fff8164                FT_Time_Per_Tick_uS
-                0x1fff8168                . = ALIGN (0x8)
+ *fill*         0x1fff81a2        0x2 
+ COMMON         0x1fff81a4       0x4c .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x1fff81a4                digit
+                0x1fff81b4                FT_Period_uS
+                0x1fff81b8                decimalPlaces
+                0x1fff81bc                Seg10Count
+                0x1fff81c0                Seg1Count
+                0x1fff81c4                FT_Resolution
+                0x1fff81c8                FT_Period_Int
+                0x1fff81cc                displayData
+                0x1fff81dc                Seg1000Count
+                0x1fff81e0                Seg100Count
+                0x1fff81e4                SoundSpeed
+                0x1fff81e8                FT_Time_Per_Tick
+                0x1fff81ec                FT_Time_Per_Tick_uS
+                0x1fff81f0                . = ALIGN (0x8)
  *(.ram.b)
-                0x1fff8168                _end = .
-                0x1fff8168                __end = .
-                0x1fff8168                PROVIDE (end, .)
-                0x1fff8168                PROVIDE (__bss_end__, .)
-                0x00001398                __cy_region_init_ram = LOADADDR (.data)
-                0x00000068                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000038                __cy_region_zero_size_ram = (_end - _edata)
+                0x1fff81f0                _end = .
+                0x1fff81f0                __end = .
+                0x1fff81f0                PROVIDE (end, .)
+                0x1fff81f0                PROVIDE (__bss_end__, .)
+                0x00002e70                __cy_region_init_ram = LOADADDR (.data)
+                0x000000b8                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000070                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8168       0x80 load address 0x00001400
-                0x1fff8168                . = _end
-                0x1fff81e8                . = (. + 0x80)
- *fill*         0x1fff8168       0x80 
-                0x1fff81e8                __cy_heap_limit = .
+.heap           0x1fff81f0       0x80 load address 0x00002f28
+                0x1fff81f0                . = _end
+                0x1fff8270                . = (. + 0x80)
+ *fill*         0x1fff81f0       0x80 
+                0x1fff8270                __cy_heap_limit = .
 
 .stack          0x20007800      0x800
                 0x20007800                __cy_stack_limit = .
@@ -849,9 +1188,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000       0xec
+.cyconfigecc    0x80000000      0x1fc
  *(.cyconfigecc)
- .cyconfigecc   0x80000000       0xec .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0x1fc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -880,8 +1219,8 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00001400        0x0 load address 0x9050000c
- .rel.iplt      0x00001400        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.rel.dyn        0x00002f28        0x0 load address 0x9050000c
+ .rel.iplt      0x00002f28        0x0 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .stab
  *(.stab)
@@ -901,180 +1240,250 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x788
+.debug_aranges  0x00000000      0x958
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000000       0x38 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_aranges
-                0x00000028       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000038       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .debug_aranges
-                0x00000080       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x00000090       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
  .debug_aranges
-                0x00000098       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000000a8       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
  .debug_aranges
-                0x000000e0       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+                0x000000f0       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
  .debug_aranges
-                0x00000150       0x48 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x00000160       0x58 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
  .debug_aranges
-                0x00000198      0x2a0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+                0x000001b8       0x48 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
  .debug_aranges
-                0x00000438       0x98 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+                0x00000200      0x2a0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .debug_aranges
-                0x000004d0       0x40 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x000004a0       0x98 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
  .debug_aranges
-                0x00000510       0x58 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x00000538       0x40 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
  .debug_aranges
-                0x00000568       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x00000578       0x58 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
  .debug_aranges
-                0x000005d8       0x88 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x000005d0       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
  .debug_aranges
-                0x00000660       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+                0x00000640       0x88 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .debug_aranges
-                0x00000680       0x88 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+                0x000006c8       0x80 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
  .debug_aranges
-                0x00000708       0x80 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+                0x00000748       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .debug_aranges
+                0x00000770       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .debug_aranges
+                0x00000798       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_aranges
+                0x00000808       0x28 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .debug_aranges
+                0x00000830       0x20 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00000850       0x88 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_aranges
+                0x000008d8       0x80 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x42a8
+.debug_info     0x00000000     0x5028
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x202 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_info    0x00000202      0x4c9 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x000006cb      0x134 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x000007ff      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_info    0x00000bba      0x283 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
- .debug_info    0x00000e3d      0x1d3 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
- .debug_info    0x00001010     0x1374 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .debug_info    0x00002384      0xa2a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
- .debug_info    0x00002dae      0x151 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
- .debug_info    0x00002eff      0x1e0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
- .debug_info    0x000030df      0x2c8 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
- .debug_info    0x000033a7      0x295 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .debug_info    0x0000363c       0xcf .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
- .debug_info    0x0000370b      0x64d .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
- .debug_info    0x00003d58      0x550 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_info    0x00000000      0x59a .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_info    0x0000059a      0x4ee .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00000a88      0x135 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00000bbd      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x00000f78      0x283 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_info    0x000011fb      0x1ec .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .debug_info    0x000013e7      0x1d3 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_info    0x000015ba     0x1374 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_info    0x0000292e      0xa2a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_info    0x00003358      0x151 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_info    0x000034a9      0x1df .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_info    0x00003688      0x2c8 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_info    0x00003950      0x295 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .debug_info    0x00003be5      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .debug_info    0x00003eb7       0xd6 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .debug_info    0x00003f8d       0xd6 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .debug_info    0x00004063      0x283 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_info    0x000042e6       0xd6 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .debug_info    0x000043bc       0xcf .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+ .debug_info    0x0000448b      0x64d .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_info    0x00004ad8      0x550 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x12b3
+.debug_abbrev   0x00000000     0x1864
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xc2 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_abbrev  0x000000c2      0x1fe .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_abbrev  0x000002c0       0x5d .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_abbrev  0x0000031d      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_abbrev  0x00000505      0x139 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
- .debug_abbrev  0x0000063e       0xf6 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
- .debug_abbrev  0x00000734      0x254 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .debug_abbrev  0x00000988      0x1ab .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
- .debug_abbrev  0x00000b33       0xb2 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
- .debug_abbrev  0x00000be5       0xf7 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
- .debug_abbrev  0x00000cdc      0x16e .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
- .debug_abbrev  0x00000e4a      0x11a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .debug_abbrev  0x00000f64       0x14 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000f78      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
- .debug_abbrev  0x0000111f      0x194 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_abbrev  0x00000000      0x157 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x00000157      0x1fe .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x00000355       0x66 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x000003bb      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_abbrev  0x000005a3      0x139 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_abbrev  0x000006dc       0xe4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .debug_abbrev  0x000007c0       0xf6 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_abbrev  0x000008b6      0x254 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_abbrev  0x00000b0a      0x1ab .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_abbrev  0x00000cb5       0xb2 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_abbrev  0x00000d67       0xf7 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_abbrev  0x00000e5e      0x16e .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_abbrev  0x00000fcc      0x11a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .debug_abbrev  0x000010e6      0x173 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .debug_abbrev  0x00001259       0x81 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .debug_abbrev  0x000012da       0x81 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .debug_abbrev  0x0000135b      0x139 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_abbrev  0x00001494       0x81 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .debug_abbrev  0x00001515       0x14 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00001529      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_abbrev  0x000016d0      0x194 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
-.debug_line     0x00000000     0x1e29
+.debug_line     0x00000000     0x24c1
  *(.debug_line)
- .debug_line    0x00000000      0x1d2 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_line    0x000001d2      0x1e9 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x000003bb      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x000004fc      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_line    0x00000730      0x17f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
- .debug_line    0x000008af       0xcc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
- .debug_line    0x0000097b      0x816 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .debug_line    0x00001191      0x367 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
- .debug_line    0x000014f8       0xae .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
- .debug_line    0x000015a6       0xe4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
- .debug_line    0x0000168a      0x165 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
- .debug_line    0x000017ef      0x15a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .debug_line    0x00001949       0x66 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
- .debug_line    0x000019af      0x21a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
- .debug_line    0x00001bc9      0x260 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_line    0x00000000      0x358 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x00000358      0x1e6 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x0000053e      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x0000067f      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x000008b3      0x17f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_line    0x00000a32       0xfa .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .debug_line    0x00000b2c       0xcc .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_line    0x00000bf8      0x816 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_line    0x0000140e      0x367 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_line    0x00001775       0xae .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_line    0x00001823       0xe4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_line    0x00001907      0x165 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_line    0x00001a6c      0x15a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .debug_line    0x00001bc6      0x132 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .debug_line    0x00001cf8       0x71 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .debug_line    0x00001d69       0x79 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .debug_line    0x00001de2      0x181 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_line    0x00001f63       0x7e .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .debug_line    0x00001fe1       0x66 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+ .debug_line    0x00002047      0x21a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_line    0x00002261      0x260 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
-.debug_frame    0x00000000     0x139c
+.debug_frame    0x00000000     0x1944
  *(.debug_frame)
- .debug_frame   0x00000000       0x48 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_frame   0x00000048       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_frame   0x0000012c       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_frame   0x000001e4       0xe0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
- .debug_frame   0x000002c4       0x9c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
- .debug_frame   0x00000360      0x738 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .debug_frame   0x00000a98      0x1f8 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
- .debug_frame   0x00000c90       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
- .debug_frame   0x00000d08       0xb4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
- .debug_frame   0x00000dbc      0x108 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
- .debug_frame   0x00000ec4      0x108 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .debug_frame   0x00000fcc      0x194 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
- .debug_frame   0x00001160      0x180 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
- .debug_frame   0x000012e0       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00001300       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x00001328       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00001354       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000137c       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x84 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_frame   0x00000084       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x00000168       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_frame   0x00000220       0xe0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_frame   0x00000300       0xb4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .debug_frame   0x000003b4       0x9c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_frame   0x00000450      0x738 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_frame   0x00000b88      0x1f8 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_frame   0x00000d80       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_frame   0x00000df8       0xb4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_frame   0x00000eac      0x108 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_frame   0x00000fb4      0x108 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .debug_frame   0x000010bc      0x104 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .debug_frame   0x000011c0       0x30 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .debug_frame   0x000011f0       0x30 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .debug_frame   0x00001220       0xe0 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_frame   0x00001300       0x30 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .debug_frame   0x00001330      0x194 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_frame   0x000014c4      0x180 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_frame   0x00001644       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
+ .debug_frame   0x00001664       0x34 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
+ .debug_frame   0x00001698       0x4c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
+ .debug_frame   0x000016e4       0x68 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
+ .debug_frame   0x0000174c       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
+ .debug_frame   0x0000177c       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+ .debug_frame   0x0000179c       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+ .debug_frame   0x000017bc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+ .debug_frame   0x000017dc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+ .debug_frame   0x000017fc       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+ .debug_frame   0x00001838       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+ .debug_frame   0x00001868       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
+ .debug_frame   0x00001888       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000018a8       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000018d0       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000018fc       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001924       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1a51
+.debug_str      0x00000000     0x200e
  *(.debug_str)
- .debug_str     0x00000000      0x2a5 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x2ed (size before relaxing)
- .debug_str     0x000002a5      0x187 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000000      0x467 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x4af (size before relaxing)
+ .debug_str     0x00000467      0x187 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x34e (size before relaxing)
- .debug_str     0x0000042c       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x000005ee       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                                 0x223 (size before relaxing)
- .debug_str     0x000004ab      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_str     0x0000066d      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
                                 0x349 (size before relaxing)
- .debug_str     0x000005ef      0x1bd .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_str     0x000007b1      0x1bd .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
                                 0x399 (size before relaxing)
- .debug_str     0x000007ac       0x9d .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_str     0x0000096e      0x166 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+                                0x370 (size before relaxing)
+ .debug_str     0x00000ad4       0x9d .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
                                 0x26e (size before relaxing)
- .debug_str     0x00000849      0x84e .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_str     0x00000b71      0x80a .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
                                 0xa86 (size before relaxing)
- .debug_str     0x00001097      0x365 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_str     0x0000137b      0x365 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
                                 0x772 (size before relaxing)
- .debug_str     0x000013fc       0x83 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_str     0x000016e0       0x83 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
                                 0x260 (size before relaxing)
- .debug_str     0x0000147f       0xa9 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_str     0x00001763       0xa9 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
                                 0x272 (size before relaxing)
- .debug_str     0x00001528      0x121 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_str     0x0000180c      0x121 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
                                 0x317 (size before relaxing)
- .debug_str     0x00001649      0x1a1 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .debug_str     0x0000192d      0x173 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
                                 0x3a4 (size before relaxing)
- .debug_str     0x000017ea      0x1bb .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_str     0x00001aa0       0xc5 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+                                0x2e5 (size before relaxing)
+ .debug_str     0x00001b65       0x32 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+                                0x1fa (size before relaxing)
+ .debug_str     0x00001b97       0x42 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+                                0x212 (size before relaxing)
+ .debug_str     0x00001bd9      0x182 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+                                0x3b1 (size before relaxing)
+ .debug_str     0x00001d5b       0x4c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+                                0x221 (size before relaxing)
+ .debug_str     0x00001da7      0x1bb .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
                                 0x3ff (size before relaxing)
- .debug_str     0x000019a5       0xac .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_str     0x00001f62       0xac .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
                                 0x377 (size before relaxing)
 
-.debug_loc      0x00000000     0x1cd6
+.debug_loc      0x00000000     0x1f94
  *(.debug_loc)
- .debug_loc     0x00000000      0x1d7 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_loc     0x000001d7      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_loc     0x0000031b      0x128 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
- .debug_loc     0x00000443       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
- .debug_loc     0x000004a3      0xa11 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .debug_loc     0x00000eb4      0x1e4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
- .debug_loc     0x00001098       0x21 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
- .debug_loc     0x000010b9       0x79 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
- .debug_loc     0x00001132       0xed .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
- .debug_loc     0x0000121f      0x3b2 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
- .debug_loc     0x000015d1      0x705 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_loc     0x00000000       0xf5 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_loc     0x000000f5      0x1d7 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_loc     0x000002cc      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_loc     0x00000410      0x128 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_loc     0x00000538       0x47 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .debug_loc     0x0000057f       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_loc     0x000005df      0xa11 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_loc     0x00000ff0      0x1e4 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_loc     0x000011d4       0x21 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_loc     0x000011f5       0x79 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_loc     0x0000126e       0xed .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_loc     0x0000135b       0x56 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .debug_loc     0x000013b1      0x12c .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_loc     0x000014dd      0x3b2 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_loc     0x0000188f      0x705 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x680
+.debug_ranges   0x00000000      0x7f0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_ranges  0x00000018       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_ranges  0x00000060       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_ranges  0x00000098       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
- .debug_ranges  0x000000f8       0x38 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
- .debug_ranges  0x00000130      0x290 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
- .debug_ranges  0x000003c0       0x88 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
- .debug_ranges  0x00000448       0x30 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
- .debug_ranges  0x00000478       0x48 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
- .debug_ranges  0x000004c0       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
- .debug_ranges  0x00000520       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
- .debug_ranges  0x00000598       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
- .debug_ranges  0x00000610       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+ .debug_ranges  0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_ranges  0x00000028       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x00000070       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_ranges  0x000000a8       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .debug_ranges  0x00000108       0x48 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
+ .debug_ranges  0x00000150       0x38 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+ .debug_ranges  0x00000188      0x290 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+ .debug_ranges  0x00000418       0x88 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+ .debug_ranges  0x000004a0       0x30 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+ .debug_ranges  0x000004d0       0x48 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+ .debug_ranges  0x00000518       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+ .debug_ranges  0x00000578       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .debug_ranges  0x000005f0       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .debug_ranges  0x00000660       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .debug_ranges  0x00000678       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .debug_ranges  0x00000690       0x60 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .debug_ranges  0x000006f0       0x18 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
+ .debug_ranges  0x00000708       0x78 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+ .debug_ranges  0x00000780       0x70 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
 .comment        0x00000000       0x6e
  .comment       0x00000000       0x6e .\CortexM3\ARM_GCC_541\Debug\main.o
@@ -1083,6 +1492,7 @@ END GROUP
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
@@ -1090,6 +1500,11 @@ END GROUP
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
+ .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
  .comment       0x0000006e       0x6f .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
 
@@ -1128,49 +1543,99 @@ END GROUP
  .ARM.attributes
                 0x00000131       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Drive.o)
  .ARM.attributes
-                0x00000164       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
+                0x00000164       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Ultrasonic_Pulse_Counter.o)
  .ARM.attributes
-                0x00000197       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
+                0x00000197       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(PGA_1.o)
  .ARM.attributes
-                0x000001ca       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
+                0x000001ca       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyLib.o)
  .ARM.attributes
-                0x000001fd       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
+                0x000001fd       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(cyPm.o)
  .ARM.attributes
-                0x00000230       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
+                0x00000230       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Vssa_Buffer.o)
  .ARM.attributes
-                0x00000263       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
+                0x00000263       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(VDAC8_1.o)
  .ARM.attributes
-                0x00000296       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
+                0x00000296       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Comp_1.o)
  .ARM.attributes
-                0x000002c9       0x21 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
+                0x000002c9       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer.o)
  .ARM.attributes
-                0x000002ea       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
+                0x000002fc       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(isr_1.o)
  .ARM.attributes
-                0x0000031d       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
+                0x0000032f       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Digit_Reg.o)
  .ARM.attributes
-                0x00000350       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00000362       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Seven_Segment_Reg.o)
  .ARM.attributes
-                0x0000036d       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x00000395       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Clock.o)
  .ARM.attributes
-                0x0000038a       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+                0x000003c8       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(Flight_Timer_Reset_Reg.o)
  .ARM.attributes
-                0x000003a7       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x000003fb       0x21 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x000003c4       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x0000041c       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CyFlash.o)
  .ARM.attributes
-                0x000003f1       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                0x0000044f       0x33 .\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a(CySpc.o)
  .ARM.attributes
-                0x0000041e       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00000482       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-powl.o)
  .ARM.attributes
-                0x0000044b       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x000004af       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_floor.o)
  .ARM.attributes
-                0x00000478       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x000004dc       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-w_pow.o)
  .ARM.attributes
-                0x000004a5       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00000509       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_pow.o)
  .ARM.attributes
-                0x000004d2       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+                0x00000536       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-e_sqrt.o)
  .ARM.attributes
-                0x000004ff       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00000563       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_fabs.o)
+ .ARM.attributes
+                0x00000590       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_finite.o)
+ .ARM.attributes
+                0x000005bd       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_lib_ver.o)
+ .ARM.attributes
+                0x000005ea       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_matherr.o)
+ .ARM.attributes
+                0x00000617       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_nan.o)
+ .ARM.attributes
+                0x00000644       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_rint.o)
+ .ARM.attributes
+                0x00000671       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_scalbn.o)
+ .ARM.attributes
+                0x0000069e       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a(lib_a-s_copysign.o)
+ .ARM.attributes
+                0x000006cb       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x000006e8       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000705       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000722       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_unorddf2.o)
+ .ARM.attributes
+                0x0000073f       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x0000075c       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000779       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x00000796       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000007b3       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000007d0       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+ .ARM.attributes
+                0x000007ed       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x0000081a       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000847       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000874       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000008a1       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x000008ce       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000008fb       0x2d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .ARM.attributes
+                0x00000928       0x1d c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)

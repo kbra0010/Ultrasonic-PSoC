@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
   28:Generated_Source\PSoC5/VDAC8_1.c **** 
   29:Generated_Source\PSoC5/VDAC8_1.c **** #if (CY_PSOC5A)
   30:Generated_Source\PSoC5/VDAC8_1.c ****     static uint8 VDAC8_1_restoreVal = 0u;
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 2
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 2
 
 
   31:Generated_Source\PSoC5/VDAC8_1.c **** #endif /* CY_PSOC5A */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
   85:Generated_Source\PSoC5/VDAC8_1.c **** * Parameters:
   86:Generated_Source\PSoC5/VDAC8_1.c **** *  void
   87:Generated_Source\PSoC5/VDAC8_1.c **** *
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 3
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 3
 
 
   88:Generated_Source\PSoC5/VDAC8_1.c **** * Return:
@@ -140,13 +140,13 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
   33              		.loc 1 98 0
   34 0000 054A     		ldr	r2, .L2
   35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  36 0004 43F00403 		orr	r3, r3, #4
+  36 0004 43F00803 		orr	r3, r3, #8
   37 0008 1370     		strb	r3, [r2]
   99:Generated_Source\PSoC5/VDAC8_1.c ****     VDAC8_1_STBY_PWRMGR |= VDAC8_1_STBY_PWR_EN;
   38              		.loc 1 99 0
   39 000a 1032     		adds	r2, r2, #16
   40 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  41 000e 43F00403 		orr	r3, r3, #4
+  41 000e 43F00803 		orr	r3, r3, #8
   42 0012 1370     		strb	r3, [r2]
   43 0014 7047     		bx	lr
   44              	.L3:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  111:Generated_Source\PSoC5/VDAC8_1.c **** 
  112:Generated_Source\PSoC5/VDAC8_1.c **** 
  113:Generated_Source\PSoC5/VDAC8_1.c **** /*******************************************************************************
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 4
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 4
 
 
  114:Generated_Source\PSoC5/VDAC8_1.c **** * Function Name: VDAC8_1_Start
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  168:Generated_Source\PSoC5/VDAC8_1.c **** void VDAC8_1_Stop(void) 
  169:Generated_Source\PSoC5/VDAC8_1.c **** {
   59              		.loc 1 169 0
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 5
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 5
 
 
   60              		.cfi_startproc
@@ -250,13 +250,13 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
   64              		.loc 1 171 0
   65 0000 054A     		ldr	r2, .L5
   66 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  67 0004 03F0FB03 		and	r3, r3, #251
+  67 0004 03F0F703 		and	r3, r3, #247
   68 0008 1370     		strb	r3, [r2]
  172:Generated_Source\PSoC5/VDAC8_1.c ****     VDAC8_1_STBY_PWRMGR &= (uint8)(~VDAC8_1_STBY_PWR_EN);
   69              		.loc 1 172 0
   70 000a 1032     		adds	r2, r2, #16
   71 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  72 000e 03F0FB03 		and	r3, r3, #251
+  72 000e 03F0F703 		and	r3, r3, #247
   73 0012 1370     		strb	r3, [r2]
   74 0014 7047     		bx	lr
   75              	.L6:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  194:Generated_Source\PSoC5/VDAC8_1.c **** * Return:
  195:Generated_Source\PSoC5/VDAC8_1.c **** *  void
  196:Generated_Source\PSoC5/VDAC8_1.c **** *
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 6
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 6
 
 
  197:Generated_Source\PSoC5/VDAC8_1.c **** * Theory:
@@ -332,7 +332,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  108              	.L9:
  109 0016 00BF     		.align	2
  110              	.L8:
- 111 0018 28580040 		.word	1073764392
+ 111 0018 2C580040 		.word	1073764396
  112              		.cfi_endproc
  113              	.LFE4:
  114              		.size	VDAC8_1_SetSpeed, .-VDAC8_1_SetSpeed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  218:Generated_Source\PSoC5/VDAC8_1.c **** *  Range: Sets one of Three valid ranges.
  219:Generated_Source\PSoC5/VDAC8_1.c **** *
  220:Generated_Source\PSoC5/VDAC8_1.c **** * Return:
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 7
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 7
 
 
  221:Generated_Source\PSoC5/VDAC8_1.c **** *  void 
@@ -414,11 +414,11 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  133              	.L12:
  134 0006 00BF     		.align	2
  135              	.L11:
- 136 0008 825B0040 		.word	1073765250
+ 136 0008 835B0040 		.word	1073765251
  137              		.cfi_endproc
  138              	.LFE6:
  139              		.size	VDAC8_1_SetValue, .-VDAC8_1_SetValue
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 8
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 8
 
 
  140              		.section	.text.VDAC8_1_DacTrim,"ax",%progbits
@@ -478,10 +478,10 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  160              	.LVL4:
  161 000c 0633     		adds	r3, r3, #6
  162              	.LVL5:
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 9
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 9
 
 
- 163 000e 93F82831 		ldrb	r3, [r3, #296]	@ zero_extendqisi2
+ 163 000e 93F83831 		ldrb	r3, [r3, #312]	@ zero_extendqisi2
  164              	.LVL6:
  165 0012 DBB2     		uxtb	r3, r3
  166 0014 024A     		ldr	r2, .L14+4
@@ -490,8 +490,8 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  169              	.L15:
  170 001a 00BF     		.align	2
  171              	.L14:
- 172 001c 28580040 		.word	1073764392
- 173 0020 0A460040 		.word	1073759754
+ 172 001c 2C580040 		.word	1073764396
+ 173 0020 0B460040 		.word	1073759755
  174              		.cfi_endproc
  175              	.LFE7:
  176              		.size	VDAC8_1_DacTrim, .-VDAC8_1_DacTrim
@@ -534,11 +534,11 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  209              	.L19:
  210              		.align	2
  211              	.L18:
- 212 001c 28580040 		.word	1073764392
+ 212 001c 2C580040 		.word	1073764396
  213              		.cfi_endproc
  214              	.LFE5:
  215              		.size	VDAC8_1_SetRange, .-VDAC8_1_SetRange
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 10
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 10
 
 
  216              		.section	.text.VDAC8_1_Init,"ax",%progbits
@@ -569,7 +569,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  238 000a 1C70     		strb	r4, [r3]
   72:Generated_Source\PSoC5/VDAC8_1.c **** 
  239              		.loc 1 72 0
- 240 000c 2046     		mov	r0, r4
+ 240 000c 0420     		movs	r0, #4
  241 000e FFF7FEFF 		bl	VDAC8_1_SetRange
  242              	.LVL10:
   75:Generated_Source\PSoC5/VDAC8_1.c **** }
@@ -581,7 +581,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  248              	.L23:
  249 001a 00BF     		.align	2
  250              	.L22:
- 251 001c 28580040 		.word	1073764392
+ 251 001c 2C580040 		.word	1073764396
  252              		.cfi_endproc
  253              	.LFE0:
  254              		.size	VDAC8_1_Init, .-VDAC8_1_Init
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  264              		.cfi_startproc
  265              		@ args = 0, pretend = 0, frame = 0
  266              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 11
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 11
 
 
  267 0000 08B5     		push	{r3, lr}
@@ -626,7 +626,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  285              	.LVL13:
  146:Generated_Source\PSoC5/VDAC8_1.c **** }
  286              		.loc 1 146 0
- 287 0016 6420     		movs	r0, #100
+ 287 0016 DA20     		movs	r0, #218
  288 0018 FFF7FEFF 		bl	VDAC8_1_SetValue
  289              	.LVL14:
  290 001c 08BD     		pop	{r3, pc}
@@ -649,7 +649,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  307              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  308              		.section	.debug_info,"",%progbits
  309              	.Ldebug_info0:
- 310 0000 DC010000 		.4byte	0x1dc
+ 310 0000 DB010000 		.4byte	0x1db
  311 0004 0400     		.2byte	0x4
  312 0006 00000000 		.4byte	.Ldebug_abbrev0
  313 000a 04       		.byte	0x4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  316 0010 0C       		.byte	0xc
  317 0011 34020000 		.4byte	.LASF26
  318 0015 34000000 		.4byte	.LASF27
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 12
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 12
 
 
  319 0019 00000000 		.4byte	.Ldebug_ranges0+0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  373 0080 04       		.byte	0x4
  374 0081 A4010000 		.4byte	.LASF10
  375 0085 02       		.uleb128 0x2
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 13
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 13
 
 
  376 0086 01       		.byte	0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  430 00ff FE       		.byte	0xfe
  431 0100 6B000000 		.4byte	0x6b
  432 0104 01       		.uleb128 0x1
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 14
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 14
 
 
  433 0105 50       		.byte	0x50
@@ -826,593 +826,592 @@ ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 1
  475 0167 20000000 		.4byte	.LFE0-.LFB0
  476 016b 01       		.uleb128 0x1
  477 016c 9C       		.byte	0x9c
- 478 016d 96010000 		.4byte	0x196
+ 478 016d 95010000 		.4byte	0x195
  479 0171 0D       		.uleb128 0xd
  480 0172 12000000 		.4byte	.LVL10
  481 0176 2E010000 		.4byte	0x12e
- 482 017a 85010000 		.4byte	0x185
+ 482 017a 84010000 		.4byte	0x184
  483 017e 0E       		.uleb128 0xe
  484 017f 01       		.uleb128 0x1
  485 0180 50       		.byte	0x50
- 486 0181 02       		.uleb128 0x2
- 487 0182 74       		.byte	0x74
- 488 0183 00       		.sleb128 0
- 489 0184 00       		.byte	0
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 15
+ 486 0181 01       		.uleb128 0x1
+ 487 0182 34       		.byte	0x34
+ 488 0183 00       		.byte	0
+ 489 0184 0F       		.uleb128 0xf
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 15
 
 
- 490 0185 0F       		.uleb128 0xf
- 491 0186 18000000 		.4byte	.LVL11
- 492 018a BF000000 		.4byte	0xbf
- 493 018e 0E       		.uleb128 0xe
- 494 018f 01       		.uleb128 0x1
- 495 0190 50       		.byte	0x50
- 496 0191 02       		.uleb128 0x2
- 497 0192 74       		.byte	0x74
- 498 0193 00       		.sleb128 0
+ 490 0185 18000000 		.4byte	.LVL11
+ 491 0189 BF000000 		.4byte	0xbf
+ 492 018d 0E       		.uleb128 0xe
+ 493 018e 01       		.uleb128 0x1
+ 494 018f 50       		.byte	0x50
+ 495 0190 02       		.uleb128 0x2
+ 496 0191 74       		.byte	0x74
+ 497 0192 00       		.sleb128 0
+ 498 0193 00       		.byte	0
  499 0194 00       		.byte	0
- 500 0195 00       		.byte	0
- 501 0196 07       		.uleb128 0x7
- 502 0197 96010000 		.4byte	.LASF24
- 503 019b 01       		.byte	0x1
- 504 019c 85       		.byte	0x85
- 505 019d 00000000 		.4byte	.LFB2
- 506 01a1 24000000 		.4byte	.LFE2-.LFB2
- 507 01a5 01       		.uleb128 0x1
- 508 01a6 9C       		.byte	0x9c
- 509 01a7 CE010000 		.4byte	0x1ce
- 510 01ab 0C       		.uleb128 0xc
- 511 01ac 0C000000 		.4byte	.LVL12
- 512 01b0 5C010000 		.4byte	0x15c
- 513 01b4 0C       		.uleb128 0xc
- 514 01b5 16000000 		.4byte	.LVL13
- 515 01b9 9D000000 		.4byte	0x9d
- 516 01bd 0F       		.uleb128 0xf
- 517 01be 1C000000 		.4byte	.LVL14
- 518 01c2 E4000000 		.4byte	0xe4
- 519 01c6 0E       		.uleb128 0xe
- 520 01c7 01       		.uleb128 0x1
- 521 01c8 50       		.byte	0x50
- 522 01c9 02       		.uleb128 0x2
- 523 01ca 08       		.byte	0x8
- 524 01cb 64       		.byte	0x64
+ 500 0195 07       		.uleb128 0x7
+ 501 0196 96010000 		.4byte	.LASF24
+ 502 019a 01       		.byte	0x1
+ 503 019b 85       		.byte	0x85
+ 504 019c 00000000 		.4byte	.LFB2
+ 505 01a0 24000000 		.4byte	.LFE2-.LFB2
+ 506 01a4 01       		.uleb128 0x1
+ 507 01a5 9C       		.byte	0x9c
+ 508 01a6 CD010000 		.4byte	0x1cd
+ 509 01aa 0C       		.uleb128 0xc
+ 510 01ab 0C000000 		.4byte	.LVL12
+ 511 01af 5C010000 		.4byte	0x15c
+ 512 01b3 0C       		.uleb128 0xc
+ 513 01b4 16000000 		.4byte	.LVL13
+ 514 01b8 9D000000 		.4byte	0x9d
+ 515 01bc 0F       		.uleb128 0xf
+ 516 01bd 1C000000 		.4byte	.LVL14
+ 517 01c1 E4000000 		.4byte	0xe4
+ 518 01c5 0E       		.uleb128 0xe
+ 519 01c6 01       		.uleb128 0x1
+ 520 01c7 50       		.byte	0x50
+ 521 01c8 02       		.uleb128 0x2
+ 522 01c9 09       		.byte	0x9
+ 523 01ca DA       		.byte	0xda
+ 524 01cb 00       		.byte	0
  525 01cc 00       		.byte	0
- 526 01cd 00       		.byte	0
- 527 01ce 10       		.uleb128 0x10
- 528 01cf 0B020000 		.4byte	.LASF29
- 529 01d3 01       		.byte	0x1
- 530 01d4 1B       		.byte	0x1b
- 531 01d5 6B000000 		.4byte	0x6b
- 532 01d9 05       		.uleb128 0x5
- 533 01da 03       		.byte	0x3
- 534 01db 00000000 		.4byte	VDAC8_1_initVar
- 535 01df 00       		.byte	0
- 536              		.section	.debug_abbrev,"",%progbits
- 537              	.Ldebug_abbrev0:
- 538 0000 01       		.uleb128 0x1
- 539 0001 11       		.uleb128 0x11
- 540 0002 01       		.byte	0x1
- 541 0003 25       		.uleb128 0x25
- 542 0004 0E       		.uleb128 0xe
- 543 0005 13       		.uleb128 0x13
- 544 0006 0B       		.uleb128 0xb
- 545 0007 03       		.uleb128 0x3
- 546 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 16
+ 526 01cd 10       		.uleb128 0x10
+ 527 01ce 0B020000 		.4byte	.LASF29
+ 528 01d2 01       		.byte	0x1
+ 529 01d3 1B       		.byte	0x1b
+ 530 01d4 6B000000 		.4byte	0x6b
+ 531 01d8 05       		.uleb128 0x5
+ 532 01d9 03       		.byte	0x3
+ 533 01da 00000000 		.4byte	VDAC8_1_initVar
+ 534 01de 00       		.byte	0
+ 535              		.section	.debug_abbrev,"",%progbits
+ 536              	.Ldebug_abbrev0:
+ 537 0000 01       		.uleb128 0x1
+ 538 0001 11       		.uleb128 0x11
+ 539 0002 01       		.byte	0x1
+ 540 0003 25       		.uleb128 0x25
+ 541 0004 0E       		.uleb128 0xe
+ 542 0005 13       		.uleb128 0x13
+ 543 0006 0B       		.uleb128 0xb
+ 544 0007 03       		.uleb128 0x3
+ 545 0008 0E       		.uleb128 0xe
+ 546 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 16
 
 
- 547 0009 1B       		.uleb128 0x1b
- 548 000a 0E       		.uleb128 0xe
- 549 000b 55       		.uleb128 0x55
- 550 000c 17       		.uleb128 0x17
- 551 000d 11       		.uleb128 0x11
- 552 000e 01       		.uleb128 0x1
- 553 000f 10       		.uleb128 0x10
- 554 0010 17       		.uleb128 0x17
- 555 0011 00       		.byte	0
- 556 0012 00       		.byte	0
- 557 0013 02       		.uleb128 0x2
- 558 0014 24       		.uleb128 0x24
- 559 0015 00       		.byte	0
- 560 0016 0B       		.uleb128 0xb
- 561 0017 0B       		.uleb128 0xb
- 562 0018 3E       		.uleb128 0x3e
- 563 0019 0B       		.uleb128 0xb
- 564 001a 03       		.uleb128 0x3
- 565 001b 0E       		.uleb128 0xe
- 566 001c 00       		.byte	0
- 567 001d 00       		.byte	0
- 568 001e 03       		.uleb128 0x3
- 569 001f 24       		.uleb128 0x24
- 570 0020 00       		.byte	0
- 571 0021 0B       		.uleb128 0xb
- 572 0022 0B       		.uleb128 0xb
- 573 0023 3E       		.uleb128 0x3e
- 574 0024 0B       		.uleb128 0xb
- 575 0025 03       		.uleb128 0x3
- 576 0026 08       		.uleb128 0x8
- 577 0027 00       		.byte	0
- 578 0028 00       		.byte	0
- 579 0029 04       		.uleb128 0x4
- 580 002a 16       		.uleb128 0x16
- 581 002b 00       		.byte	0
- 582 002c 03       		.uleb128 0x3
- 583 002d 0E       		.uleb128 0xe
- 584 002e 3A       		.uleb128 0x3a
- 585 002f 0B       		.uleb128 0xb
- 586 0030 3B       		.uleb128 0x3b
- 587 0031 05       		.uleb128 0x5
- 588 0032 49       		.uleb128 0x49
- 589 0033 13       		.uleb128 0x13
- 590 0034 00       		.byte	0
- 591 0035 00       		.byte	0
- 592 0036 05       		.uleb128 0x5
- 593 0037 35       		.uleb128 0x35
- 594 0038 00       		.byte	0
- 595 0039 49       		.uleb128 0x49
- 596 003a 13       		.uleb128 0x13
- 597 003b 00       		.byte	0
- 598 003c 00       		.byte	0
- 599 003d 06       		.uleb128 0x6
- 600 003e 2E       		.uleb128 0x2e
- 601 003f 00       		.byte	0
- 602 0040 3F       		.uleb128 0x3f
- 603 0041 19       		.uleb128 0x19
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 17
+ 547 000a 0E       		.uleb128 0xe
+ 548 000b 55       		.uleb128 0x55
+ 549 000c 17       		.uleb128 0x17
+ 550 000d 11       		.uleb128 0x11
+ 551 000e 01       		.uleb128 0x1
+ 552 000f 10       		.uleb128 0x10
+ 553 0010 17       		.uleb128 0x17
+ 554 0011 00       		.byte	0
+ 555 0012 00       		.byte	0
+ 556 0013 02       		.uleb128 0x2
+ 557 0014 24       		.uleb128 0x24
+ 558 0015 00       		.byte	0
+ 559 0016 0B       		.uleb128 0xb
+ 560 0017 0B       		.uleb128 0xb
+ 561 0018 3E       		.uleb128 0x3e
+ 562 0019 0B       		.uleb128 0xb
+ 563 001a 03       		.uleb128 0x3
+ 564 001b 0E       		.uleb128 0xe
+ 565 001c 00       		.byte	0
+ 566 001d 00       		.byte	0
+ 567 001e 03       		.uleb128 0x3
+ 568 001f 24       		.uleb128 0x24
+ 569 0020 00       		.byte	0
+ 570 0021 0B       		.uleb128 0xb
+ 571 0022 0B       		.uleb128 0xb
+ 572 0023 3E       		.uleb128 0x3e
+ 573 0024 0B       		.uleb128 0xb
+ 574 0025 03       		.uleb128 0x3
+ 575 0026 08       		.uleb128 0x8
+ 576 0027 00       		.byte	0
+ 577 0028 00       		.byte	0
+ 578 0029 04       		.uleb128 0x4
+ 579 002a 16       		.uleb128 0x16
+ 580 002b 00       		.byte	0
+ 581 002c 03       		.uleb128 0x3
+ 582 002d 0E       		.uleb128 0xe
+ 583 002e 3A       		.uleb128 0x3a
+ 584 002f 0B       		.uleb128 0xb
+ 585 0030 3B       		.uleb128 0x3b
+ 586 0031 05       		.uleb128 0x5
+ 587 0032 49       		.uleb128 0x49
+ 588 0033 13       		.uleb128 0x13
+ 589 0034 00       		.byte	0
+ 590 0035 00       		.byte	0
+ 591 0036 05       		.uleb128 0x5
+ 592 0037 35       		.uleb128 0x35
+ 593 0038 00       		.byte	0
+ 594 0039 49       		.uleb128 0x49
+ 595 003a 13       		.uleb128 0x13
+ 596 003b 00       		.byte	0
+ 597 003c 00       		.byte	0
+ 598 003d 06       		.uleb128 0x6
+ 599 003e 2E       		.uleb128 0x2e
+ 600 003f 00       		.byte	0
+ 601 0040 3F       		.uleb128 0x3f
+ 602 0041 19       		.uleb128 0x19
+ 603 0042 03       		.uleb128 0x3
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 17
 
 
- 604 0042 03       		.uleb128 0x3
- 605 0043 0E       		.uleb128 0xe
- 606 0044 3A       		.uleb128 0x3a
- 607 0045 0B       		.uleb128 0xb
- 608 0046 3B       		.uleb128 0x3b
- 609 0047 0B       		.uleb128 0xb
- 610 0048 27       		.uleb128 0x27
- 611 0049 19       		.uleb128 0x19
- 612 004a 11       		.uleb128 0x11
- 613 004b 01       		.uleb128 0x1
- 614 004c 12       		.uleb128 0x12
- 615 004d 06       		.uleb128 0x6
- 616 004e 40       		.uleb128 0x40
- 617 004f 18       		.uleb128 0x18
- 618 0050 9742     		.uleb128 0x2117
- 619 0052 19       		.uleb128 0x19
- 620 0053 00       		.byte	0
- 621 0054 00       		.byte	0
- 622 0055 07       		.uleb128 0x7
- 623 0056 2E       		.uleb128 0x2e
- 624 0057 01       		.byte	0x1
- 625 0058 3F       		.uleb128 0x3f
- 626 0059 19       		.uleb128 0x19
- 627 005a 03       		.uleb128 0x3
- 628 005b 0E       		.uleb128 0xe
- 629 005c 3A       		.uleb128 0x3a
- 630 005d 0B       		.uleb128 0xb
- 631 005e 3B       		.uleb128 0x3b
- 632 005f 0B       		.uleb128 0xb
- 633 0060 27       		.uleb128 0x27
- 634 0061 19       		.uleb128 0x19
- 635 0062 11       		.uleb128 0x11
- 636 0063 01       		.uleb128 0x1
- 637 0064 12       		.uleb128 0x12
- 638 0065 06       		.uleb128 0x6
- 639 0066 40       		.uleb128 0x40
- 640 0067 18       		.uleb128 0x18
- 641 0068 9742     		.uleb128 0x2117
- 642 006a 19       		.uleb128 0x19
- 643 006b 01       		.uleb128 0x1
- 644 006c 13       		.uleb128 0x13
- 645 006d 00       		.byte	0
- 646 006e 00       		.byte	0
- 647 006f 08       		.uleb128 0x8
- 648 0070 05       		.uleb128 0x5
- 649 0071 00       		.byte	0
- 650 0072 03       		.uleb128 0x3
- 651 0073 0E       		.uleb128 0xe
- 652 0074 3A       		.uleb128 0x3a
- 653 0075 0B       		.uleb128 0xb
- 654 0076 3B       		.uleb128 0x3b
- 655 0077 0B       		.uleb128 0xb
- 656 0078 49       		.uleb128 0x49
- 657 0079 13       		.uleb128 0x13
- 658 007a 02       		.uleb128 0x2
- 659 007b 17       		.uleb128 0x17
- 660 007c 00       		.byte	0
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 18
+ 604 0043 0E       		.uleb128 0xe
+ 605 0044 3A       		.uleb128 0x3a
+ 606 0045 0B       		.uleb128 0xb
+ 607 0046 3B       		.uleb128 0x3b
+ 608 0047 0B       		.uleb128 0xb
+ 609 0048 27       		.uleb128 0x27
+ 610 0049 19       		.uleb128 0x19
+ 611 004a 11       		.uleb128 0x11
+ 612 004b 01       		.uleb128 0x1
+ 613 004c 12       		.uleb128 0x12
+ 614 004d 06       		.uleb128 0x6
+ 615 004e 40       		.uleb128 0x40
+ 616 004f 18       		.uleb128 0x18
+ 617 0050 9742     		.uleb128 0x2117
+ 618 0052 19       		.uleb128 0x19
+ 619 0053 00       		.byte	0
+ 620 0054 00       		.byte	0
+ 621 0055 07       		.uleb128 0x7
+ 622 0056 2E       		.uleb128 0x2e
+ 623 0057 01       		.byte	0x1
+ 624 0058 3F       		.uleb128 0x3f
+ 625 0059 19       		.uleb128 0x19
+ 626 005a 03       		.uleb128 0x3
+ 627 005b 0E       		.uleb128 0xe
+ 628 005c 3A       		.uleb128 0x3a
+ 629 005d 0B       		.uleb128 0xb
+ 630 005e 3B       		.uleb128 0x3b
+ 631 005f 0B       		.uleb128 0xb
+ 632 0060 27       		.uleb128 0x27
+ 633 0061 19       		.uleb128 0x19
+ 634 0062 11       		.uleb128 0x11
+ 635 0063 01       		.uleb128 0x1
+ 636 0064 12       		.uleb128 0x12
+ 637 0065 06       		.uleb128 0x6
+ 638 0066 40       		.uleb128 0x40
+ 639 0067 18       		.uleb128 0x18
+ 640 0068 9742     		.uleb128 0x2117
+ 641 006a 19       		.uleb128 0x19
+ 642 006b 01       		.uleb128 0x1
+ 643 006c 13       		.uleb128 0x13
+ 644 006d 00       		.byte	0
+ 645 006e 00       		.byte	0
+ 646 006f 08       		.uleb128 0x8
+ 647 0070 05       		.uleb128 0x5
+ 648 0071 00       		.byte	0
+ 649 0072 03       		.uleb128 0x3
+ 650 0073 0E       		.uleb128 0xe
+ 651 0074 3A       		.uleb128 0x3a
+ 652 0075 0B       		.uleb128 0xb
+ 653 0076 3B       		.uleb128 0x3b
+ 654 0077 0B       		.uleb128 0xb
+ 655 0078 49       		.uleb128 0x49
+ 656 0079 13       		.uleb128 0x13
+ 657 007a 02       		.uleb128 0x2
+ 658 007b 17       		.uleb128 0x17
+ 659 007c 00       		.byte	0
+ 660 007d 00       		.byte	0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 18
 
 
- 661 007d 00       		.byte	0
- 662 007e 09       		.uleb128 0x9
- 663 007f 05       		.uleb128 0x5
- 664 0080 00       		.byte	0
- 665 0081 03       		.uleb128 0x3
- 666 0082 0E       		.uleb128 0xe
- 667 0083 3A       		.uleb128 0x3a
- 668 0084 0B       		.uleb128 0xb
- 669 0085 3B       		.uleb128 0x3b
- 670 0086 0B       		.uleb128 0xb
- 671 0087 49       		.uleb128 0x49
- 672 0088 13       		.uleb128 0x13
- 673 0089 02       		.uleb128 0x2
- 674 008a 18       		.uleb128 0x18
- 675 008b 00       		.byte	0
- 676 008c 00       		.byte	0
- 677 008d 0A       		.uleb128 0xa
- 678 008e 2E       		.uleb128 0x2e
- 679 008f 01       		.byte	0x1
- 680 0090 3F       		.uleb128 0x3f
- 681 0091 19       		.uleb128 0x19
- 682 0092 03       		.uleb128 0x3
- 683 0093 0E       		.uleb128 0xe
- 684 0094 3A       		.uleb128 0x3a
- 685 0095 0B       		.uleb128 0xb
- 686 0096 3B       		.uleb128 0x3b
- 687 0097 05       		.uleb128 0x5
- 688 0098 27       		.uleb128 0x27
- 689 0099 19       		.uleb128 0x19
- 690 009a 11       		.uleb128 0x11
- 691 009b 01       		.uleb128 0x1
- 692 009c 12       		.uleb128 0x12
- 693 009d 06       		.uleb128 0x6
- 694 009e 40       		.uleb128 0x40
- 695 009f 18       		.uleb128 0x18
- 696 00a0 9742     		.uleb128 0x2117
- 697 00a2 19       		.uleb128 0x19
- 698 00a3 01       		.uleb128 0x1
- 699 00a4 13       		.uleb128 0x13
- 700 00a5 00       		.byte	0
- 701 00a6 00       		.byte	0
- 702 00a7 0B       		.uleb128 0xb
- 703 00a8 34       		.uleb128 0x34
- 704 00a9 00       		.byte	0
- 705 00aa 03       		.uleb128 0x3
- 706 00ab 0E       		.uleb128 0xe
- 707 00ac 3A       		.uleb128 0x3a
- 708 00ad 0B       		.uleb128 0xb
- 709 00ae 3B       		.uleb128 0x3b
- 710 00af 05       		.uleb128 0x5
- 711 00b0 49       		.uleb128 0x49
- 712 00b1 13       		.uleb128 0x13
- 713 00b2 02       		.uleb128 0x2
- 714 00b3 17       		.uleb128 0x17
- 715 00b4 00       		.byte	0
- 716 00b5 00       		.byte	0
- 717 00b6 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 19
+ 661 007e 09       		.uleb128 0x9
+ 662 007f 05       		.uleb128 0x5
+ 663 0080 00       		.byte	0
+ 664 0081 03       		.uleb128 0x3
+ 665 0082 0E       		.uleb128 0xe
+ 666 0083 3A       		.uleb128 0x3a
+ 667 0084 0B       		.uleb128 0xb
+ 668 0085 3B       		.uleb128 0x3b
+ 669 0086 0B       		.uleb128 0xb
+ 670 0087 49       		.uleb128 0x49
+ 671 0088 13       		.uleb128 0x13
+ 672 0089 02       		.uleb128 0x2
+ 673 008a 18       		.uleb128 0x18
+ 674 008b 00       		.byte	0
+ 675 008c 00       		.byte	0
+ 676 008d 0A       		.uleb128 0xa
+ 677 008e 2E       		.uleb128 0x2e
+ 678 008f 01       		.byte	0x1
+ 679 0090 3F       		.uleb128 0x3f
+ 680 0091 19       		.uleb128 0x19
+ 681 0092 03       		.uleb128 0x3
+ 682 0093 0E       		.uleb128 0xe
+ 683 0094 3A       		.uleb128 0x3a
+ 684 0095 0B       		.uleb128 0xb
+ 685 0096 3B       		.uleb128 0x3b
+ 686 0097 05       		.uleb128 0x5
+ 687 0098 27       		.uleb128 0x27
+ 688 0099 19       		.uleb128 0x19
+ 689 009a 11       		.uleb128 0x11
+ 690 009b 01       		.uleb128 0x1
+ 691 009c 12       		.uleb128 0x12
+ 692 009d 06       		.uleb128 0x6
+ 693 009e 40       		.uleb128 0x40
+ 694 009f 18       		.uleb128 0x18
+ 695 00a0 9742     		.uleb128 0x2117
+ 696 00a2 19       		.uleb128 0x19
+ 697 00a3 01       		.uleb128 0x1
+ 698 00a4 13       		.uleb128 0x13
+ 699 00a5 00       		.byte	0
+ 700 00a6 00       		.byte	0
+ 701 00a7 0B       		.uleb128 0xb
+ 702 00a8 34       		.uleb128 0x34
+ 703 00a9 00       		.byte	0
+ 704 00aa 03       		.uleb128 0x3
+ 705 00ab 0E       		.uleb128 0xe
+ 706 00ac 3A       		.uleb128 0x3a
+ 707 00ad 0B       		.uleb128 0xb
+ 708 00ae 3B       		.uleb128 0x3b
+ 709 00af 05       		.uleb128 0x5
+ 710 00b0 49       		.uleb128 0x49
+ 711 00b1 13       		.uleb128 0x13
+ 712 00b2 02       		.uleb128 0x2
+ 713 00b3 17       		.uleb128 0x17
+ 714 00b4 00       		.byte	0
+ 715 00b5 00       		.byte	0
+ 716 00b6 0C       		.uleb128 0xc
+ 717 00b7 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 19
 
 
- 718 00b7 898201   		.uleb128 0x4109
- 719 00ba 00       		.byte	0
- 720 00bb 11       		.uleb128 0x11
- 721 00bc 01       		.uleb128 0x1
- 722 00bd 31       		.uleb128 0x31
- 723 00be 13       		.uleb128 0x13
- 724 00bf 00       		.byte	0
- 725 00c0 00       		.byte	0
- 726 00c1 0D       		.uleb128 0xd
- 727 00c2 898201   		.uleb128 0x4109
- 728 00c5 01       		.byte	0x1
- 729 00c6 11       		.uleb128 0x11
- 730 00c7 01       		.uleb128 0x1
- 731 00c8 31       		.uleb128 0x31
- 732 00c9 13       		.uleb128 0x13
- 733 00ca 01       		.uleb128 0x1
- 734 00cb 13       		.uleb128 0x13
- 735 00cc 00       		.byte	0
- 736 00cd 00       		.byte	0
- 737 00ce 0E       		.uleb128 0xe
- 738 00cf 8A8201   		.uleb128 0x410a
- 739 00d2 00       		.byte	0
- 740 00d3 02       		.uleb128 0x2
- 741 00d4 18       		.uleb128 0x18
- 742 00d5 9142     		.uleb128 0x2111
- 743 00d7 18       		.uleb128 0x18
- 744 00d8 00       		.byte	0
- 745 00d9 00       		.byte	0
- 746 00da 0F       		.uleb128 0xf
- 747 00db 898201   		.uleb128 0x4109
- 748 00de 01       		.byte	0x1
- 749 00df 11       		.uleb128 0x11
- 750 00e0 01       		.uleb128 0x1
- 751 00e1 31       		.uleb128 0x31
- 752 00e2 13       		.uleb128 0x13
- 753 00e3 00       		.byte	0
- 754 00e4 00       		.byte	0
- 755 00e5 10       		.uleb128 0x10
- 756 00e6 34       		.uleb128 0x34
- 757 00e7 00       		.byte	0
- 758 00e8 03       		.uleb128 0x3
- 759 00e9 0E       		.uleb128 0xe
- 760 00ea 3A       		.uleb128 0x3a
- 761 00eb 0B       		.uleb128 0xb
- 762 00ec 3B       		.uleb128 0x3b
- 763 00ed 0B       		.uleb128 0xb
- 764 00ee 49       		.uleb128 0x49
- 765 00ef 13       		.uleb128 0x13
- 766 00f0 3F       		.uleb128 0x3f
- 767 00f1 19       		.uleb128 0x19
- 768 00f2 02       		.uleb128 0x2
- 769 00f3 18       		.uleb128 0x18
- 770 00f4 00       		.byte	0
- 771 00f5 00       		.byte	0
- 772 00f6 00       		.byte	0
- 773              		.section	.debug_loc,"",%progbits
- 774              	.Ldebug_loc0:
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 20
+ 718 00ba 00       		.byte	0
+ 719 00bb 11       		.uleb128 0x11
+ 720 00bc 01       		.uleb128 0x1
+ 721 00bd 31       		.uleb128 0x31
+ 722 00be 13       		.uleb128 0x13
+ 723 00bf 00       		.byte	0
+ 724 00c0 00       		.byte	0
+ 725 00c1 0D       		.uleb128 0xd
+ 726 00c2 898201   		.uleb128 0x4109
+ 727 00c5 01       		.byte	0x1
+ 728 00c6 11       		.uleb128 0x11
+ 729 00c7 01       		.uleb128 0x1
+ 730 00c8 31       		.uleb128 0x31
+ 731 00c9 13       		.uleb128 0x13
+ 732 00ca 01       		.uleb128 0x1
+ 733 00cb 13       		.uleb128 0x13
+ 734 00cc 00       		.byte	0
+ 735 00cd 00       		.byte	0
+ 736 00ce 0E       		.uleb128 0xe
+ 737 00cf 8A8201   		.uleb128 0x410a
+ 738 00d2 00       		.byte	0
+ 739 00d3 02       		.uleb128 0x2
+ 740 00d4 18       		.uleb128 0x18
+ 741 00d5 9142     		.uleb128 0x2111
+ 742 00d7 18       		.uleb128 0x18
+ 743 00d8 00       		.byte	0
+ 744 00d9 00       		.byte	0
+ 745 00da 0F       		.uleb128 0xf
+ 746 00db 898201   		.uleb128 0x4109
+ 747 00de 01       		.byte	0x1
+ 748 00df 11       		.uleb128 0x11
+ 749 00e0 01       		.uleb128 0x1
+ 750 00e1 31       		.uleb128 0x31
+ 751 00e2 13       		.uleb128 0x13
+ 752 00e3 00       		.byte	0
+ 753 00e4 00       		.byte	0
+ 754 00e5 10       		.uleb128 0x10
+ 755 00e6 34       		.uleb128 0x34
+ 756 00e7 00       		.byte	0
+ 757 00e8 03       		.uleb128 0x3
+ 758 00e9 0E       		.uleb128 0xe
+ 759 00ea 3A       		.uleb128 0x3a
+ 760 00eb 0B       		.uleb128 0xb
+ 761 00ec 3B       		.uleb128 0x3b
+ 762 00ed 0B       		.uleb128 0xb
+ 763 00ee 49       		.uleb128 0x49
+ 764 00ef 13       		.uleb128 0x13
+ 765 00f0 3F       		.uleb128 0x3f
+ 766 00f1 19       		.uleb128 0x19
+ 767 00f2 02       		.uleb128 0x2
+ 768 00f3 18       		.uleb128 0x18
+ 769 00f4 00       		.byte	0
+ 770 00f5 00       		.byte	0
+ 771 00f6 00       		.byte	0
+ 772              		.section	.debug_loc,"",%progbits
+ 773              	.Ldebug_loc0:
+ 774              	.LLST0:
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 20
 
 
- 775              	.LLST0:
- 776 0000 00000000 		.4byte	.LVL0
- 777 0004 10000000 		.4byte	.LVL1
- 778 0008 0100     		.2byte	0x1
- 779 000a 50       		.byte	0x50
- 780 000b 10000000 		.4byte	.LVL1
- 781 000f 1C000000 		.4byte	.LFE4
- 782 0013 0400     		.2byte	0x4
- 783 0015 F3       		.byte	0xf3
- 784 0016 01       		.uleb128 0x1
- 785 0017 50       		.byte	0x50
- 786 0018 9F       		.byte	0x9f
- 787 0019 00000000 		.4byte	0
- 788 001d 00000000 		.4byte	0
- 789              	.LLST1:
- 790 0021 08000000 		.4byte	.LVL3
- 791 0025 0C000000 		.4byte	.LVL4
- 792 0029 0300     		.2byte	0x3
- 793 002b 73       		.byte	0x73
- 794 002c 06       		.sleb128 6
- 795 002d 9F       		.byte	0x9f
- 796 002e 0C000000 		.4byte	.LVL4
- 797 0032 0E000000 		.4byte	.LVL5
- 798 0036 0700     		.2byte	0x7
- 799 0038 73       		.byte	0x73
- 800 0039 868080B8 		.sleb128 -1224736762
- 800      7B
- 801 003e 9F       		.byte	0x9f
- 802 003f 0E000000 		.4byte	.LVL5
- 803 0043 12000000 		.4byte	.LVL6
- 804 0047 0700     		.2byte	0x7
- 805 0049 73       		.byte	0x73
- 806 004a 808080B8 		.sleb128 -1224736768
- 806      7B
- 807 004f 9F       		.byte	0x9f
- 808 0050 00000000 		.4byte	0
- 809 0054 00000000 		.4byte	0
- 810              	.LLST2:
- 811 0058 00000000 		.4byte	.LVL7
- 812 005c 12000000 		.4byte	.LVL8
- 813 0060 0100     		.2byte	0x1
- 814 0062 50       		.byte	0x50
- 815 0063 12000000 		.4byte	.LVL8
- 816 0067 20000000 		.4byte	.LFE5
- 817 006b 0400     		.2byte	0x4
- 818 006d F3       		.byte	0xf3
- 819 006e 01       		.uleb128 0x1
- 820 006f 50       		.byte	0x50
- 821 0070 9F       		.byte	0x9f
- 822 0071 00000000 		.4byte	0
- 823 0075 00000000 		.4byte	0
- 824              		.section	.debug_aranges,"",%progbits
- 825 0000 54000000 		.4byte	0x54
- 826 0004 0200     		.2byte	0x2
- 827 0006 00000000 		.4byte	.Ldebug_info0
- 828 000a 04       		.byte	0x4
- 829 000b 00       		.byte	0
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 21
+ 775 0000 00000000 		.4byte	.LVL0
+ 776 0004 10000000 		.4byte	.LVL1
+ 777 0008 0100     		.2byte	0x1
+ 778 000a 50       		.byte	0x50
+ 779 000b 10000000 		.4byte	.LVL1
+ 780 000f 1C000000 		.4byte	.LFE4
+ 781 0013 0400     		.2byte	0x4
+ 782 0015 F3       		.byte	0xf3
+ 783 0016 01       		.uleb128 0x1
+ 784 0017 50       		.byte	0x50
+ 785 0018 9F       		.byte	0x9f
+ 786 0019 00000000 		.4byte	0
+ 787 001d 00000000 		.4byte	0
+ 788              	.LLST1:
+ 789 0021 08000000 		.4byte	.LVL3
+ 790 0025 0C000000 		.4byte	.LVL4
+ 791 0029 0300     		.2byte	0x3
+ 792 002b 73       		.byte	0x73
+ 793 002c 06       		.sleb128 6
+ 794 002d 9F       		.byte	0x9f
+ 795 002e 0C000000 		.4byte	.LVL4
+ 796 0032 0E000000 		.4byte	.LVL5
+ 797 0036 0700     		.2byte	0x7
+ 798 0038 73       		.byte	0x73
+ 799 0039 868080B8 		.sleb128 -1224736762
+ 799      7B
+ 800 003e 9F       		.byte	0x9f
+ 801 003f 0E000000 		.4byte	.LVL5
+ 802 0043 12000000 		.4byte	.LVL6
+ 803 0047 0700     		.2byte	0x7
+ 804 0049 73       		.byte	0x73
+ 805 004a 808080B8 		.sleb128 -1224736768
+ 805      7B
+ 806 004f 9F       		.byte	0x9f
+ 807 0050 00000000 		.4byte	0
+ 808 0054 00000000 		.4byte	0
+ 809              	.LLST2:
+ 810 0058 00000000 		.4byte	.LVL7
+ 811 005c 12000000 		.4byte	.LVL8
+ 812 0060 0100     		.2byte	0x1
+ 813 0062 50       		.byte	0x50
+ 814 0063 12000000 		.4byte	.LVL8
+ 815 0067 20000000 		.4byte	.LFE5
+ 816 006b 0400     		.2byte	0x4
+ 817 006d F3       		.byte	0xf3
+ 818 006e 01       		.uleb128 0x1
+ 819 006f 50       		.byte	0x50
+ 820 0070 9F       		.byte	0x9f
+ 821 0071 00000000 		.4byte	0
+ 822 0075 00000000 		.4byte	0
+ 823              		.section	.debug_aranges,"",%progbits
+ 824 0000 54000000 		.4byte	0x54
+ 825 0004 0200     		.2byte	0x2
+ 826 0006 00000000 		.4byte	.Ldebug_info0
+ 827 000a 04       		.byte	0x4
+ 828 000b 00       		.byte	0
+ 829 000c 0000     		.2byte	0
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 21
 
 
- 830 000c 0000     		.2byte	0
- 831 000e 0000     		.2byte	0
- 832 0010 00000000 		.4byte	.LFB1
- 833 0014 1C000000 		.4byte	.LFE1-.LFB1
- 834 0018 00000000 		.4byte	.LFB3
- 835 001c 1C000000 		.4byte	.LFE3-.LFB3
- 836 0020 00000000 		.4byte	.LFB4
- 837 0024 1C000000 		.4byte	.LFE4-.LFB4
- 838 0028 00000000 		.4byte	.LFB6
- 839 002c 0C000000 		.4byte	.LFE6-.LFB6
- 840 0030 00000000 		.4byte	.LFB7
- 841 0034 24000000 		.4byte	.LFE7-.LFB7
- 842 0038 00000000 		.4byte	.LFB5
- 843 003c 20000000 		.4byte	.LFE5-.LFB5
- 844 0040 00000000 		.4byte	.LFB0
- 845 0044 20000000 		.4byte	.LFE0-.LFB0
- 846 0048 00000000 		.4byte	.LFB2
- 847 004c 24000000 		.4byte	.LFE2-.LFB2
- 848 0050 00000000 		.4byte	0
- 849 0054 00000000 		.4byte	0
- 850              		.section	.debug_ranges,"",%progbits
- 851              	.Ldebug_ranges0:
- 852 0000 00000000 		.4byte	.LFB1
- 853 0004 1C000000 		.4byte	.LFE1
- 854 0008 00000000 		.4byte	.LFB3
- 855 000c 1C000000 		.4byte	.LFE3
- 856 0010 00000000 		.4byte	.LFB4
- 857 0014 1C000000 		.4byte	.LFE4
- 858 0018 00000000 		.4byte	.LFB6
- 859 001c 0C000000 		.4byte	.LFE6
- 860 0020 00000000 		.4byte	.LFB7
- 861 0024 24000000 		.4byte	.LFE7
- 862 0028 00000000 		.4byte	.LFB5
- 863 002c 20000000 		.4byte	.LFE5
- 864 0030 00000000 		.4byte	.LFB0
- 865 0034 20000000 		.4byte	.LFE0
- 866 0038 00000000 		.4byte	.LFB2
- 867 003c 24000000 		.4byte	.LFE2
- 868 0040 00000000 		.4byte	0
- 869 0044 00000000 		.4byte	0
- 870              		.section	.debug_line,"",%progbits
- 871              	.Ldebug_line0:
- 872 0000 E0000000 		.section	.debug_str,"MS",%progbits,1
- 872      02004400 
- 872      00000201 
- 872      FB0E0D00 
- 872      01010101 
- 873              	.LASF20:
- 874 0000 56444143 		.ascii	"VDAC8_1_DacTrim\000"
- 874      385F315F 
- 874      44616354 
- 874      72696D00 
- 875              	.LASF15:
- 876 0010 56444143 		.ascii	"VDAC8_1_Stop\000"
- 876      385F315F 
- 876      53746F70 
- 876      00
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 22
+ 830 000e 0000     		.2byte	0
+ 831 0010 00000000 		.4byte	.LFB1
+ 832 0014 1C000000 		.4byte	.LFE1-.LFB1
+ 833 0018 00000000 		.4byte	.LFB3
+ 834 001c 1C000000 		.4byte	.LFE3-.LFB3
+ 835 0020 00000000 		.4byte	.LFB4
+ 836 0024 1C000000 		.4byte	.LFE4-.LFB4
+ 837 0028 00000000 		.4byte	.LFB6
+ 838 002c 0C000000 		.4byte	.LFE6-.LFB6
+ 839 0030 00000000 		.4byte	.LFB7
+ 840 0034 24000000 		.4byte	.LFE7-.LFB7
+ 841 0038 00000000 		.4byte	.LFB5
+ 842 003c 20000000 		.4byte	.LFE5-.LFB5
+ 843 0040 00000000 		.4byte	.LFB0
+ 844 0044 20000000 		.4byte	.LFE0-.LFB0
+ 845 0048 00000000 		.4byte	.LFB2
+ 846 004c 24000000 		.4byte	.LFE2-.LFB2
+ 847 0050 00000000 		.4byte	0
+ 848 0054 00000000 		.4byte	0
+ 849              		.section	.debug_ranges,"",%progbits
+ 850              	.Ldebug_ranges0:
+ 851 0000 00000000 		.4byte	.LFB1
+ 852 0004 1C000000 		.4byte	.LFE1
+ 853 0008 00000000 		.4byte	.LFB3
+ 854 000c 1C000000 		.4byte	.LFE3
+ 855 0010 00000000 		.4byte	.LFB4
+ 856 0014 1C000000 		.4byte	.LFE4
+ 857 0018 00000000 		.4byte	.LFB6
+ 858 001c 0C000000 		.4byte	.LFE6
+ 859 0020 00000000 		.4byte	.LFB7
+ 860 0024 24000000 		.4byte	.LFE7
+ 861 0028 00000000 		.4byte	.LFB5
+ 862 002c 20000000 		.4byte	.LFE5
+ 863 0030 00000000 		.4byte	.LFB0
+ 864 0034 20000000 		.4byte	.LFE0
+ 865 0038 00000000 		.4byte	.LFB2
+ 866 003c 24000000 		.4byte	.LFE2
+ 867 0040 00000000 		.4byte	0
+ 868 0044 00000000 		.4byte	0
+ 869              		.section	.debug_line,"",%progbits
+ 870              	.Ldebug_line0:
+ 871 0000 E0000000 		.section	.debug_str,"MS",%progbits,1
+ 871      02004400 
+ 871      00000201 
+ 871      FB0E0D00 
+ 871      01010101 
+ 872              	.LASF20:
+ 873 0000 56444143 		.ascii	"VDAC8_1_DacTrim\000"
+ 873      385F315F 
+ 873      44616354 
+ 873      72696D00 
+ 874              	.LASF15:
+ 875 0010 56444143 		.ascii	"VDAC8_1_Stop\000"
+ 875      385F315F 
+ 875      53746F70 
+ 875      00
+ 876              	.LASF19:
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 22
 
 
- 877              	.LASF19:
- 878 001d 76616C75 		.ascii	"value\000"
- 878      6500
- 879              	.LASF16:
- 880 0023 56444143 		.ascii	"VDAC8_1_SetSpeed\000"
- 880      385F315F 
- 880      53657453 
- 880      70656564 
- 880      00
- 881              	.LASF27:
- 882 0034 433A5C55 		.ascii	"C:\\Users\\Kurty\\Documents\\Ultrasonic GitHub (TRC"
- 882      73657273 
- 882      5C4B7572 
- 882      74795C44 
- 882      6F63756D 
- 883 0063 33353030 		.ascii	"3500)\\Ultrasonic-PSoC\\Ultrasonic Sensor Workspace"
- 883      295C556C 
- 883      74726173 
- 883      6F6E6963 
- 883      2D50536F 
- 884 0094 5C556C74 		.ascii	"\\Ultrasonic Distance Meter.cydsn\000"
- 884      7261736F 
- 884      6E696320 
- 884      44697374 
- 884      616E6365 
- 885              	.LASF9:
- 886 00b5 666C6F61 		.ascii	"float\000"
- 886      7400
- 887              	.LASF1:
- 888 00bb 756E7369 		.ascii	"unsigned char\000"
- 888      676E6564 
- 888      20636861 
- 888      7200
- 889              	.LASF25:
- 890 00c9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 890      43313120 
- 890      352E342E 
- 890      31203230 
- 890      31363036 
- 891 00fc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 891      20726576 
- 891      6973696F 
- 891      6E203233 
- 891      37373135 
- 892 012f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 892      66756E63 
- 892      74696F6E 
- 892      2D736563 
- 892      74696F6E 
- 893              	.LASF13:
- 894 0157 72656738 		.ascii	"reg8\000"
- 894      00
- 895              	.LASF14:
- 896 015c 56444143 		.ascii	"VDAC8_1_Enable\000"
- 896      385F315F 
- 896      456E6162 
- 896      6C6500
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 23
+ 877 001d 76616C75 		.ascii	"value\000"
+ 877      6500
+ 878              	.LASF16:
+ 879 0023 56444143 		.ascii	"VDAC8_1_SetSpeed\000"
+ 879      385F315F 
+ 879      53657453 
+ 879      70656564 
+ 879      00
+ 880              	.LASF27:
+ 881 0034 433A5C55 		.ascii	"C:\\Users\\Kurty\\Documents\\Ultrasonic GitHub (TRC"
+ 881      73657273 
+ 881      5C4B7572 
+ 881      74795C44 
+ 881      6F63756D 
+ 882 0063 33353030 		.ascii	"3500)\\Ultrasonic-PSoC\\Ultrasonic Sensor Workspace"
+ 882      295C556C 
+ 882      74726173 
+ 882      6F6E6963 
+ 882      2D50536F 
+ 883 0094 5C556C74 		.ascii	"\\Ultrasonic Distance Meter.cydsn\000"
+ 883      7261736F 
+ 883      6E696320 
+ 883      44697374 
+ 883      616E6365 
+ 884              	.LASF9:
+ 885 00b5 666C6F61 		.ascii	"float\000"
+ 885      7400
+ 886              	.LASF1:
+ 887 00bb 756E7369 		.ascii	"unsigned char\000"
+ 887      676E6564 
+ 887      20636861 
+ 887      7200
+ 888              	.LASF25:
+ 889 00c9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 889      43313120 
+ 889      352E342E 
+ 889      31203230 
+ 889      31363036 
+ 890 00fc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 890      20726576 
+ 890      6973696F 
+ 890      6E203233 
+ 890      37373135 
+ 891 012f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 891      66756E63 
+ 891      74696F6E 
+ 891      2D736563 
+ 891      74696F6E 
+ 892              	.LASF13:
+ 893 0157 72656738 		.ascii	"reg8\000"
+ 893      00
+ 894              	.LASF14:
+ 895 015c 56444143 		.ascii	"VDAC8_1_Enable\000"
+ 895      385F315F 
+ 895      456E6162 
+ 895      6C6500
+ 896              	.LASF5:
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 23
 
 
- 897              	.LASF5:
- 898 016b 6C6F6E67 		.ascii	"long unsigned int\000"
- 898      20756E73 
- 898      69676E65 
- 898      6420696E 
- 898      7400
- 899              	.LASF3:
- 900 017d 73686F72 		.ascii	"short unsigned int\000"
- 900      7420756E 
- 900      7369676E 
- 900      65642069 
- 900      6E7400
- 901              	.LASF22:
- 902 0190 72616E67 		.ascii	"range\000"
- 902      6500
- 903              	.LASF24:
- 904 0196 56444143 		.ascii	"VDAC8_1_Start\000"
- 904      385F315F 
- 904      53746172 
- 904      7400
- 905              	.LASF10:
- 906 01a4 646F7562 		.ascii	"double\000"
- 906      6C6500
- 907              	.LASF8:
- 908 01ab 756E7369 		.ascii	"unsigned int\000"
- 908      676E6564 
- 908      20696E74 
- 908      00
- 909              	.LASF7:
- 910 01b8 6C6F6E67 		.ascii	"long long unsigned int\000"
- 910      206C6F6E 
- 910      6720756E 
- 910      7369676E 
- 910      65642069 
- 911              	.LASF17:
- 912 01cf 56444143 		.ascii	"VDAC8_1_SetValue\000"
- 912      385F315F 
- 912      53657456 
- 912      616C7565 
- 912      00
- 913              	.LASF28:
- 914 01e0 6D6F6465 		.ascii	"mode\000"
- 914      00
- 915              	.LASF18:
- 916 01e5 73706565 		.ascii	"speed\000"
- 916      6400
- 917              	.LASF6:
- 918 01eb 6C6F6E67 		.ascii	"long long int\000"
- 918      206C6F6E 
- 918      6720696E 
- 918      7400
- 919              	.LASF23:
- 920 01f9 56444143 		.ascii	"VDAC8_1_Init\000"
- 920      385F315F 
- 920      496E6974 
- 920      00
- 921              	.LASF11:
-ARM GAS  C:\Users\Kurty\AppData\Local\Temp\cce2Hz6g.s 			page 24
+ 897 016b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 897      20756E73 
+ 897      69676E65 
+ 897      6420696E 
+ 897      7400
+ 898              	.LASF3:
+ 899 017d 73686F72 		.ascii	"short unsigned int\000"
+ 899      7420756E 
+ 899      7369676E 
+ 899      65642069 
+ 899      6E7400
+ 900              	.LASF22:
+ 901 0190 72616E67 		.ascii	"range\000"
+ 901      6500
+ 902              	.LASF24:
+ 903 0196 56444143 		.ascii	"VDAC8_1_Start\000"
+ 903      385F315F 
+ 903      53746172 
+ 903      7400
+ 904              	.LASF10:
+ 905 01a4 646F7562 		.ascii	"double\000"
+ 905      6C6500
+ 906              	.LASF8:
+ 907 01ab 756E7369 		.ascii	"unsigned int\000"
+ 907      676E6564 
+ 907      20696E74 
+ 907      00
+ 908              	.LASF7:
+ 909 01b8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 909      206C6F6E 
+ 909      6720756E 
+ 909      7369676E 
+ 909      65642069 
+ 910              	.LASF17:
+ 911 01cf 56444143 		.ascii	"VDAC8_1_SetValue\000"
+ 911      385F315F 
+ 911      53657456 
+ 911      616C7565 
+ 911      00
+ 912              	.LASF28:
+ 913 01e0 6D6F6465 		.ascii	"mode\000"
+ 913      00
+ 914              	.LASF18:
+ 915 01e5 73706565 		.ascii	"speed\000"
+ 915      6400
+ 916              	.LASF6:
+ 917 01eb 6C6F6E67 		.ascii	"long long int\000"
+ 917      206C6F6E 
+ 917      6720696E 
+ 917      7400
+ 918              	.LASF23:
+ 919 01f9 56444143 		.ascii	"VDAC8_1_Init\000"
+ 919      385F315F 
+ 919      496E6974 
+ 919      00
+ 920              	.LASF11:
+ 921 0206 63686172 		.ascii	"char\000"
+ARM GAS  C:\Users\Kurty\AppData\Local\Temp\ccZdubh8.s 			page 24
 
 
- 922 0206 63686172 		.ascii	"char\000"
- 922      00
- 923              	.LASF29:
- 924 020b 56444143 		.ascii	"VDAC8_1_initVar\000"
- 924      385F315F 
- 924      696E6974 
- 924      56617200 
- 925              	.LASF2:
- 926 021b 73686F72 		.ascii	"short int\000"
- 926      7420696E 
- 926      7400
- 927              	.LASF12:
- 928 0225 75696E74 		.ascii	"uint8\000"
- 928      3800
- 929              	.LASF4:
- 930 022b 6C6F6E67 		.ascii	"long int\000"
- 930      20696E74 
- 930      00
- 931              	.LASF26:
- 932 0234 47656E65 		.ascii	"Generated_Source\\PSoC5\\VDAC8_1.c\000"
- 932      72617465 
- 932      645F536F 
- 932      75726365 
- 932      5C50536F 
- 933              	.LASF0:
- 934 0255 7369676E 		.ascii	"signed char\000"
- 934      65642063 
- 934      68617200 
- 935              	.LASF21:
- 936 0261 56444143 		.ascii	"VDAC8_1_SetRange\000"
- 936      385F315F 
- 936      53657452 
- 936      616E6765 
- 936      00
- 937              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 921      00
+ 922              	.LASF29:
+ 923 020b 56444143 		.ascii	"VDAC8_1_initVar\000"
+ 923      385F315F 
+ 923      696E6974 
+ 923      56617200 
+ 924              	.LASF2:
+ 925 021b 73686F72 		.ascii	"short int\000"
+ 925      7420696E 
+ 925      7400
+ 926              	.LASF12:
+ 927 0225 75696E74 		.ascii	"uint8\000"
+ 927      3800
+ 928              	.LASF4:
+ 929 022b 6C6F6E67 		.ascii	"long int\000"
+ 929      20696E74 
+ 929      00
+ 930              	.LASF26:
+ 931 0234 47656E65 		.ascii	"Generated_Source\\PSoC5\\VDAC8_1.c\000"
+ 931      72617465 
+ 931      645F536F 
+ 931      75726365 
+ 931      5C50536F 
+ 932              	.LASF0:
+ 933 0255 7369676E 		.ascii	"signed char\000"
+ 933      65642063 
+ 933      68617200 
+ 934              	.LASF21:
+ 935 0261 56444143 		.ascii	"VDAC8_1_SetRange\000"
+ 935      385F315F 
+ 935      53657452 
+ 935      616E6765 
+ 935      00
+ 936              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -120,8 +120,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer_PM.c</File>
@@ -130,6 +128,37 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RX_Tie_High.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Seven_Segment_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Seven_Segment.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Seven_Segment.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Decimal_place_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Decimal_place.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Decimal_place.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_3.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_Reg.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_Reg.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit_Reg_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Seven_Segment_Reg.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Seven_Segment_Reg.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Seven_Segment_Reg_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer_Clock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer_Clock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer_Reset_Reg.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer_Reset_Reg.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Flight_Timer_Reset_Reg_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM_1.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Kurty\Documents\Ultrasonic GitHub (TRC3500)\Ultrasonic-PSoC\Ultrasonic Sensor Workspace\Ultrasonic Distance Meter.cydsn\Export\ARM_GCC_Generic">

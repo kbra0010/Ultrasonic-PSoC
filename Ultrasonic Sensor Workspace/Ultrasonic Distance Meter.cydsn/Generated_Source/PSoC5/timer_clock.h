@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: timer_clock.h
+* File Name: Timer_Clock.h
 * Version 2.20
 *
 *  Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_CLOCK_timer_clock_H)
-#define CY_CLOCK_timer_clock_H
+#if !defined(CY_CLOCK_Timer_Clock_H)
+#define CY_CLOCK_Timer_Clock_H
 
 #include <cytypes.h>
 #include <cyfitter.h>
@@ -36,37 +36,37 @@
 *        Function Prototypes
 ***************************************/
 
-void timer_clock_Start(void) ;
-void timer_clock_Stop(void) ;
+void Timer_Clock_Start(void) ;
+void Timer_Clock_Stop(void) ;
 
 #if(CY_PSOC3 || CY_PSOC5LP)
-void timer_clock_StopBlock(void) ;
+void Timer_Clock_StopBlock(void) ;
 #endif /* (CY_PSOC3 || CY_PSOC5LP) */
 
-void timer_clock_StandbyPower(uint8 state) ;
-void timer_clock_SetDividerRegister(uint16 clkDivider, uint8 restart) 
+void Timer_Clock_StandbyPower(uint8 state) ;
+void Timer_Clock_SetDividerRegister(uint16 clkDivider, uint8 restart) 
                                 ;
-uint16 timer_clock_GetDividerRegister(void) ;
-void timer_clock_SetModeRegister(uint8 modeBitMask) ;
-void timer_clock_ClearModeRegister(uint8 modeBitMask) ;
-uint8 timer_clock_GetModeRegister(void) ;
-void timer_clock_SetSourceRegister(uint8 clkSource) ;
-uint8 timer_clock_GetSourceRegister(void) ;
-#if defined(timer_clock__CFG3)
-void timer_clock_SetPhaseRegister(uint8 clkPhase) ;
-uint8 timer_clock_GetPhaseRegister(void) ;
-#endif /* defined(timer_clock__CFG3) */
+uint16 Timer_Clock_GetDividerRegister(void) ;
+void Timer_Clock_SetModeRegister(uint8 modeBitMask) ;
+void Timer_Clock_ClearModeRegister(uint8 modeBitMask) ;
+uint8 Timer_Clock_GetModeRegister(void) ;
+void Timer_Clock_SetSourceRegister(uint8 clkSource) ;
+uint8 Timer_Clock_GetSourceRegister(void) ;
+#if defined(Timer_Clock__CFG3)
+void Timer_Clock_SetPhaseRegister(uint8 clkPhase) ;
+uint8 Timer_Clock_GetPhaseRegister(void) ;
+#endif /* defined(Timer_Clock__CFG3) */
 
-#define timer_clock_Enable()                       timer_clock_Start()
-#define timer_clock_Disable()                      timer_clock_Stop()
-#define timer_clock_SetDivider(clkDivider)         timer_clock_SetDividerRegister(clkDivider, 1u)
-#define timer_clock_SetDividerValue(clkDivider)    timer_clock_SetDividerRegister((clkDivider) - 1u, 1u)
-#define timer_clock_SetMode(clkMode)               timer_clock_SetModeRegister(clkMode)
-#define timer_clock_SetSource(clkSource)           timer_clock_SetSourceRegister(clkSource)
-#if defined(timer_clock__CFG3)
-#define timer_clock_SetPhase(clkPhase)             timer_clock_SetPhaseRegister(clkPhase)
-#define timer_clock_SetPhaseValue(clkPhase)        timer_clock_SetPhaseRegister((clkPhase) + 1u)
-#endif /* defined(timer_clock__CFG3) */
+#define Timer_Clock_Enable()                       Timer_Clock_Start()
+#define Timer_Clock_Disable()                      Timer_Clock_Stop()
+#define Timer_Clock_SetDivider(clkDivider)         Timer_Clock_SetDividerRegister(clkDivider, 1u)
+#define Timer_Clock_SetDividerValue(clkDivider)    Timer_Clock_SetDividerRegister((clkDivider) - 1u, 1u)
+#define Timer_Clock_SetMode(clkMode)               Timer_Clock_SetModeRegister(clkMode)
+#define Timer_Clock_SetSource(clkSource)           Timer_Clock_SetSourceRegister(clkSource)
+#if defined(Timer_Clock__CFG3)
+#define Timer_Clock_SetPhase(clkPhase)             Timer_Clock_SetPhaseRegister(clkPhase)
+#define Timer_Clock_SetPhaseValue(clkPhase)        Timer_Clock_SetPhaseRegister((clkPhase) + 1u)
+#endif /* defined(Timer_Clock__CFG3) */
 
 
 /***************************************
@@ -74,31 +74,31 @@ uint8 timer_clock_GetPhaseRegister(void) ;
 ***************************************/
 
 /* Register to enable or disable the clock */
-#define timer_clock_CLKEN              (* (reg8 *) timer_clock__PM_ACT_CFG)
-#define timer_clock_CLKEN_PTR          ((reg8 *) timer_clock__PM_ACT_CFG)
+#define Timer_Clock_CLKEN              (* (reg8 *) Timer_Clock__PM_ACT_CFG)
+#define Timer_Clock_CLKEN_PTR          ((reg8 *) Timer_Clock__PM_ACT_CFG)
 
 /* Register to enable or disable the clock */
-#define timer_clock_CLKSTBY            (* (reg8 *) timer_clock__PM_STBY_CFG)
-#define timer_clock_CLKSTBY_PTR        ((reg8 *) timer_clock__PM_STBY_CFG)
+#define Timer_Clock_CLKSTBY            (* (reg8 *) Timer_Clock__PM_STBY_CFG)
+#define Timer_Clock_CLKSTBY_PTR        ((reg8 *) Timer_Clock__PM_STBY_CFG)
 
 /* Clock LSB divider configuration register. */
-#define timer_clock_DIV_LSB            (* (reg8 *) timer_clock__CFG0)
-#define timer_clock_DIV_LSB_PTR        ((reg8 *) timer_clock__CFG0)
-#define timer_clock_DIV_PTR            ((reg16 *) timer_clock__CFG0)
+#define Timer_Clock_DIV_LSB            (* (reg8 *) Timer_Clock__CFG0)
+#define Timer_Clock_DIV_LSB_PTR        ((reg8 *) Timer_Clock__CFG0)
+#define Timer_Clock_DIV_PTR            ((reg16 *) Timer_Clock__CFG0)
 
 /* Clock MSB divider configuration register. */
-#define timer_clock_DIV_MSB            (* (reg8 *) timer_clock__CFG1)
-#define timer_clock_DIV_MSB_PTR        ((reg8 *) timer_clock__CFG1)
+#define Timer_Clock_DIV_MSB            (* (reg8 *) Timer_Clock__CFG1)
+#define Timer_Clock_DIV_MSB_PTR        ((reg8 *) Timer_Clock__CFG1)
 
 /* Mode and source configuration register */
-#define timer_clock_MOD_SRC            (* (reg8 *) timer_clock__CFG2)
-#define timer_clock_MOD_SRC_PTR        ((reg8 *) timer_clock__CFG2)
+#define Timer_Clock_MOD_SRC            (* (reg8 *) Timer_Clock__CFG2)
+#define Timer_Clock_MOD_SRC_PTR        ((reg8 *) Timer_Clock__CFG2)
 
-#if defined(timer_clock__CFG3)
+#if defined(Timer_Clock__CFG3)
 /* Analog clock phase configuration register */
-#define timer_clock_PHASE              (* (reg8 *) timer_clock__CFG3)
-#define timer_clock_PHASE_PTR          ((reg8 *) timer_clock__CFG3)
-#endif /* defined(timer_clock__CFG3) */
+#define Timer_Clock_PHASE              (* (reg8 *) Timer_Clock__CFG3)
+#define Timer_Clock_PHASE_PTR          ((reg8 *) Timer_Clock__CFG3)
+#endif /* defined(Timer_Clock__CFG3) */
 
 
 /**************************************
@@ -106,19 +106,19 @@ uint8 timer_clock_GetPhaseRegister(void) ;
 **************************************/
 
 /* Power manager register masks */
-#define timer_clock_CLKEN_MASK         timer_clock__PM_ACT_MSK
-#define timer_clock_CLKSTBY_MASK       timer_clock__PM_STBY_MSK
+#define Timer_Clock_CLKEN_MASK         Timer_Clock__PM_ACT_MSK
+#define Timer_Clock_CLKSTBY_MASK       Timer_Clock__PM_STBY_MSK
 
 /* CFG2 field masks */
-#define timer_clock_SRC_SEL_MSK        timer_clock__CFG2_SRC_SEL_MASK
-#define timer_clock_MODE_MASK          (~(timer_clock_SRC_SEL_MSK))
+#define Timer_Clock_SRC_SEL_MSK        Timer_Clock__CFG2_SRC_SEL_MASK
+#define Timer_Clock_MODE_MASK          (~(Timer_Clock_SRC_SEL_MSK))
 
-#if defined(timer_clock__CFG3)
+#if defined(Timer_Clock__CFG3)
 /* CFG3 phase mask */
-#define timer_clock_PHASE_MASK         timer_clock__CFG3_PHASE_DLY_MASK
-#endif /* defined(timer_clock__CFG3) */
+#define Timer_Clock_PHASE_MASK         Timer_Clock__CFG3_PHASE_DLY_MASK
+#endif /* defined(Timer_Clock__CFG3) */
 
-#endif /* CY_CLOCK_timer_clock_H */
+#endif /* CY_CLOCK_Timer_Clock_H */
 
 
 /* [] END OF FILE */

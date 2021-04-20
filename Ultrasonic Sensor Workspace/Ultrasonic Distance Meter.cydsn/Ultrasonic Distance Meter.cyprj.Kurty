@@ -17,12 +17,29 @@
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\Decimal_place.h" />
+<dep name=".\Generated_Source\PSoC5\Decimal_place_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_0.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_0_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_1.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_2.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_3.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\EEPROM_1.h" />
 <dep name=".\Generated_Source\PSoC5\Flight_Timer.h" />
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Clock.h" />
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg.h" />
 <dep name=".\Generated_Source\PSoC5\PGA_1.h" />
 <dep name=".\Generated_Source\PSoC5\RX_1.h" />
 <dep name=".\Generated_Source\PSoC5\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\RX_Tie_High.h" />
 <dep name=".\Generated_Source\PSoC5\RX_Tie_High_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment.h" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\TX_1.h" />
 <dep name=".\Generated_Source\PSoC5\TX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\TX_2.h" />
@@ -48,7 +65,6 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\isr_1.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name=".\Generated_Source\PSoC5\timer_clock.h" />
 <dep name=".\main.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\Comp_1.h" />
@@ -56,12 +72,29 @@
 <file name=".\Generated_Source\PSoC5\CyFlash.h" />
 <file name=".\Generated_Source\PSoC5\CyLib.h" />
 <file name=".\Generated_Source\PSoC5\CySpc.h" />
+<file name=".\Generated_Source\PSoC5\Decimal_place.h" />
+<file name=".\Generated_Source\PSoC5\Decimal_place_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Digit_0.h" />
+<file name=".\Generated_Source\PSoC5\Digit_0_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Digit_1.h" />
+<file name=".\Generated_Source\PSoC5\Digit_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Digit_2.h" />
+<file name=".\Generated_Source\PSoC5\Digit_2_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Digit_3.h" />
+<file name=".\Generated_Source\PSoC5\Digit_3_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Digit_Reg.h" />
+<file name=".\Generated_Source\PSoC5\EEPROM_1.h" />
 <file name=".\Generated_Source\PSoC5\Flight_Timer.h" />
+<file name=".\Generated_Source\PSoC5\Flight_Timer_Clock.h" />
+<file name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg.h" />
 <file name=".\Generated_Source\PSoC5\PGA_1.h" />
 <file name=".\Generated_Source\PSoC5\RX_1.h" />
 <file name=".\Generated_Source\PSoC5\RX_1_aliases.h" />
 <file name=".\Generated_Source\PSoC5\RX_Tie_High.h" />
 <file name=".\Generated_Source\PSoC5\RX_Tie_High_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Seven_Segment.h" />
+<file name=".\Generated_Source\PSoC5\Seven_Segment_Reg.h" />
+<file name=".\Generated_Source\PSoC5\Seven_Segment_aliases.h" />
 <file name=".\Generated_Source\PSoC5\TX_1.h" />
 <file name=".\Generated_Source\PSoC5\TX_1_aliases.h" />
 <file name=".\Generated_Source\PSoC5\TX_2.h" />
@@ -87,8 +120,34 @@
 <file name=".\Generated_Source\PSoC5\cytypes.h" />
 <file name=".\Generated_Source\PSoC5\isr_1.h" />
 <file name=".\Generated_Source\PSoC5\project.h" />
-<file name=".\Generated_Source\PSoC5\timer_clock.h" />
 <file name=".\main.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\EEPROM_1.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\EEPROM_1.c" />
+<dep name=".\Generated_Source\PSoC5\EEPROM_1.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\EEPROM_1.c" />
+<file name=".\Generated_Source\PSoC5\Memory.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Memory.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\Memory.c" />
+<dep name=".\Generated_Source\PSoC5\Memory.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Memory.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o">
 <dep name=".\Generated_Source\PSoC5\Cm3Start.c" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
@@ -180,6 +239,79 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\CySpc.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Decimal_place.o">
+<dep name=".\Generated_Source\PSoC5\Decimal_place.c" />
+<dep name=".\Generated_Source\PSoC5\Decimal_place.h" />
+<dep name=".\Generated_Source\PSoC5\Decimal_place_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Decimal_place.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Digit_0.o">
+<dep name=".\Generated_Source\PSoC5\Digit_0.c" />
+<dep name=".\Generated_Source\PSoC5\Digit_0.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_0_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Digit_0.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Digit_1.o">
+<dep name=".\Generated_Source\PSoC5\Digit_1.c" />
+<dep name=".\Generated_Source\PSoC5\Digit_1.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Digit_1.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Digit_2.o">
+<dep name=".\Generated_Source\PSoC5\Digit_2.c" />
+<dep name=".\Generated_Source\PSoC5\Digit_2.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Digit_2.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Digit_3.o">
+<dep name=".\Generated_Source\PSoC5\Digit_3.c" />
+<dep name=".\Generated_Source\PSoC5\Digit_3.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Digit_3.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Digit_Reg.o">
+<dep name=".\Generated_Source\PSoC5\Digit_Reg.c" />
+<dep name=".\Generated_Source\PSoC5\Digit_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Digit_Reg.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Digit_Reg_PM.o">
+<dep name=".\Generated_Source\PSoC5\Digit_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\Digit_Reg_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Digit_Reg_PM.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -193,6 +325,15 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\Flight_Timer.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_Clock.o">
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Clock.c" />
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Clock.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Flight_Timer_Clock.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_PM.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -206,6 +347,24 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\Flight_Timer_PM.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_Reset_Reg.o">
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg.c" />
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_Reset_Reg_PM.o">
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Flight_Timer_Reset_Reg_PM.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\PGA_1.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -254,6 +413,35 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\RX_Tie_High.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Seven_Segment.o">
+<dep name=".\Generated_Source\PSoC5\Seven_Segment.c" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment.h" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Seven_Segment.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Seven_Segment_Reg.o">
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_Reg.c" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Seven_Segment_Reg.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Seven_Segment_Reg_PM.o">
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\Seven_Segment_Reg_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Seven_Segment_Reg_PM.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\TX_1.o">
 <dep name=".\Generated_Source\PSoC5\TX_1.c" />
 <dep name=".\Generated_Source\PSoC5\TX_1.h" />
@@ -443,15 +631,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\isr_1.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\timer_clock.o">
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\timer_clock.c" />
-<dep name=".\Generated_Source\PSoC5\timer_clock.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\timer_clock.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
 <dep name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
@@ -462,6 +641,35 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
+<file name=".\Generated_Source\PSoC5\timer_clock.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\timer_clock.o">
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\timer_clock.c" />
+<dep name=".\Generated_Source\PSoC5\timer_clock.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\timer_clock.c" />
+<file name=".\Generated_Source\PSoC5\Decimal_Place_Reg.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Decimal_Place_Reg.o">
+<dep name=".\Generated_Source\PSoC5\Decimal_Place_Reg.c" />
+<dep name=".\Generated_Source\PSoC5\Decimal_Place_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Decimal_Place_Reg.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\Decimal_Place_Reg_PM.o">
+<dep name=".\Generated_Source\PSoC5\Decimal_Place_Reg.h" />
+<dep name=".\Generated_Source\PSoC5\Decimal_Place_Reg_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\Decimal_Place_Reg_PM.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\RX_2.o">
 <dep name=".\Generated_Source\PSoC5\RX_2.c" />
 <dep name=".\Generated_Source\PSoC5\RX_2.h" />
@@ -512,11 +720,24 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\VDAC8_1_PM.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Comp_1.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Comp_1_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\timer_clock.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_PM.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\RX_Tie_High.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\isr_1.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Seven_Segment.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Decimal_place.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Digit_0.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Digit_1.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Digit_2.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Digit_3.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Digit_Reg.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Digit_Reg_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Seven_Segment_Reg.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Seven_Segment_Reg_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_Clock.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_Reset_Reg.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\Flight_Timer_Reset_Reg_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\EEPROM_1.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Ultrasonic Distance Meter.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" />
 </file>
@@ -565,6 +786,24 @@
 <name_val_pair name="Generated_Source\PSoC5\Flight_Timer_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC5\RX_Tie_High.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC5\isr_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Seven_Segment.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Decimal_place.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Digit_0.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Digit_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Digit_2.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Digit_3.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Digit_Reg.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Digit_Reg_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Seven_Segment_Reg.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Seven_Segment_Reg_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Decimal_Place_Reg.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Decimal_Place_Reg_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Timer_Clock.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Flight_Timer_Clock.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Flight_Timer_Reset_Reg.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Flight_Timer_Reset_Reg_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\Memory.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC5\EEPROM_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Kurty\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;C:\Users\Kurty\Documents\Ultrasonic GitHub (TRC3500)\Ultrasonic-PSoC\Ultrasonic Sensor Workspace\Ultrasonic Distance Meter.cydsn\Ultrasonic Distance Meter.cyprj&quot; -d CY8C5888LTI-LP097 -s &quot;C:\Users\Kurty\Documents\Ultrasonic GitHub (TRC3500)\Ultrasonic-PSoC\Ultrasonic Sensor Workspace\Ultrasonic Distance Meter.cydsn\Generated_Source\PSoC5&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -824,6 +1063,12 @@
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\version.cypatch</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\EEPROM_v3_0\EEPROM_v3_0.cysym</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\EEPROM_v3_0\EEPROM_v3_0.pdf</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\EEPROM_v3_0\EEPROM_v3_0.cystate</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\EEPROM_v3_0\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\EEPROM_v3_0\API\eeprom.c</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\EEPROM_v3_0\API\eeprom.h</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Timer_v2_80.cycdx</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Timer_v2_80.cysym</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Timer_v2_80.pdf</v>
@@ -973,8 +1218,8 @@
 <v>Generated_Source\PSoC5\Comp_1.c</v>
 <v>Generated_Source\PSoC5\Comp_1.h</v>
 <v>Generated_Source\PSoC5\Comp_1_PM.c</v>
-<v>Generated_Source\PSoC5\timer_clock.c</v>
-<v>Generated_Source\PSoC5\timer_clock.h</v>
+<v>Generated_Source\PSoC5\Timer_Clock.c</v>
+<v>Generated_Source\PSoC5\Timer_Clock.h</v>
 <v>Generated_Source\PSoC5\Flight_Timer.c</v>
 <v>Generated_Source\PSoC5\Flight_Timer.h</v>
 <v>Generated_Source\PSoC5\Flight_Timer_PM.c</v>
@@ -983,6 +1228,44 @@
 <v>Generated_Source\PSoC5\RX_Tie_High.h</v>
 <v>Generated_Source\PSoC5\isr_1.c</v>
 <v>Generated_Source\PSoC5\isr_1.h</v>
+<v>Generated_Source\PSoC5\Seven_Segment_aliases.h</v>
+<v>Generated_Source\PSoC5\Seven_Segment.c</v>
+<v>Generated_Source\PSoC5\Seven_Segment.h</v>
+<v>Generated_Source\PSoC5\Decimal_place_aliases.h</v>
+<v>Generated_Source\PSoC5\Decimal_place.c</v>
+<v>Generated_Source\PSoC5\Decimal_place.h</v>
+<v>Generated_Source\PSoC5\Digit_0_aliases.h</v>
+<v>Generated_Source\PSoC5\Digit_0.c</v>
+<v>Generated_Source\PSoC5\Digit_0.h</v>
+<v>Generated_Source\PSoC5\Digit_1_aliases.h</v>
+<v>Generated_Source\PSoC5\Digit_1.c</v>
+<v>Generated_Source\PSoC5\Digit_1.h</v>
+<v>Generated_Source\PSoC5\Digit_2_aliases.h</v>
+<v>Generated_Source\PSoC5\Digit_2.c</v>
+<v>Generated_Source\PSoC5\Digit_2.h</v>
+<v>Generated_Source\PSoC5\Digit_3_aliases.h</v>
+<v>Generated_Source\PSoC5\Digit_3.c</v>
+<v>Generated_Source\PSoC5\Digit_3.h</v>
+<v>Generated_Source\PSoC5\Digit_Reg.h</v>
+<v>Generated_Source\PSoC5\Digit_Reg.c</v>
+<v>Generated_Source\PSoC5\Digit_Reg_PM.c</v>
+<v>Generated_Source\PSoC5\Seven_Segment_Reg.h</v>
+<v>Generated_Source\PSoC5\Seven_Segment_Reg.c</v>
+<v>Generated_Source\PSoC5\Seven_Segment_Reg_PM.c</v>
+<v>Generated_Source\PSoC5\Decimal_Place_Reg.h</v>
+<v>Generated_Source\PSoC5\Decimal_Place_Reg.c</v>
+<v>Generated_Source\PSoC5\Decimal_Place_Reg_PM.c</v>
+<v>Generated_Source\PSoC5\Flight_Timer_Clock.c</v>
+<v>Generated_Source\PSoC5\Flight_Timer_Clock.h</v>
+<v>Generated_Source\PSoC5\Flight_Timer_Reset_Reg.h</v>
+<v>Generated_Source\PSoC5\Flight_Timer_Reset_Reg.c</v>
+<v>Generated_Source\PSoC5\Flight_Timer_Reset_Reg_PM.c</v>
+<v>Generated_Source\PSoC5\Memory.c</v>
+<v>Generated_Source\PSoC5\Memory.h</v>
+<v>Generated_Source\PSoC5\EEPROM_1.c</v>
+<v>Generated_Source\PSoC5\EEPROM_1.h</v>
+<v>Generated_Source\PSoC5\EEPROM.c</v>
+<v>Generated_Source\PSoC5\EEPROM.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -991,7 +1274,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cy_psoc3_inc.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 </warp_dep>
-<deps_time v="132633129874162717" />
+<deps_time v="132634063345046026" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 <pdl_path v="" />
@@ -1001,7 +1284,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="132633158936191380" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="132634062980508244" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

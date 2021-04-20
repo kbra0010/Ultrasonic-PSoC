@@ -43,7 +43,7 @@ extern uint8 Flight_Timer_initVar;
 #define Flight_Timer_SoftwareTriggerMode        0u
 #define Flight_Timer_UsingHWEnable              0u
 #define Flight_Timer_EnableTriggerMode          0u
-#define Flight_Timer_InterruptOnCaptureCount    0u
+#define Flight_Timer_InterruptOnCaptureCount    1u
 #define Flight_Timer_RunModeUsed                0u
 #define Flight_Timer_ControlRegRemoved          0u
 
@@ -173,10 +173,10 @@ void Flight_Timer_Wakeup(void)        ;
 #define Flight_Timer_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Flight_Timer_CTRL_TRIG_MODE_SHIFT))
 #if (Flight_Timer_UsingFixedFunction)
     #define Flight_Timer_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Flight_Timer_STATUS_TC_INT_MASK_SHIFT)) | \
-                                                  ((uint8)((uint8)0 << Flight_Timer_STATUS_CAPTURE_INT_MASK_SHIFT)))
+                                                  ((uint8)((uint8)1 << Flight_Timer_STATUS_CAPTURE_INT_MASK_SHIFT)))
 #else
     #define Flight_Timer_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Flight_Timer_STATUS_TC_INT_MASK_SHIFT)) | \
-                                                 ((uint8)((uint8)0 << Flight_Timer_STATUS_CAPTURE_INT_MASK_SHIFT)) | \
+                                                 ((uint8)((uint8)1 << Flight_Timer_STATUS_CAPTURE_INT_MASK_SHIFT)) | \
                                                  ((uint8)((uint8)0 << Flight_Timer_STATUS_FIFOFULL_INT_MASK_SHIFT)))
 #endif /* (Flight_Timer_UsingFixedFunction) */
 #define Flight_Timer_INIT_CAPTURE_COUNT      (2u)
