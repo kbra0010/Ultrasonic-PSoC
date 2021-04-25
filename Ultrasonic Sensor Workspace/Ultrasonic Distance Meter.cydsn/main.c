@@ -40,61 +40,131 @@ int seven = 0xF8;
 int eight = 0x80;
 int nine = 0x98;
 
+// digit variables (not completely necessary, but a good indicator of one-hot display encoding)
 int digitThree = 1;
 int digitTwo = 2;
 int digitOne = 4;
 int digitZero = 8;
 
-long unsigned int displayData[4]; // 0 = ones digit, MSB = decimal
+int test;
+int dotFlag;
+
+long unsigned int displayData[4]; // 0 = ones digit, MSB = decimal point, bits 0 to 7 are the number
+
+// button variables etc
+int fiveMillisecCount = 5;
+long unsigned int milli = 0;
+int oneSecondCount = 1000;
+int units = 0; //0 = metric, 1 = imperial
 
 int digit[4]; // should be a local var
 
 void getDigits(float FlightTime);
 void saveDigitsToRAM();
+void checkMeasurementButton();
+void pulseDot();
 
 CY_ISR(Flight_Timer_ISR) {
     // Triggers once ultrasonic receives a pulse back
     // Once triggered gets timer value, measures distance
-    int FT_Count = Flight_Timer_ReadCapture(); // forces capture, returns capture value
-    float FlightTime = FT_Count * FT_Time_Per_Tick;
+    int FT_Count = Flight_Timer_ReadPeriod(); // forces capture, returns capture value
+    float FlightTime = (10000 - FT_Count) * FT_Time_Per_Tick;
+    // should be max period - read period
+    
     getDigits(FlightTime);
     saveDigitsToRAM();
-    
     isr_1_ClearPending();
+    
+    // function to get average distance goes here
+    
+    
     Flight_Timer_Reset_Reg_Write(1);
+    Flight_Timer_ReadStatusRegister();
     Flight_Timer_Reset_Reg_Write(0);
     
+    //Flight_Timer_Stop();
+    //Flight_Timer_Start();
+    
+    
+    
+    //Flight_Timer_Reset_Reg_Write(0);
+    // write reg zero when starting pulses
+    
+    //FT_Count = Flight_Timer_ReadCapture();
+    //FT_Count = Flight_Timer_ReadCapture();
+    //FT_Count = Flight_Timer_ReadCapture();
     // Timer_1_ReadStatusRegister()
 }
 
-//int writeStatus = EEPROM_WriteByte(1,0);
+CY_ISR(Millisec_ISR) { // triggered every millisecond
+    // stuff
+    // check buttons
+    // check the state (if measuring or not)
+    // do stuff depending on state
+    
+    if(fiveMillisecCount == 0) {
+        // do stuff
+        checkMeasurementButton();
+        fiveMillisecCount = 5;
+    }
+    if(oneSecondCount == 0) {
+        // do stuff
+        pulseDot();
+        oneSecondCount = 1000;
+    }
+    milli++;
+    fiveMillisecCount--;
+    oneSecondCount--;
+    //Five_Millisec_Timer_WriteCounter(0);
+}
+
+/*
+CY_ISR(Measurement_ISR) { //ISR to start ultrasonic pulses when button pushed
+    // this ISR triggered when S1_1 goes high (measurement button pushed)
+}
+*/
+
 
 
 
 
 int main(void) {
     CyGlobalIntEnable; /* Enable global interrupts. */
-    isr_1_ClearPending();		 // Cancel any pending isr_1 interrupts 
-    isr_1_StartEx(Flight_Timer_ISR);     //Enable the interrupt service routine
+    isr_1_ClearPending();               // Cancel any pending isr_1 interrupts 
+    isr_1_StartEx(Flight_Timer_ISR);    //Enable the interrupt service routine
+    isr_2_ClearPending();               // Cancel any pending isr_1 interrupts 
+    isr_2_StartEx(Millisec_ISR);        //Enable the interrupt service routine
+    /*
+    isr_3_ClearPending();               // Cancel any pending isr_1 interrupts 
+    isr_3_StartEx(Measurement_ISR);     //Enable the interrupt service routine
+    */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     // Initialising hardware modules
     
+    Button_Tie_High_Write(1); // pin for pulling buttons high when pushed
+    
     PGA_1_Start();
     VDAC8_1_Start();
     Comp_1_Start();
-    //PGA_1_Start();
     Vssa_Buffer_Start();
     Ultrasonic_Drive_Start();
     Flight_Timer_Enable();
     Flight_Timer_Start();
+    Five_Millisec_Timer_Enable();
+    Five_Millisec_Timer_Start();
+    
+    // read status register for timers
     Ultrasonic_Drive_Enable();
     Ultrasonic_Drive_Start();
-    Ultrasonic_Pulse_Counter_Enable();
+    //Ultrasonic_Pulse_Counter_Enable();
     Ultrasonic_Pulse_Counter_Start();
     Flight_Timer_Clock_Enable();
     Flight_Timer_Clock_Start();
     
+    EEPROM_Start();
+    //EEPROM_WriteByte(12,0); // team number
+    //EEPROM_WriteByte(units,1);
     
 
     
@@ -126,12 +196,19 @@ int main(void) {
         //Digit_Reg_Write(digitZero);
         //Seven_Segment_Reg_Write(zero);
         // test number write function
-        
+        int testing = EEPROM_ReadByte(0);
+        CyDelay(10);
+        int test = 1;
         for(;;) {
             for(int index = 0; index < 4; index++) { // loop through digits 0 to 3
                 int currentDigit = powl(2,index);
-                Digit_Reg_Write(currentDigit);
+                int currentDigitInverted = powl(2,8)-1 - currentDigit;
+                
+                
+                
+                Digit_Reg_Write(currentDigitInverted); // correct way, just inverts bits
                 //Digit_Reg_Write(15);
+                
                 Seven_Segment_Reg_Write(displayData[index]);
                 CyDelay(1);
             }
@@ -142,7 +219,7 @@ int main(void) {
 /* [] END OF FILE */
 
 
-void getDigits(float FlightTime) {
+void getDigits(float FlightTime) { // puts distance in mm into digits[] array
     // read EEPROM for which kind of distance it is
     // calc distance
     // readEEPROM
@@ -166,12 +243,12 @@ void getDigits(float FlightTime) {
     // 1 = tens
     // 2 = hundreds
     // 3 = thousands
-    int currentDigit = distanceMM;
-    while(currentDigit >= 10) {
-        digit[index] = currentDigit % 10;
+    digit[0] = distanceMM;
+    while(digit[index] >= 10) {
+        digit[index] = digit[index] % 10;
         
         index += 1; // increment index
-        currentDigit = floor(currentDigit / 10); // move to next number
+        digit[index] = floor(digit[index] / 10); // move to next number
     }
     
     /*
@@ -238,7 +315,7 @@ void saveDigitsToRAM() {
         }
         
         if(index == 1) { // 2nd most significant digit
-            displayData[index] = displayData[index] + powl(2,7); //unsure if works
+            displayData[index] = displayData[index] + powl(2,7); //works
         }
     }
     
@@ -246,18 +323,67 @@ void saveDigitsToRAM() {
     // segment pin low = segment ILLUMINATED
 }
 
+void checkMeasurementButton() {// if button pressed, do ultrasonic pulsing stuff
+    test = S1_1_Read();
+    if(S1_1_Read() == 1) { // if button is HIGH (pushed)
+        Ultrasonic_Drive_Stop(); // stop pulsing ultrasonic
+        Ultrasonic_Pulse_Counter_WriteCounter(0); // reset counter
+        Ultrasonic_Set_Reg_Write(0); // set counter reset line low
+        //(can remove this reg and just use WriteCounter command to reset)
+        Ultrasonic_Drive_Start();
+        
+        Flight_Timer_Reset_Reg_Write(0);
+        
+        R3_2_Reg_Write(0);
+        J1_2_Reg_Write(1);
+        // send 10 pulses
+        // ISR waits for response
+        // main loop displays code
+    }
+}
+
+void pulseDot() {
+    if(dotFlag == 0) { // dot is off
+        displayData[3] = displayData[3] + powl(2,7);
+        dotFlag = 1;
+    }
+    else if(dotFlag == 1) {
+        displayData[3] = displayData[3] - powl(2,7);
+        dotFlag = 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 // test number write function
-        digit[0] = 9;
-        digit[1] = 8;
-        digit[2] = 2;
-        digit[3] = 1;
+        digit[0] = 1;
+        digit[1] = 2;
+        digit[2] = 3;
+        digit[3] = 4;
         saveDigitsToRAM();
+        
         for(;;) {
             for(int index = 0; index < 4; index++) { // loop through digits 0 to 3
                 int currentDigit = powl(2,index);
-                Digit_Reg_Write(currentDigit);
+                int currentDigitInverted = powl(2,8)-1 - currentDigit;
+                
+                
+                
+                Digit_Reg_Write(currentDigitInverted); // correct way, just inverts bits
                 //Digit_Reg_Write(15);
+                
                 Seven_Segment_Reg_Write(displayData[index]);
                 CyDelay(1);
             }

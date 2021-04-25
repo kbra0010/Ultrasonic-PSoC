@@ -1,5 +1,5 @@
 # Ultrasonic Distance Meter
-# 2021-04-20 15:32:09Z
+# 2021-04-21 06:47:01Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -25,16 +25,33 @@ set_io "Digit_0(0)" iocell 1 7
 set_io "Digit_1(0)" iocell 1 6
 set_io "Digit_2(0)" iocell 1 5
 set_io "Digit_3(0)" iocell 1 4
-set_location "Net_9" 3 0 0 0
-set_location "\Ultrasonic_Pulse_Counter:Counter7\" 3 0 7
-set_location "\Ultrasonic_Set_Reg:Sync:ctrl_reg\" 2 0 6
+set_io "J1_1(0)" iocell 12 3
+set_io "J3_1(0)" iocell 12 5
+set_io "S1_1(0)" iocell 0 5
+set_io "R3_2(0)" iocell 0 4
+set_io "J1_2(0)" iocell 12 4
+set_location "Net_9" 3 1 0 0
+set_location "\Five_Millisec_Timer:TimerUDB:status_tc\" 2 1 1 1
+set_location "\Ultrasonic_Pulse_Counter:Counter7\" 3 1 7
+set_location "\Ultrasonic_Set_Reg:Sync:ctrl_reg\" 2 1 6
 set_location "\Vssa_Buffer:ABuf\" abufcell -1 -1 3
 set_location "\PGA_1:SC\" sccell -1 -1 3
-set_location "\VDAC8_1:viDAC8\" vidaccell -1 -1 3
-set_location "\Comp_1:ctComp\" comparatorcell -1 -1 1
+set_location "\VDAC8_1:viDAC8\" vidaccell -1 -1 1
+set_location "\Comp_1:ctComp\" comparatorcell -1 -1 3
 set_location "\Flight_Timer:TimerHW\" timercell -1 -1 0
-set_location "__ONE__" 3 1 1 2
+set_location "__ONE__" 0 3 0 2
 set_location "isr_1" interrupt -1 -1 17
-set_location "\Digit_Reg:Sync:ctrl_reg\" 0 3 6
-set_location "\Seven_Segment_Reg:Sync:ctrl_reg\" 1 0 6
-set_location "\Flight_Timer_Reset_Reg:Sync:ctrl_reg\" 1 3 6
+set_location "\Digit_Reg:Sync:ctrl_reg\" 1 4 6
+set_location "\Seven_Segment_Reg:Sync:ctrl_reg\" 2 2 6
+set_location "\Flight_Timer_Reset_Reg:Sync:ctrl_reg\" 0 4 6
+set_location "\Five_Millisec_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 2 0 6
+set_location "\Five_Millisec_Timer:TimerUDB:rstSts:stsreg\" 2 1 4
+set_location "\Five_Millisec_Timer:TimerUDB:sT32:timerdp:u0\" 2 0 2
+set_location "\Five_Millisec_Timer:TimerUDB:sT32:timerdp:u1\" 3 0 2
+set_location "\Five_Millisec_Timer:TimerUDB:sT32:timerdp:u2\" 3 1 2
+set_location "\Five_Millisec_Timer:TimerUDB:sT32:timerdp:u3\" 2 1 2
+set_location "isr_2" interrupt -1 -1 0
+set_location "\Button_Tie_High:Sync:ctrl_reg\" 0 0 6
+set_location "\R3_2_Reg:Sync:ctrl_reg\" 3 0 6
+set_location "\J1_2_Reg:Sync:ctrl_reg\" 1 0 6
+set_location "Net_244" 2 1 1 0
